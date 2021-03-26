@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Wrapper } from './style'
 
-const AuthLayout = ({ children }: any) => <Wrapper>{children}</Wrapper>
+const AuthLayout: FC = ({ children }) => <Wrapper>{children}</Wrapper>
 
 export default AuthLayout
