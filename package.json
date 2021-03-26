@@ -1,8 +1,8 @@
 {
-  "name": "centra",
+  "name": "quipy",
   "version": "1.0.0",
   "private": true,
-  "description": "Centra platform",
+  "description": "quipy-portal",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

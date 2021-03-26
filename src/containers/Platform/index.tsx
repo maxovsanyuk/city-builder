@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Wrapper } from './style'
 
-const PlatformLayout = ({ children }: any) => <Wrapper>{children}</Wrapper>
+const PlatformLayout: FC = ({ children }) => <Wrapper>{children}</Wrapper>
 
 export default PlatformLayout
