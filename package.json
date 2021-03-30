@@ -13,6 +13,11 @@
     "lint:fix": "eslint . --cache --ext .ts,.tsx --fix",
     "prepare": "husky install"
   },
+  "husky": {
+    "hooks": {
+      "post-commit": "git update-index --again"
+    }
+  },
   "author": {
     "name": "Artkai Company",
     "email": "hello@artk.ai"
