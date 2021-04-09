@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Row } from 'procredit-bank-design-system'
+import Row from 'procredit-bank-design-system/modules/row'
 import { Wrapper } from './style'
 
 const AuthLayout: FC = ({ children }) => {
