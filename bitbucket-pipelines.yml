@@ -9,9 +9,6 @@ pipelines:
           caches:
             - node
           script:
-            - npm i
-            - npm run build
-            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'rm -rf quipy-portal/*'
-            - tar -cf build.tar.gz build
-            - scp -P $ARTKAI_DEV_PORT -r build.tar.gz $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST:quipy-portal/
-            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal/ && tar -xvf build.tar.gz && mv ./build/* ./ && rm -rf ./build.tar.gz && rm -rf ./build'
+            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && git reset --hard && git pull origin staging'
+            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && npm i'
+            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && npm run build'
