@@ -1,0 +1,8 @@
+/.git
+/.vscode
+/.idea
+node_modules/*
+public/*
+src/registerServiceWorker.js
+typings/*
+src/types/*
