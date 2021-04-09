@@ -24,6 +24,7 @@
     "@typescript-eslint/no-explicit-any": "off",
     // solved problem with linting diferent worked locally machin (Windows, Linux)
     "prettier/prettier": "off",
-    "@typescript-eslint/explicit-function-return-type": "off"
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }
