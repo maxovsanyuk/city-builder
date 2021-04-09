@@ -39,3 +39,4 @@ Instructions on how to use them in your own application are linked below.
 | React Intl | [Documentation](https://formatjs.io/docs/getting-started/installation/) |
 | Styled components | [GitHub](https://github.com/styled-components/styled-components/blob/master/README.md) |
 | Lodash | [Documentation](https://lodash.com/) |
+| Design system | [Documentation](http://design-system-v1.azurewebsites.net/) |
