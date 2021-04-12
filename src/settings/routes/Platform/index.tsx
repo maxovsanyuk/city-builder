@@ -1,10 +1,10 @@
 import { RouteProperties } from '../types/RouteProperties'
 import { Platform } from 'pages/Platform'
-import { generate } from 'shortid'
+import { nanoid } from 'nanoid'
 
 const routes: RouteProperties[] = [
   {
-    id: generate(),
+    id: nanoid(),
     component: Platform,
     exact: true,
     path: '/',
