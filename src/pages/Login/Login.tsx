@@ -31,10 +31,11 @@ const Login: FC = () => {
     <Wrapper>
       <Link to="/">
         <img src={HorizontalLogo} alt="horizontalLogo.svg" />
-        <div className="title">
-          <FormattedMessage id="welcome.to.my.procredit" />
-        </div>
       </Link>
+
+      <div className="title">
+        <FormattedMessage id="welcome.to.my.procredit" />
+      </div>
 
       <Form name="basic" initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed}>
         <Form.Item
