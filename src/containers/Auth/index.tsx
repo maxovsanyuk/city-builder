@@ -1,12 +1,15 @@
 import React, { FC } from 'react'
-import Row from 'procredit-bank-design-system/modules/row'
+import { LangSwitcher } from '../../components/Common/LangSwitcher'
+
 import { Wrapper } from './style'
 
 const AuthLayout: FC = ({ children }) => {
   return (
     <Wrapper>
-      <Row>test row</Row>
-      {children}
+      <div className="header">
+        <LangSwitcher />
+      </div>
+      <div className="children">{children}</div>
     </Wrapper>
   )
 }
