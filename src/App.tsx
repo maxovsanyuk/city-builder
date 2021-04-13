@@ -2,7 +2,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { AuthLayout, PlatformLayout } from 'containers/index'
 import { Sprite } from 'components/Common'
-import { GlobalStyle, Theme } from 'components'
+import { GlobalStyle, Theme, CssColors } from 'components'
 import { Router, Route, Switch, Redirect } from 'react-router-dom'
 import { history } from 'store/configureStore'
 import { LoginRoutes, PlatformRoutes } from 'settings/routes'
@@ -14,6 +14,7 @@ const App = () => {
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
+      <CssColors />
       <Sprite />
       <Router history={history}>
         {user ? (
