@@ -1,9 +1,9 @@
-import React, { FC } from 'react'
-import { LangSwitcher } from '../../components/Common/LangSwitcher'
+import React from 'react'
+import LangSwitcher from '../../components/Common/LangSwitcher'
 
 import { Wrapper } from './style'
 
-const AuthLayout: FC = ({ children }) => {
+const AuthLayout: React.FC = ({ children }) => {
   return (
     <Wrapper>
       <div className="header">
