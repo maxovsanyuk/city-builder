@@ -1,7 +1,14 @@
 import { DefaultTheme } from 'styled-components'
 
+interface FontStyle {
+  fontSize: Record<string, string>
+  lineHeight: Record<string, string>
+}
+
 export interface ThemeType {
   fonts: Record<string, any>
+  fontStyle: Record<string, FontStyle | Record<string, number | string>>
+
   colors: {
     dark: string
     black: string
@@ -45,6 +52,69 @@ export interface ThemeType {
 const fonts = {
   arial: 'Arial, sans-serif',
   inter: 'Inter',
+}
+
+const fontStyle = {
+  desktop: {
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '24px',
+      hd: '32px',
+    },
+
+    lineHeight: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '24px',
+      hd: '32px',
+    },
+  },
+  tablet: {
+    fontSize: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '18px',
+      hd: '22px',
+    },
+
+    lineHeight: {
+      xs: '12px',
+      sm: '14px',
+      md: '16px',
+      lg: '18px',
+      hd: '22px',
+    },
+  },
+
+  mobile: {
+    fontSize: {
+      xs: '8px',
+      sm: '10px',
+      md: '12px',
+      lg: '16px',
+      hd: '20px',
+    },
+
+    lineHeight: {
+      xs: '8px',
+      sm: '10px',
+      md: '12px',
+      lg: '16px',
+      hd: '20px',
+    },
+  },
+
+  weight: {
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+  },
 }
 
 const colors = {
@@ -92,6 +162,7 @@ const breakpoint = {
 
 const Theme: DefaultTheme = {
   fonts,
+  fontStyle,
   colors,
   labels,
   breakpoint,

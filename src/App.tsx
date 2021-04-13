@@ -17,7 +17,7 @@ const App = () => {
       <CssColors />
       <Sprite />
       <Router history={history}>
-        {user ? (
+        {user?.token ? (
           <PlatformLayout>
             <Switch>
               {PlatformRoutes.map(elem => (

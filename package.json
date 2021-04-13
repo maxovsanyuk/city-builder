@@ -36,6 +36,7 @@
     "nanoid": "^3.1.22",
     "procredit-bank-design-system": "git+https://egor.shakala:2p6ujswndtp4qqcj5poxlvp3czo3djspd6geichmcerf2wa7cplq@dev.azure.com/quipu-COD/QuipuDesignSystem/_git/QuipuDesignSystemPackage#main",
     "react": "^17.0.2",
+    "react-device-detect": "^1.17.0",
     "react-dom": "^17.0.2",
     "react-intl": "^5.12.5",
     "react-redux": "^7.2.3",
