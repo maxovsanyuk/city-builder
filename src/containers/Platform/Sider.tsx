@@ -4,9 +4,9 @@ import { useLocation } from 'react-router-dom'
 import Layout from 'procredit-bank-design-system/modules/layout'
 import Menu, { IMenuItem } from 'components/Common/Menu'
 
-const { Sider: ProSider } = Layout
+const { Sider } = Layout
 
-const StyledProSider = styled(ProSider).attrs({ theme: 'light' })`
+const StyledSider = styled(Sider).attrs({ theme: 'light' })`
   border-right: 2px solid var(--color-gray-3);
   & > .ant-layout-sider-children {
     padding-top: 20px;
@@ -18,14 +18,14 @@ const StyledProSider = styled(ProSider).attrs({ theme: 'light' })`
 interface SiderProps {
   items: IMenuItem[]
 }
-const Sider: React.FC<SiderProps> = ({ items }) => {
+const SiderComponent: React.FC<SiderProps> = ({ items }) => {
   const location = useLocation()
   const selectedKeys = [location.pathname]
   return (
-    <StyledProSider width={320}>
+    <StyledSider width={320}>
       <Menu items={items} selectedKeys={selectedKeys} />
-    </StyledProSider>
+    </StyledSider>
   )
 }
 
-export default Sider
+export default SiderComponent

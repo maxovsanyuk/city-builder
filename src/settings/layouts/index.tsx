@@ -16,38 +16,38 @@ const {
 
 // Default layout
 export const DefaultItems: IMenuItem[] = [
-  { key: 'home', title: 'Home', href: '/', icon: <HomeOutlined />, type: 'item' },
+  { id: 'home', title: 'Home', href: '/', icon: <HomeOutlined />, type: 'item' },
   {
-    key: 'transaction',
+    id: 'transaction',
     title: 'Financial transaction',
     href: '/transactions',
     icon: <PieChartOutlined />,
     type: 'item',
   },
   {
-    key: 'authorizations',
+    id: 'authorizations',
     title: 'Managing authorizations',
     href: '/authorizations',
     icon: <TeamOutlined />,
     type: 'item',
   },
-  { key: 'documents', title: 'Managing documents', href: '/documents', icon: <FileTextOutlined />, type: 'item' },
+  { id: 'documents', title: 'Managing documents', href: '/documents', icon: <FileTextOutlined />, type: 'item' },
   {
-    key: 'pos-terminals',
+    id: 'pos-terminals',
     title: 'Managing POS terminals',
     href: '/pos-terminals',
     icon: <WalletOutlined />,
     type: 'item',
   },
   {
-    key: 'document-signing',
+    id: 'document-signing',
     title: 'Documents signing',
     href: '/document-signing',
     icon: <AuditOutlined />,
     type: 'item',
   },
   {
-    key: 'business-cards',
+    id: 'business-cards',
     title: 'Managing Business Cards',
     href: '/business-cards',
     icon: <IdcardOutlined />,
@@ -63,25 +63,26 @@ export const DefaultLayout = {
 // 'authorizations / x'
 export const AuthorizationsItems: IMenuItem[] = [
   {
+    id: 'managing-authorizations',
     title: 'Managing authorizations',
     type: 'group',
     items: [
       {
-        key: 'catalog',
+        id: 'catalog',
         title: 'Authorizations',
         href: '/authorizations/catalog',
         icon: <TeamOutlined />,
         type: 'item',
       },
       {
-        key: 'accounts',
+        id: 'accounts',
         title: 'Accounts',
         href: '/authorizations/accounts',
         icon: <CreditCardOutlined />,
         type: 'item',
       },
       {
-        key: 'modifications',
+        id: 'modifications',
         title: 'Modifications',
         href: '/authorizations/modifications',
         icon: <UserAddOutlined />,
