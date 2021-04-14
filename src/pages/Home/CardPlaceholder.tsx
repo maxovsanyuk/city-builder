@@ -1,11 +1,11 @@
 import * as React from 'react'
 import styled from 'styled-components'
-import ProCard from 'procredit-bank-design-system/modules/card'
+import Card from 'procredit-bank-design-system/modules/card'
 import Skeleton from 'procredit-bank-design-system/modules/skeleton'
 
-const { Meta } = ProCard
+const { Meta } = Card
 
-const StyledCardPlaceholder = styled(ProCard)`
+const StyledCardPlaceholder = styled(Card)`
   & .ant-card-cover {
     background-color: var(--color-gray-3);
   }
