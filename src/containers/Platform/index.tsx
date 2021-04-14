@@ -10,6 +10,7 @@ import Sider from './Sider'
 const { Content } = Layout
 
 const StyledContent = styled(Content)`
+  background-color: var(--color-gray-2);
   display: flex;
   flex-direction: column;
   position: relative;
