@@ -1,6 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import Layout from 'procredit-bank-design-system/modules/layout'
+import Colors from 'procredit-bank-design-system/modules/colors'
 import Row from 'procredit-bank-design-system/modules/row'
 import Col from 'procredit-bank-design-system/modules/col'
 import LangSwitcher from '../LangSwitcher'
@@ -8,15 +9,16 @@ import LogoutButton from './LogoutButton'
 import UserProfile from './UserProfile'
 import Logo from './Logo'
 
-const { Header: ProHeader } = Layout
+const { gray } = Colors
+const { Header } = Layout
 
 const HeaderWrapper = styled.div`
-  border-bottom: 1px solid var(--color-gray-3);
+  border-bottom: 1px solid ${gray[3]};
 `
 
-const StyledProHeader = styled(ProHeader)`
+const StyledHeader = styled(Header)`
   align-items: center;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${gray[1]};
   display: flex;
   justify-content: space-between;
   padding-left: 24px;
@@ -24,27 +26,25 @@ const StyledProHeader = styled(ProHeader)`
 `
 
 interface HeaderProps {}
-const Header: React.FC<HeaderProps> = () => {
-  return (
-    <HeaderWrapper>
-      <StyledProHeader>
-        <Row gutter={16} align="center" wrap={false} style={{ height: 'inherit' }}>
-          <Logo />
-        </Row>
-        <Row gutter={16} align="center" wrap={false}>
-          <Col style={{ marginRight: '16px' }}>
-            <UserProfile />
-          </Col>
-          <Col>
-            <LangSwitcher />
-          </Col>
-          <Col>
-            <LogoutButton />
-          </Col>
-        </Row>
-      </StyledProHeader>
-    </HeaderWrapper>
-  )
-}
+const HeaderComponent: React.FC<HeaderProps> = () => (
+  <HeaderWrapper>
+    <StyledHeader>
+      <Row gutter={16} align="center" wrap={false} style={{ height: 'inherit' }}>
+        <Logo />
+      </Row>
+      <Row gutter={16} align="center" wrap={false}>
+        <Col style={{ marginRight: '16px' }}>
+          <UserProfile />
+        </Col>
+        <Col>
+          <LangSwitcher />
+        </Col>
+        <Col>
+          <LogoutButton />
+        </Col>
+      </Row>
+    </StyledHeader>
+  </HeaderWrapper>
+)
 
-export default Header
+export default HeaderComponent
