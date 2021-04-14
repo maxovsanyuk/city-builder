@@ -7,7 +7,7 @@ const UserName = styled.span`
 `
 
 const mockedUser = {
-  avatar: 'https://www.spotlexdigital.com/thebeautifuls/categories/photostudio/img/user-3.jpg',
+  avatar: '/mocks/userAvatar.jpg',
   name: 'userXXXXX007',
 }
 
