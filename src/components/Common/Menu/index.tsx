@@ -15,21 +15,21 @@ const StyledMenu = styled(Menu)`
   }
 `
 
-interface IItem {
+export interface IItem {
   id: string
   title: React.ReactNode
   icon?: React.ReactNode
   href: string
   type: 'item'
 }
-interface ISubMenu {
+export interface ISubMenu {
   id: string
   title: React.ReactNode
   icon?: React.ReactNode
   items: (IItem | ISubMenu)[]
   type: 'submenu'
 }
-interface IGroup {
+export interface IGroup {
   id: string
   title: React.ReactNode
   items: (IItem | ISubMenu)[]
