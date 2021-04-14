@@ -10,6 +10,10 @@ const translations = {
   'authorizations.status.eba': 'EBA access',
   'authorizations.status.no-eba': 'No EBA access',
   'authorizations.status.dismissed': 'Dismissed',
+  'authorizations.catalog.add-new-authorization': 'Add new authorization',
+  'authorizations.managing-authorizations': 'Managing authorizations',
+  'authorizations.authorizations': 'Authorizations',
+  'common.home': 'Home',
 }
 
 export default translations
