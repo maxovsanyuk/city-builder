@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import Layout from 'procredit-bank-design-system/modules/layout'
 import { DefaultLayout } from 'settings/layouts'
 import { IMenuItem } from 'components/Common/Menu'
@@ -8,6 +9,11 @@ import Sider from './Sider'
 
 const { Content } = Layout
 
+const StyledContent = styled(Content)`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`
 interface PlatformLayoutProps {
   items?: IMenuItem[]
 }
@@ -16,7 +22,7 @@ const PlatformLayout: React.FC<PlatformLayoutProps> = ({ children, items = Defau
     <Header />
     <Layout>
       <Sider items={items} />
-      <Content>{children}</Content>
+      <StyledContent>{children}</StyledContent>
     </Layout>
   </Wrapper>
 )
