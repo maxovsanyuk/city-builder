@@ -31,6 +31,9 @@ const App: React.FC = () => {
                 )}
               />
             ))}
+            <Route path="/login">
+              <Redirect to="/" />
+            </Route>
             <Route path="*">
               <PlatformLayout>
                 <NotFound />
