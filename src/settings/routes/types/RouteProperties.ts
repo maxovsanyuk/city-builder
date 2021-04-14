@@ -1,4 +1,5 @@
 import React from 'react'
+import { IMenuItem } from 'components/Common/Menu'
 
 export interface RouteProperties {
   id: string
@@ -9,4 +10,7 @@ export interface RouteProperties {
   }
   path: string
   name: string
+  layout?: {
+    items: IMenuItem[]
+  }
 }

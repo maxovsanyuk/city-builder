@@ -1,5 +1,6 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import ProMenu from 'procredit-bank-design-system/modules/menu'
 
 const { SubMenu: ProSubMenu, Item: ProItem, ItemGroup: ProItemGroup } = ProMenu
@@ -18,6 +19,7 @@ interface Item {
   key: string
   title: React.ReactNode
   icon?: React.ReactNode
+  href: string
   type: 'item'
 }
 interface SubMenu {
@@ -52,8 +54,8 @@ const renderItem = (item: IMenuItem) => {
     )
   }
   return (
-    <ProItem key={item.key} icon={item.icon}>
-      {item.title}
+    <ProItem key={item.href || item.key} icon={item.icon}>
+      <Link to={item.href}>{item.title}</Link>
     </ProItem>
   )
 }
@@ -61,9 +63,12 @@ const renderItem = (item: IMenuItem) => {
 interface MenuProps {
   items: IMenuItem[]
   defaultSelectedKeys?: string | string[]
+  selectedKeys?: string | string[]
+  activeKey?: string
   defaultOpenKeys?: string | string[]
   mode?: 'inline' | 'vertical' | 'horizontal'
   onClick?: (key: string) => void
+  openKeys?: string[]
 }
 const Menu: React.FC<MenuProps> = ({ items, defaultSelectedKeys = '1', mode = 'inline', ...props }) => {
   if (!items) return null

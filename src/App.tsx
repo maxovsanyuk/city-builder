@@ -1,14 +1,15 @@
 import React from 'react'
-import { ThemeProvider } from 'styled-components'
-import { AuthLayout, PlatformLayout } from 'containers/index'
-import { Sprite } from 'components/Common'
-import { GlobalStyle, Theme, CssColors } from 'components'
-import { Router, Route, Switch, Redirect } from 'react-router-dom'
-import { history } from 'store/configureStore'
-import { LoginRoutes, PlatformRoutes } from 'settings/routes'
 import { useSelector } from 'react-redux'
+import { ThemeProvider } from 'styled-components'
+import { Router, Route, Switch, Redirect } from 'react-router-dom'
+import { AuthLayout, PlatformLayout } from 'containers/index'
+import { LoginRoutes, PlatformRoutes } from 'settings/routes'
+import { GlobalStyle, Theme, CssColors } from 'components'
+import { history } from 'store/configureStore'
+import { Sprite } from 'components/Common'
+import NotFound from 'pages/404'
 
-const App = () => {
+const App: React.FC = () => {
   const { user } = useSelector(({ auth }) => auth)
 
   return (
@@ -18,14 +19,24 @@ const App = () => {
       <Sprite />
       <Router history={history}>
         {user?.token ? (
-          <PlatformLayout>
-            <Switch>
-              {PlatformRoutes.map(elem => (
-                <Route key={elem.id} {...elem} />
-              ))}
-              <Redirect to="/" />
-            </Switch>
-          </PlatformLayout>
+          <Switch>
+            {PlatformRoutes.map(({ component: Component, ...elem }) => (
+              <Route
+                key={elem.id}
+                {...elem}
+                render={() => (
+                  <PlatformLayout items={elem?.layout?.items || []}>
+                    <Component />
+                  </PlatformLayout>
+                )}
+              />
+            ))}
+            <Route path="*">
+              <PlatformLayout>
+                <NotFound />
+              </PlatformLayout>
+            </Route>
+          </Switch>
         ) : (
           <AuthLayout>
             <Switch>

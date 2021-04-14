@@ -1,10 +1,9 @@
-import { RouteProperties } from '../types/RouteProperties'
 import { Login } from 'pages/Login'
-import { nanoid } from 'nanoid'
+import { RouteProperties } from '../types/RouteProperties'
 
 const routes: RouteProperties[] = [
   {
-    id: nanoid(),
+    id: 'login',
     component: Login,
     exact: true,
     path: '/login',

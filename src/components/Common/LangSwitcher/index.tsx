@@ -10,7 +10,7 @@ import * as CommonActions from 'store/common/actions'
 const { Item } = Menu
 const { DownOutlined } = Icons
 
-const StyledButton = styled(Button)`
+const ButtonInner = styled.span`
   text-transform: uppercase;
   & .anticon {
     font-size: 12px;
@@ -44,9 +44,11 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = () => {
 
   return (
     <Dropdown overlay={menu}>
-      <StyledButton type="text">
-        {fancyLang(lang)} <DownOutlined />
-      </StyledButton>
+      <Button type="text">
+        <ButtonInner>
+          {fancyLang(lang)} <DownOutlined />
+        </ButtonInner>
+      </Button>
     </Dropdown>
   )
 }
