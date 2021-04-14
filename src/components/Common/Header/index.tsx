@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import Layout from 'procredit-bank-design-system/modules/layout'
 import Colors from 'procredit-bank-design-system/modules/colors'
@@ -26,7 +26,7 @@ const StyledHeader = styled(Header)`
 `
 
 interface HeaderProps {}
-const HeaderComponent: React.FC<HeaderProps> = () => (
+const HeaderComponent: FC<HeaderProps> = () => (
   <HeaderWrapper>
     <StyledHeader>
       <Row gutter={16} align="center" wrap={false} style={{ height: 'inherit' }}>

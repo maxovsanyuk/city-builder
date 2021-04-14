@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface TransactionsProps {}
-const Transactions: React.FC<TransactionsProps> = () => {
+const Transactions: FC<TransactionsProps> = () => {
   return <></>
 }
 

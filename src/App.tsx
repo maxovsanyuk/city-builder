@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { Router, Route, Switch, Redirect } from 'react-router-dom'
@@ -9,7 +9,7 @@ import { history } from 'store/configureStore'
 import { Sprite } from 'components/Common'
 import NotFound from 'pages/404'
 
-const App: React.FC = () => {
+const App: FC = () => {
   const { user } = useSelector(({ auth }) => auth)
 
   return (
@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <GlobalStyle />
       <Sprite />
       <Router history={history}>
-        {user?.token ? (
+        {!user?.token ? (
           <Switch>
             {PlatformRoutes.map(({ component: Component, ...elem }) => (
               <Route

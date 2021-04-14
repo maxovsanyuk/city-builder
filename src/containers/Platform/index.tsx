@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FC } from 'react'
 import Layout from 'procredit-bank-design-system/modules/layout'
 import { DefaultLayout } from 'settings/layouts'
 import { IMenuItem } from 'components/Common/Menu'
@@ -11,7 +11,7 @@ const { Content } = Layout
 interface PlatformLayoutProps {
   items?: IMenuItem[]
 }
-const PlatformLayout: React.FC<PlatformLayoutProps> = ({ children, items = DefaultLayout.items }) => (
+const PlatformLayout: FC<PlatformLayoutProps> = ({ children, items = DefaultLayout.items }) => (
   <Wrapper>
     <Header />
     <Layout>

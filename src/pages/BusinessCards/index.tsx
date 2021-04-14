@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface BusinessCardsProps {}
-const BusinessCards: React.FC<BusinessCardsProps> = () => {
+const BusinessCards: FC<BusinessCardsProps> = () => {
   return <></>
 }
 

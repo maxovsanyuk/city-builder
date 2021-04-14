@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface CatalogProps {}
-const Catalog: React.FC<CatalogProps> = () => {
+const Catalog: FC<CatalogProps> = () => {
   return <></>
 }
 
