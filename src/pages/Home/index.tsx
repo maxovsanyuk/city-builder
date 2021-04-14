@@ -9,7 +9,7 @@ const useCards = (): {
   loading: boolean
 } => ({
   cards: mockCards,
-  loading: true,
+  loading: false,
 })
 
 interface HomePageProps {}
