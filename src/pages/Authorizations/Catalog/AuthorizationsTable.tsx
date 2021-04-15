@@ -1,5 +1,4 @@
 import { FC, useMemo, MouseEvent } from 'react'
-import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'
@@ -69,13 +68,12 @@ const RenderAuthorizationTags = (tags: string[]) => (
 )
 
 const RenderStatusTag = (text: string) => {
-  const { formatMessage: f } = useIntl()
   let color = ''
   if (text === 'new') color = 'volcano'
   if (text === 'eba') color = 'green'
   if (text === 'no-eba') color = 'magenta'
   if (text === 'dismissed') color = 'red'
-  return <Tag color={color}>{f({ id: `authorizations.status.${text}`, defaultMessage: text })}</Tag>
+  return <Tag color={color}>{text}</Tag>
 }
 
 interface AuthorizationsTableProps {
