@@ -1,9 +1,19 @@
 const translations = {
-  currentLanguage: 'Current language',
+  // Login
+
   login: 'Login',
   password: 'Password',
-  'login.title': 'User name',
-  'welcome.to.my.procredit': 'Welcome to MyProcredit',
+  confirm: 'Confirm',
+  'user.name': 'User name',
+  'welcome.to.procredit': 'Welcome to My Procredit',
+  'confirm.login': 'Confirm login',
+  'mTAN.for.serial.number': 'mTAN for serial number 247',
+  'enter.mTAN': 'Enter mTAN',
+  'please.input.username': 'Please input username',
+  'please.input.password': 'Please input password',
+  'please.input.mTAN': 'Please input mTAN',
+  'resend.new.code': 'Resend a new code',
+  'receive.your.code.text': "It may take a minute to receive your code. Haven't received it?",
 }
 
 export default translations

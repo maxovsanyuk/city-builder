@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import { fontStyle } from '../../styles/fontStyle'
+
+import Colors from 'procredit-bank-design-system/modules/colors'
+
+const { gray } = Colors
 
 export const Wrapper = styled.div`
   .current-lang-box {
@@ -14,8 +17,7 @@ export const Wrapper = styled.div`
     .lang {
       width: max-content;
       color: ${({ theme }) => theme.colors.dark};
-      ${({ theme }) => fontStyle(theme, 'md', 'normal', 'hd')};
-      border-bottom: ${({ theme }) => `2px solid ${theme.colors.greySemiDark}`};
+      border-bottom: ${`2px solid ${gray[7]}`};
       text-transform: uppercase;
       margin: 0 15px 0 0;
     }
@@ -23,7 +25,7 @@ export const Wrapper = styled.div`
     .options-cont {
       position: absolute;
       border-radius: 14px;
-      border: ${({ theme }) => `2px solid ${theme.colors.grey}`};
+      border: ${`2px solid ${gray[7]}`};
       overflow: hidden;
       top: 40px;
       left: 0;
@@ -31,7 +33,6 @@ export const Wrapper = styled.div`
       .option {
         width: 100%;
         background: ${({ theme }) => theme.colors.white};
-        ${({ theme }) => fontStyle(theme, 'sd', 'normal')};
         text-transform: uppercase;
         padding: 10px;
 
@@ -45,7 +46,7 @@ export const Wrapper = styled.div`
       }
 
       .selected-lang {
-        color: ${({ theme }) => theme.colors.grey};
+        color: ${gray[7]};
 
         &:hover {
           cursor: not-allowed;
