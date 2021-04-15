@@ -2,7 +2,7 @@ import { FC, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'
-import ProTable from 'procredit-bank-design-system/modules/table'
+import Table from 'procredit-bank-design-system/modules/table'
 import Button from 'procredit-bank-design-system/modules/button'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
@@ -117,7 +117,7 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data }) => {
     ]
   }, [data])
 
-  return <ProTable columns={columns} dataSource={data} pagination={{ showSizeChanger: true }} />
+  return <Table columns={columns} dataSource={data} pagination={{ showSizeChanger: true }} />
 }
 
 export default AuthorizationsTable
