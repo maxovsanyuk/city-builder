@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import Spin from 'procredit-bank-design-system/modules/spin'
 
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 `
 
 interface LoadingProps {}
-const Loading: React.FC<LoadingProps> = () => (
+const Loading: FC<LoadingProps> = () => (
   <Wrapper>
     <Spin />
   </Wrapper>

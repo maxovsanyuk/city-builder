@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import CardPlaceholder from './CardPlaceholder'
@@ -32,7 +32,7 @@ interface CardsProps {
   cards: ICard[]
   loading?: boolean
 }
-const Cards: React.FC<CardsProps> = ({ cards, loading = false }) => {
+const Cards: FC<CardsProps> = ({ cards, loading = false }) => {
   if (loading) {
     return (
       <Grid>

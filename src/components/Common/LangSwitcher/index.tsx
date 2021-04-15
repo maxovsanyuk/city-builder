@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
 import Icons from 'procredit-bank-design-system/modules/icons'
@@ -27,7 +27,7 @@ const fancyLang = (lang = '') => {
 
 // Render language selector
 interface LanguageSwitcherProps {}
-const LanguageSwitcher: React.FC<LanguageSwitcherProps> = () => {
+const LanguageSwitcher: FC<LanguageSwitcherProps> = () => {
   const dispatch = useDispatch()
 
   const { lang } = useSelector(({ common }) => common)

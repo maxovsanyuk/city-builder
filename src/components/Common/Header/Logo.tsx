@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 
 const Link = styled.a`
@@ -11,7 +11,7 @@ const Link = styled.a`
 `
 
 interface LogoProps {}
-const Logo: React.FC<LogoProps> = () => {
+const Logo: FC<LogoProps> = () => {
   return (
     <Link href="/">
       <img src="/logos/logo.svg" alt="" />

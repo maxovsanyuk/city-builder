@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from 'pages/404'
 import NewAuthorization from './NewAuthorization'
@@ -7,7 +7,7 @@ import Accounts from './Accounts'
 import Catalog from './Catalog'
 
 interface AuthorizationsProps {}
-const Authorizations: React.FC<AuthorizationsProps> = () => (
+const Authorizations: FC<AuthorizationsProps> = () => (
   <Switch>
     <Route path="/authorizations/catalog">
       <Catalog />

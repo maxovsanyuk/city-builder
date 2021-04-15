@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `
 
 interface NotFoundProps {}
-const NotFound: React.FC<NotFoundProps> = () => {
+const NotFound: FC<NotFoundProps> = () => {
   const { formatMessage } = useIntl()
   return (
     <Wrapper>

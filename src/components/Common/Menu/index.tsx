@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Menu from 'procredit-bank-design-system/modules/menu'
@@ -15,23 +15,23 @@ const StyledMenu = styled(Menu)`
   }
 `
 
-interface IItem {
+export interface IItem {
   id: string
-  title: React.ReactNode
-  icon?: React.ReactNode
+  title: ReactNode
+  icon?: ReactNode
   href: string
   type: 'item'
 }
-interface ISubMenu {
+export interface ISubMenu {
   id: string
-  title: React.ReactNode
-  icon?: React.ReactNode
+  title: ReactNode
+  icon?: ReactNode
   items: (IItem | ISubMenu)[]
   type: 'submenu'
 }
-interface IGroup {
+export interface IGroup {
   id: string
-  title: React.ReactNode
+  title: ReactNode
   items: (IItem | ISubMenu)[]
   type: 'group'
 }
@@ -71,7 +71,7 @@ interface MenuProps {
   onClick?: (key: string) => void
   openKeys?: string[]
 }
-const MenuComponent: React.FC<MenuProps> = ({ items, defaultSelectedKeys = '1', mode = 'inline', ...props }) => {
+const MenuComponent: FC<MenuProps> = ({ items, defaultSelectedKeys = '1', mode = 'inline', ...props }) => {
   if (!items) return null
   return (
     <StyledMenu defaultSelectedKeys={defaultSelectedKeys} mode={mode} {...props}>

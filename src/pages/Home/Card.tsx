@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import Card from 'procredit-bank-design-system/modules/card'
 import { ICard } from './mockData'
 
@@ -7,7 +7,7 @@ const { Meta } = Card
 interface CardProps {
   card: ICard
 }
-const CardComponent: React.FC<CardProps> = ({ card }) => {
+const CardComponent: FC<CardProps> = ({ card }) => {
   if (!card) return null
   const { cover, title, description } = card
   return (

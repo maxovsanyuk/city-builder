@@ -6,10 +6,6 @@ const translations = {
   'welcome-to-my-procredit': 'Welcome to MyProcredit ru',
   '404-not-found': '404 | Страница не найдена',
   'back-to-main-page': 'На главную страницу',
-  'authorizations.status.new': 'New',
-  'authorizations.status.eba': 'EBA access',
-  'authorizations.status.no-eba': 'No EBA access',
-  'authorizations.status.dismissed': 'Dismissed',
 }
 
 export default translations

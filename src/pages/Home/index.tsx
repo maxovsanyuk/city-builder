@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import MarketingPlaceholder from './MarketingPlaceholder'
 import mockCards, { ICard } from './mockData'
 import Cards from './Cards'
@@ -13,7 +13,7 @@ const useCards = (): {
 })
 
 interface HomePageProps {}
-const HomePage: React.FC<HomePageProps> = () => {
+const HomePage: FC<HomePageProps> = () => {
   const { cards, loading } = useCards()
 
   return (
