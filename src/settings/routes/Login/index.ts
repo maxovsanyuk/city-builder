@@ -1,10 +1,9 @@
-import { RouteProperties } from '../types/RouteProperties'
 import { Login } from 'pages/Login'
-import { generate } from 'shortid'
+import { RouteProperties } from '../types/RouteProperties'
 
 const routes: RouteProperties[] = [
   {
-    id: generate(),
+    id: 'login',
     component: Login,
     exact: true,
     path: '/login',

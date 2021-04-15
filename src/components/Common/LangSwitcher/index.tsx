@@ -1,30 +1,56 @@
-import React, { FormEvent } from 'react'
-import { useIntl } from 'react-intl'
+import React, { FC } from 'react'
+import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux'
+import Icons from 'procredit-bank-design-system/modules/icons'
+import Menu from 'procredit-bank-design-system/modules/menu'
+import Button from 'procredit-bank-design-system/modules/button'
+import Dropdown from 'procredit-bank-design-system/modules/dropdown'
 import * as CommonActions from 'store/common/actions'
 
-export const LangSwitcher = () => {
+const { Item } = Menu
+const { DownOutlined } = Icons
+
+const ButtonInner = styled.span`
+  text-transform: uppercase;
+  & .anticon {
+    font-size: 12px;
+    width: 24px;
+  }
+`
+
+const fancyLang = (lang = '') => {
+  if (lang === 'en') return 'Eng'
+  if (lang === 'ua') return 'Ukr'
+  if (lang === 'ru') return 'Rus'
+  return null
+}
+
+// Render language selector
+interface LanguageSwitcherProps {}
+const LanguageSwitcher: FC<LanguageSwitcherProps> = () => {
   const dispatch = useDispatch()
-  const { formatMessage } = useIntl()
 
   const { lang } = useSelector(({ common }) => common)
 
-  const changeLang = (event: FormEvent, lang: string) => {
-    event.preventDefault()
-    dispatch(CommonActions.changeLangAction({ lang }))
-  }
+  const changeLang = ({ key }: { key: string }) => dispatch(CommonActions.changeLangAction({ lang: key }))
+
+  const menu = (
+    <Menu onSelect={changeLang}>
+      <Item key="en">Eng</Item>
+      <Item key="ua">Ukr</Item>
+      <Item key="ru">Rus</Item>
+    </Menu>
+  )
 
   return (
-    <div>
-      <div>
-        {formatMessage({ id: 'currentLanguage' })}:{lang}
-      </div>
-      <button disabled={lang === 'en'} onClick={e => changeLang(e, 'en')}>
-        en
-      </button>
-      <button disabled={lang === 'ru'} onClick={e => changeLang(e, 'ru')}>
-        ru
-      </button>
-    </div>
+    <Dropdown overlay={menu}>
+      <Button type="text">
+        <ButtonInner>
+          {fancyLang(lang)} <DownOutlined />
+        </ButtonInner>
+      </Button>
+    </Dropdown>
   )
 }
+
+export default LanguageSwitcher
