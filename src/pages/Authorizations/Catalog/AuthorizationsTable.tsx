@@ -1,6 +1,7 @@
-import { FC, useMemo } from 'react'
+import { FC, useMemo, MouseEvent } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
+import { useHistory } from 'react-router-dom'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'
 import Table from 'procredit-bank-design-system/modules/table'
 import Button from 'procredit-bank-design-system/modules/button'
@@ -13,6 +14,11 @@ import { IData, IAuthorization } from './mockData'
 const { MoreOutlined } = Icons
 const { Item } = Menu
 
+const StyledTable = styled(Table)`
+  & tbody tr {
+    cursor: pointer;
+  }
+`
 const TagList = styled.ul`
   display: flex;
   margin: 0;
@@ -36,7 +42,7 @@ const MoreOptions = (value: any, record: IData) => {
   )
 
   return (
-    <Space size="middle">
+    <Space size="middle" onClick={(e: MouseEvent) => e.stopPropagation()}>
       <Dropdown overlay={menu}>
         <Button type="ghost" aria-label="Show options">
           <MoreOutlined />
@@ -74,8 +80,10 @@ const RenderStatusTag = (text: string) => {
 
 interface AuthorizationsTableProps {
   data: IData[]
+  loading?: boolean
 }
-const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data }) => {
+const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = false }) => {
+  const history = useHistory()
   const columns = useMemo(() => {
     const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
     const statuses = Array.from(new Set(data?.map(d => d.status) || []))
@@ -117,7 +125,17 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data }) => {
     ]
   }, [data])
 
-  return <Table columns={columns} dataSource={data} pagination={{ position: ['bottomLeft'], showSizeChanger: true }} />
+  return (
+    <StyledTable
+      columns={columns}
+      dataSource={data}
+      loading={loading}
+      pagination={{ position: ['bottomLeft'], showSizeChanger: true }}
+      onRow={(record: IData) => ({
+        onClick: () => history.push(`/authorizations/${record.id}`),
+      })}
+    />
+  )
 }
 
 export default AuthorizationsTable

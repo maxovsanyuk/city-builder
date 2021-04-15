@@ -3,7 +3,6 @@ import Card from 'procredit-bank-design-system/modules/card'
 import Input from 'procredit-bank-design-system/modules/input'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import AuthorizationsTable from './AuthorizationsTable'
-import TablePlaceholder from './TablePlaceholder'
 import mockData, { IData } from './mockData'
 
 const { SearchOutlined } = Icons
@@ -38,7 +37,7 @@ const Authorizations: FC<AuthorizationsProps> = () => {
         />
       }
     >
-      {loading ? <TablePlaceholder /> : <AuthorizationsTable data={filteredData} />}
+      <AuthorizationsTable data={filteredData} loading={loading} />
     </Card>
   )
 }
