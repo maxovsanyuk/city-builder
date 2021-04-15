@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface HomePageProps {}
 const HomePage: FC<HomePageProps> = () => {

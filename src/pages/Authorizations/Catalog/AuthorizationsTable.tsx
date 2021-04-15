@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react'
+import { FC, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'

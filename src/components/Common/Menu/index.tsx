@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Menu from 'procredit-bank-design-system/modules/menu'

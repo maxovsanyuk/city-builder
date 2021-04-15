@@ -21,6 +21,8 @@
     // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "react/prop-types": 0,
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "@typescript-eslint/no-explicit-any": "off",
     // solved problem with linting diferent worked locally machin (Windows, Linux)
     "prettier/prettier": "off",

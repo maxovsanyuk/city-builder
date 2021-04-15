@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react'
+import { FC, Fragment } from 'react'
 import { useSelector } from 'react-redux'
 import { IntlProvider as IntlProviderComponent } from 'react-intl'
 import { AppLocale } from 'settings/languages'
