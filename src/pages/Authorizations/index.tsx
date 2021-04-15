@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from 'pages/404'
 import NewAuthorization from './NewAuthorization'

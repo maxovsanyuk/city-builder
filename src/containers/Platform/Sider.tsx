@@ -1,4 +1,4 @@
-import React, { FC, useMemo } from 'react'
+import { FC, useMemo } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
 import Colors from 'procredit-bank-design-system/modules/colors'

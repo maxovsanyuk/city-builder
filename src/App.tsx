@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useSelector } from 'react-redux'
 import { ThemeProvider } from 'styled-components'
 import { Router, Route, Switch, Redirect } from 'react-router-dom'

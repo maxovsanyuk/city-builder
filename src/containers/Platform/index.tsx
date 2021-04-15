@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Layout from 'procredit-bank-design-system/modules/layout'
 import { DefaultLayout } from 'settings/layouts'
 import { IMenuItem } from 'components/Common/Menu'
