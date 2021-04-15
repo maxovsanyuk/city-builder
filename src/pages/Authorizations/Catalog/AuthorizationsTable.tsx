@@ -9,7 +9,7 @@ import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import Tag from 'procredit-bank-design-system/modules/tag'
-import { IData, IAuthorization } from './mockData'
+import { IData, IAuthorization } from '../mockData'
 
 const { MoreOutlined } = Icons
 const { Item } = Menu
@@ -132,7 +132,7 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = fal
       loading={loading}
       pagination={{ position: ['bottomLeft'], showSizeChanger: true }}
       onRow={(record: IData) => ({
-        onClick: () => history.push(`/authorizations/${record.id}`),
+        onClick: () => history.push(`/authorizations/${record.userId}`),
       })}
     />
   )
