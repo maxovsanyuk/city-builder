@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface NewAuthorizationProps {}
-const NewAuthorization: React.FC<NewAuthorizationProps> = () => {
+const NewAuthorization: FC<NewAuthorizationProps> = () => {
   return <></>
 }
 

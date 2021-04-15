@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
@@ -16,12 +16,12 @@ const Wrapper = styled.div`
 `
 
 interface NotFoundProps {}
-const NotFound: React.FC<NotFoundProps> = () => {
-  const { formatMessage: f } = useIntl()
+const NotFound: FC<NotFoundProps> = () => {
+  const { formatMessage } = useIntl()
   return (
     <Wrapper>
-      <Title level={2}>{f({ id: '404.not-found', defaultMessage: '404 | Not found' })}</Title>
-      <Link to="/">{f({ id: '404.back-to-main-page', defaultMessage: 'Back to main page' })}</Link>
+      <Title level={2}>{formatMessage({ id: '404-not-found', defaultMessage: '404 | Not found' })}</Title>
+      <Link to="/">{formatMessage({ id: 'back-to-main-page', defaultMessage: 'Back to main page' })}</Link>
     </Wrapper>
   )
 }

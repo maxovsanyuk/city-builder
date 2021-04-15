@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import Avatar from 'procredit-bank-design-system/modules/avatar'
 
@@ -7,13 +7,13 @@ const UserName = styled.span`
 `
 
 const mockedUser = {
-  avatar: 'https://www.spotlexdigital.com/thebeautifuls/categories/photostudio/img/user-3.jpg',
+  avatar: '/mocks/userAvatar.jpg',
   name: 'userXXXXX007',
 }
 
 // Render User's avatar and name
 interface UserProfileProps {}
-const UserProfile: React.FC<UserProfileProps> = () => {
+const UserProfile: FC<UserProfileProps> = () => {
   const user = mockedUser
   return (
     <div>

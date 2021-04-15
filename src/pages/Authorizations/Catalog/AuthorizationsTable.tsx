@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC, useMemo } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'
@@ -75,9 +75,11 @@ const RenderStatusTag = (text: string) => {
 interface AuthorizationsTableProps {
   data: IData[]
 }
-const AuthorizationsTable: React.FC<AuthorizationsTableProps> = ({ data }) => {
-  const columns = React.useMemo(
-    () => [
+const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data }) => {
+  const columns = useMemo(() => {
+    const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
+    const statuses = Array.from(new Set(data?.map(d => d.status) || []))
+    return [
       {
         title: 'Full Name',
         dataIndex: 'name',
@@ -87,7 +89,7 @@ const AuthorizationsTable: React.FC<AuthorizationsTableProps> = ({ data }) => {
         title: 'Authorization',
         dataIndex: 'authorization',
         sorter: (a: IData, b: IData) => (b.authorization?.length || 0) - (a.authorization?.length || 0),
-        filters: Array.from(new Set(data?.map(d => d.authorization).flat() || [])).map(text => ({
+        filters: authorizations.map(text => ({
           text: text,
           value: text,
         })),
@@ -98,24 +100,10 @@ const AuthorizationsTable: React.FC<AuthorizationsTableProps> = ({ data }) => {
       {
         title: 'Status',
         dataIndex: 'status',
-        filters: [
-          {
-            text: 'New',
-            value: 'new',
-          },
-          {
-            text: 'Dismissed',
-            value: 'dismissed',
-          },
-          {
-            text: 'EBA access',
-            value: 'eba',
-          },
-          {
-            text: 'No EBA access ',
-            value: 'no-eba',
-          },
-        ],
+        filters: statuses.map(text => ({
+          text: text,
+          value: text,
+        })),
         filterMultiple: true,
         onFilter: (value: string, record: IData) => record.status === value,
         sorter: (a: IData, b: IData) => b.status.localeCompare(a.status),
@@ -126,9 +114,8 @@ const AuthorizationsTable: React.FC<AuthorizationsTableProps> = ({ data }) => {
         key: 'action',
         render: MoreOptions,
       },
-    ],
-    [data]
-  )
+    ]
+  }, [data])
 
   return <ProTable columns={columns} dataSource={data} pagination={{ showSizeChanger: true }} />
 }

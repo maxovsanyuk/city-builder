@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { nanoid } from 'nanoid'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import { IMenuItem } from 'components/Common/Menu'
 
@@ -16,45 +17,44 @@ const {
 
 // Default layout
 export const DefaultItems: IMenuItem[] = [
-  { key: 'home', title: 'Home', href: '/', icon: <HomeOutlined />, type: 'item' },
+  { id: nanoid(), title: 'Home', href: '/', icon: <HomeOutlined />, type: 'item' },
   {
-    key: 'transaction',
+    id: nanoid(),
     title: 'Financial transaction',
     href: '/transactions',
     icon: <PieChartOutlined />,
     type: 'item',
   },
   {
-    key: 'authorizations',
+    id: nanoid(),
     title: 'Managing authorizations',
     href: '/authorizations',
     icon: <TeamOutlined />,
     type: 'item',
   },
-  { key: 'documents', title: 'Managing documents', href: '/documents', icon: <FileTextOutlined />, type: 'item' },
+  { id: nanoid(), title: 'Managing documents', href: '/documents', icon: <FileTextOutlined />, type: 'item' },
   {
-    key: 'pos-terminals',
+    id: nanoid(),
     title: 'Managing POS terminals',
     href: '/pos-terminals',
     icon: <WalletOutlined />,
     type: 'item',
   },
   {
-    key: 'document-signing',
+    id: nanoid(),
     title: 'Documents signing',
     href: '/document-signing',
     icon: <AuditOutlined />,
     type: 'item',
   },
   {
-    key: 'business-cards',
+    id: nanoid(),
     title: 'Managing Business Cards',
     href: '/business-cards',
     icon: <IdcardOutlined />,
     type: 'item',
   },
 ]
-
 export const DefaultLayout = {
   items: DefaultItems,
 }
@@ -63,25 +63,26 @@ export const DefaultLayout = {
 // 'authorizations / x'
 export const AuthorizationsItems: IMenuItem[] = [
   {
+    id: nanoid(),
     title: 'Managing authorizations',
     type: 'group',
     items: [
       {
-        key: 'catalog',
+        id: nanoid(),
         title: 'Authorizations',
         href: '/authorizations/catalog',
         icon: <TeamOutlined />,
         type: 'item',
       },
       {
-        key: 'accounts',
+        id: nanoid(),
         title: 'Accounts',
         href: '/authorizations/accounts',
         icon: <CreditCardOutlined />,
         type: 'item',
       },
       {
-        key: 'modifications',
+        id: nanoid(),
         title: 'Modifications',
         href: '/authorizations/modifications',
         icon: <UserAddOutlined />,

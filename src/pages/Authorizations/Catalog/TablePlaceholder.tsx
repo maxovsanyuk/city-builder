@@ -1,12 +1,12 @@
-import * as React from 'react'
+import { FC, useMemo } from 'react'
 import List from 'procredit-bank-design-system/modules/list'
 import Skeleton from 'procredit-bank-design-system/modules/skeleton'
 
 interface TablePlacehodlerProps {
   rows?: number
 }
-const TablePlacehodler: React.FC<TablePlacehodlerProps> = ({ rows = 6 }) => {
-  const listData = React.useMemo(() => Array.from(Array(6), (_, i) => i + 1), [rows])
+const TablePlacehodler: FC<TablePlacehodlerProps> = ({ rows = 6 }) => {
+  const listData = useMemo(() => Array.from(Array(6), (_, i) => i + 1), [rows])
   return (
     <div>
       <List

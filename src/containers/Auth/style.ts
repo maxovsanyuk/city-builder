@@ -1,12 +1,15 @@
 import styled from 'styled-components'
+import Colors from 'procredit-bank-design-system/modules/colors'
 
 import PCBpattern from '../../assets/PCBpattern.svg'
+
+const { gray } = Colors
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: ${({ theme }) => `${theme.colors.greyLight} url(${PCBpattern}) no-repeat right bottom`};
+  background: ${gray[2]} url('${PCBpattern}') no-repeat right bottom;
   padding: 0 5% 5% 5%;
   overflow: auto;
 

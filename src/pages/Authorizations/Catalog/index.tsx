@@ -1,5 +1,4 @@
-import * as React from 'react'
-import { useIntl } from 'react-intl'
+import React, { FC } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Icons from 'procredit-bank-design-system/modules/icons'
@@ -19,29 +18,26 @@ const Flex = styled.div`
 `
 
 interface CatalogProps {}
-const Catalog: React.FC<CatalogProps> = () => {
-  const { formatMessage: f } = useIntl()
-  return (
-    <>
-      <Flex>
-        <Breadcrumb>
-          <Item>
-            <Link to="/">
-              <HomeFilled /> <span className="breadcrumb-item-text">{f({ id: 'common.home' })}</span>
-            </Link>
-          </Item>
-          <Item>
-            <Link to="/authorizations">{f({ id: 'authorizations.managing-authorizations' })}</Link>
-          </Item>
-          <Item>{f({ id: 'authorizations.authorizations' })}</Item>
-        </Breadcrumb>
-        <Button key="1" type="primary" as={Link} href="/authorizations/create">
-          {f({ id: 'authorizations.catalog.add-new-authorization' })}
-        </Button>
-      </Flex>
-      <Authorizations />
-    </>
-  )
-}
+const Catalog: FC<CatalogProps> = () => (
+  <>
+    <Flex>
+      <Breadcrumb>
+        <Item>
+          <Link to="/">
+            <HomeFilled /> <span className="breadcrumb-item-text">Home</span>
+          </Link>
+        </Item>
+        <Item>
+          <Link to="/authorizations">Managing authorizations</Link>
+        </Item>
+        <Item>Authorizations</Item>
+      </Breadcrumb>
+      <Button key="1" type="primary" as={Link} href="/authorizations/create">
+        Add new authorization
+      </Button>
+    </Flex>
+    <Authorizations />
+  </>
+)
 
 export default Catalog

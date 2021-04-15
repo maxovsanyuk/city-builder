@@ -1,7 +1,6 @@
 import React, { FC } from 'react'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-import { FormattedMessage } from 'react-intl'
 import { Wrapper } from './Login.style'
 
 import HorizontalLogo from '../../assets/horizontal-logo.svg'
@@ -34,12 +33,12 @@ const Login: FC = () => {
       </Link>
 
       <div className="title">
-        <FormattedMessage id="welcome.to.my.procredit" />
+        <span>{formatMessage({ id: 'welcome-to-my-procredit' })}</span>
       </div>
 
       <Form name="basic" initialValues={{ remember: true }} onFinish={onFinish} onFinishFailed={onFinishFailed}>
         <Form.Item
-          label={formatMessage({ id: 'login.title' })}
+          label={formatMessage({ id: 'user-name' })}
           name="username"
           rules={[{ required: true, message: formatMessage({ id: 'please.input.your.username' }) }]}
         >

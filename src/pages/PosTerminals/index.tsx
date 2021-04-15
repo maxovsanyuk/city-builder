@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
 interface PosTerminalsProps {}
-const PosTerminals: React.FC<PosTerminalsProps> = () => {
+const PosTerminals: FC<PosTerminalsProps> = () => {
   return <></>
 }
 

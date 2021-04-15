@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { FC, useState, useMemo, ChangeEvent } from 'react'
 import Card from 'procredit-bank-design-system/modules/card'
 import Input from 'procredit-bank-design-system/modules/input'
 import Icons from 'procredit-bank-design-system/modules/icons'
@@ -15,12 +15,12 @@ const useData = (): { data: IData[]; loading: boolean } => ({
 })
 
 interface AuthorizationsProps {}
-const Authorizations: React.FC<AuthorizationsProps> = () => {
-  const [search, setSearch] = React.useState('')
+const Authorizations: FC<AuthorizationsProps> = () => {
+  const [search, setSearch] = useState('')
 
   const { data, loading } = useData()
 
-  const filteredData = React.useMemo(() => {
+  const filteredData = useMemo(() => {
     if (!search) return data
     if (!data) return data
     return data.filter(d => d.name.toLowerCase().includes(search.toLowerCase()))
@@ -32,7 +32,7 @@ const Authorizations: React.FC<AuthorizationsProps> = () => {
       extra={
         <Input
           value={search}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
+          onChange={(e: ChangeEvent<HTMLInputElement>) => setSearch(e.target.value)}
           prefix={<SearchOutlined />}
           placeholder="Search"
         />
