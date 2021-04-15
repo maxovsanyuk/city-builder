@@ -117,7 +117,7 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data }) => {
     ]
   }, [data])
 
-  return <Table columns={columns} dataSource={data} pagination={{ showSizeChanger: true }} />
+  return <Table columns={columns} dataSource={data} pagination={{ position: ['bottomLeft'], showSizeChanger: true }} />
 }
 
 export default AuthorizationsTable
