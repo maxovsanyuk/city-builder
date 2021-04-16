@@ -51,23 +51,28 @@ const MoreOptions = (value: any, record: IData) => {
   )
 }
 
-const RenderAuthorizationTags = (tags: string[]) => (
-  <TagList>
-    {tags.map(tag => {
-      let color = ''
-      if (tag === 'A') color = 'green'
-      if (tag === 'B') color = 'yellow'
-      if (tag === 'C') color = 'blue'
-      return (
-        <li key={tag}>
-          <Tag color={color}>{tag}</Tag>
-        </li>
-      )
-    })}
-  </TagList>
-)
+const RenderAuthorizationTags = (tags: string[]) => {
+  if (!tags || tags.length === 0) return '-'
+  return (
+    <TagList>
+      {tags.map(tag => {
+        if (!tag) return null
+        let color = ''
+        if (tag === 'A') color = 'green'
+        if (tag === 'B') color = 'yellow'
+        if (tag === 'C') color = 'blue'
+        return (
+          <li key={tag}>
+            <Tag color={color}>{tag}</Tag>
+          </li>
+        )
+      })}
+    </TagList>
+  )
+}
 
 const RenderStatusTag = (text: string) => {
+  if (!text) return '-'
   let color = ''
   if (text === 'new') color = 'volcano'
   if (text === 'eba') color = 'green'
