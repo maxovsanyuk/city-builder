@@ -1,6 +1,8 @@
 import React, { FC, useState, useEffect } from 'react'
 import { useIntl } from 'react-intl'
-import { Link, useHistory } from 'react-router-dom'
+
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { Wrapper } from './ConfirmLogin.style'
 
@@ -12,21 +14,15 @@ import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
 import Button from 'procredit-bank-design-system/modules/button'
 import Typography from 'procredit-bank-design-system/modules/typography'
+import { ActionType } from '../../store/authentication/model'
 const { Title, Text } = Typography
-
-type Values = {
-  username: string
-  password: string | number
-}
 
 const ConfirmLogin: FC = () => {
   const { formatMessage } = useIntl()
 
-  const history = useHistory()
-
-  const onFinish = (values: Values) => {
-    console.log('Success:', values)
-    history.push('/confirm-login')
+  const onFinish = (mTANCode: string | number) => {
+    const dispatch = useDispatch()
+    dispatch({ type: ActionType.CONFIRM_LOGIN_USER, payload: mTANCode })
   }
 
   const resendNewCodeHandler = () => {
@@ -54,7 +50,7 @@ const ConfirmLogin: FC = () => {
       <Form form={form} initialValues={{ remember: true }} onFinish={onFinish}>
         <Form.Item
           label={formatMessage({ id: 'mTAN.for.serial.number' })}
-          name="mTAN"
+          name="mTANCode"
           rules={[{ required: true, message: formatMessage({ id: 'please.input.mTAN' }) }]}
           style={{ margin: 0 }}
         />

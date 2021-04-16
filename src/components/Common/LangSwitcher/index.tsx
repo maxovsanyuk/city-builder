@@ -16,6 +16,18 @@ const LANGUAGES_CONFIG = [
   { type: 'ru', name: 'Rus' },
 ]
 
+const fancyLang = (lang: string) => {
+  switch (lang) {
+    case 'en':
+      return 'ENG'
+    case 'ru':
+      return 'Rus'
+
+    default:
+      return null
+  }
+}
+
 function useComponentVisible() {
   const [isComponentVisible, setIsComponentVisible] = useState<boolean>(false)
   const ref = useRef<HTMLHeadingElement>(null)
@@ -50,9 +62,8 @@ const LangSwitcher: FC = () => {
   return (
     <Wrapper>
       <div className="current-lang-box" onClick={() => setIsComponentVisible(pr => !pr)} ref={ref}>
-        <Text className="lang">{lang}</Text>
+        <Text className="lang">{fancyLang(lang)}</Text>
         <DownOutlined className={isComponentVisible && 'rotate-arrow'} />
-
         {isComponentVisible && (
           <div className="options-cont">
             {LANGUAGES_CONFIG.map(({ type, name }: any) => (

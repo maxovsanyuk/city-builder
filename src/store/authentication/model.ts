@@ -4,6 +4,7 @@ export enum ActionType {
 
   // login
   LOGIN_USER = 'LOGIN_USER',
+  CONFIRM_LOGIN_USER = 'CONFIRM_LOGIN_USER',
 
   // logout
   LOGOUT_USER = 'LOGOUT_USER',

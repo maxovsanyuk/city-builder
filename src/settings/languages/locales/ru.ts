@@ -1,4 +1,9 @@
 const translations = {
+  // Common
+
+  '404.not.found': '404 | Not found ru',
+  'back.to.main.page': 'Back to main page ru',
+
   // Login
 
   login: 'Login ru',

@@ -5,26 +5,23 @@ const { gray } = Colors
 
 export const Wrapper = styled.div`
   .current-lang-box {
-    width: 50px;
-    display: flex;
-    align-items: center;
     position: relative;
-    justify-content: space-between;
 
     &:hover {
       cursor: pointer;
     }
 
     .lang {
-      width: max-content;
-      height: max-content;
-      max-height: max-content;
+      width: 30px;
       color: ${({ theme }) => theme.colors.dark};
       border-bottom: ${`2px solid ${gray[7]}`};
       text-transform: uppercase;
+      margin: 0 15px 0 0;
     }
 
     .options-cont {
+      width: min-content;
+      height: min-content;
       position: absolute;
       border-radius: 14px;
       border: ${`2px solid ${gray[4]}`};
