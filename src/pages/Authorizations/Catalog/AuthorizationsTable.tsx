@@ -1,4 +1,4 @@
-import  { FC, useMemo, MouseEvent } from 'react'
+import { FC, useMemo, MouseEvent } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
 import Dropdown from 'procredit-bank-design-system/modules/dropdown'
