@@ -4,10 +4,19 @@ import Card from 'procredit-bank-design-system/modules/card'
 import Input from 'procredit-bank-design-system/modules/input'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Skeleton from 'procredit-bank-design-system/modules/skeleton'
+import Typography from 'procredit-bank-design-system/modules/typography'
 import AuthorizationsTable from './AuthorizationsTable'
 import { useAuthorizations, IUser } from '../mockData'
 
 const { SearchOutlined } = Icons
+
+const { Text } = Typography
+
+const SubTitle = styled(Text)`
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 0.5em;
+`
 
 const Frame = styled.div`
   overflow: auto;
@@ -33,7 +42,16 @@ const Authorizations: FC<AuthorizationsProps> = ({ user, selectedRowKeys, onSele
 
   return (
     <Card
-      title={user ? user.name : <Skeleton loading={loading} active title={false} />}
+      title={
+        user ? (
+          <>
+            <span>{user.name}</span>
+            <SubTitle type="secondary">Related authorization</SubTitle>
+          </>
+        ) : (
+          <Skeleton loading={loading} active title={false} />
+        )
+      }
       extra={
         <Input
           value={search}
