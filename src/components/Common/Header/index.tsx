@@ -37,7 +37,9 @@ const HeaderComponent: FC<HeaderProps> = () => (
           <UserProfile />
         </Col>
 
-        <LangSwitcher />
+        <Col style={{ marginRight: '16px' }}>
+          <LangSwitcher />
+        </Col>
 
         <Col>
           <LogoutButton />
