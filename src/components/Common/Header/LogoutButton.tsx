@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Button from 'procredit-bank-design-system/modules/button'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import { useDispatch } from 'react-redux'

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import Card from 'procredit-bank-design-system/modules/card'
 import Colors from 'procredit-bank-design-system/modules/colors'

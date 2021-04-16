@@ -1,4 +1,4 @@
-import React, { FC, useState, useMemo, ChangeEvent } from 'react'
+import { FC, useState, useMemo, ChangeEvent } from 'react'
 import Card from 'procredit-bank-design-system/modules/card'
 import Input from 'procredit-bank-design-system/modules/input'
 import Icons from 'procredit-bank-design-system/modules/icons'

@@ -8,7 +8,6 @@ import { GlobalStyle, Theme } from 'components'
 import { history } from 'store/configureStore'
 import { Sprite } from 'components/Common'
 import NotFound from 'pages/404'
-import React from 'react'
 
 const App: FC = () => {
   const { user } = useSelector(({ auth }) => auth)

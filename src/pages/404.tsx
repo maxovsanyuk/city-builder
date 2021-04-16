@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'

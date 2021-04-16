@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import Card from 'procredit-bank-design-system/modules/card'
 import { ICard } from './mockData'
 
