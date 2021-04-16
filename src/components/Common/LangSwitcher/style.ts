@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import Colors from 'procredit-bank-design-system/modules/colors'
-
 const { gray } = Colors
 
 export const Wrapper = styled.div`
