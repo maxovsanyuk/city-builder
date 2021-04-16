@@ -28,19 +28,13 @@ const StyledCard = styled(Card)<StyledCardProps>`
   }
 `
 
-// !TODO: Not sure what this component is supposed to do
-interface MarketingPlaceholderProps {
-  href?: string
-  bgImage?: string
-  title?: ReactNode
+interface MarketingCardProps {
+  href: string
+  bgImage: string
+  title: ReactNode
   hoverable?: boolean
 }
-const MarketingPlaceholder: FC<MarketingPlaceholderProps> = ({
-  href = '/marketing',
-  hoverable = true,
-  bgImage = '/mocks/mockCardProCreditPlaceholder.jpg',
-  title = 'ProCredit Marketing placeholder',
-}) => (
+const MarketingCard: FC<MarketingCardProps> = ({ href, bgImage, title, hoverable = true }) => (
   <StyledLink to={href}>
     <StyledCard hoverable={hoverable} bgImage={bgImage}>
       <Title level={4}>{title}</Title>
@@ -48,4 +42,4 @@ const MarketingPlaceholder: FC<MarketingPlaceholderProps> = ({
   </StyledLink>
 )
 
-export default MarketingPlaceholder
+export default MarketingCard

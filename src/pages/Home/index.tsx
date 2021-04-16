@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import MarketingPlaceholder from './MarketingPlaceholder'
+import MarketingBanner from './MarketingBanner'
 import mockCards, { ICard } from './mockData'
 import Cards from './Cards'
 
@@ -12,14 +12,24 @@ const useCards = (): {
   loading: false,
 })
 
+const useMarketingBanner = () => ({
+  banner: {
+    href: '/marketing',
+    bgImage: '/mocks/mockCardProCreditPlaceholder.jpg',
+    title: 'ProCredit Marketing placeholder',
+  },
+  loading: false,
+})
+
 interface HomePageProps {}
 const HomePage: FC<HomePageProps> = () => {
   const { cards, loading } = useCards()
+  const { banner } = useMarketingBanner()
 
   return (
     <>
       <Cards cards={cards} loading={loading} />
-      <MarketingPlaceholder />
+      {banner && <MarketingBanner href={banner.href} bgImage={banner.bgImage} title={banner.title} />}
     </>
   )
 }
