@@ -1,4 +1,4 @@
-import * as React from 'react'
+import { FC } from 'react'
 import styled from 'styled-components'
 import Card from 'procredit-bank-design-system/modules/card'
 import Colors from 'procredit-bank-design-system/modules/colors'
@@ -12,7 +12,7 @@ const StyledCardPlaceholder = styled(Card)`
     background-color: ${gray[3]};
   }
 `
-const CardPlaceholder = () => (
+const CardPlaceholder: FC = () => (
   <StyledCardPlaceholder hoverable={false} cover={<div />}>
     <Meta title={<Skeleton loading active title paragraph={{ width: '100%', rows: 1 }} />} />
   </StyledCardPlaceholder>

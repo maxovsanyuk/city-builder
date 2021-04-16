@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import MarketingPlaceholder from './MarketingPlaceholder'
 import mockCards, { ICard } from './mockData'
 import Cards from './Cards'
