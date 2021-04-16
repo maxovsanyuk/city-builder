@@ -12,7 +12,6 @@ export const Wrapper = styled.div`
     &:hover {
       cursor: pointer;
     }
-
     .lang {
       width: max-content;
       color: ${({ theme }) => theme.colors.dark};
