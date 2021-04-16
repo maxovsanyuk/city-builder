@@ -6,7 +6,6 @@ import Modifications from './Modifications'
 import Accounts from './Accounts'
 import Catalog from './Catalog'
 
-
 interface AuthorizationsProps {}
 const Authorizations: FC<AuthorizationsProps> = () => (
   <Switch>
