@@ -5,28 +5,33 @@ const { gray } = Colors
 
 export const Wrapper = styled.div`
   .current-lang-box {
+    width: 50px;
     display: flex;
     align-items: center;
     position: relative;
+    justify-content: space-between;
 
     &:hover {
       cursor: pointer;
     }
+
     .lang {
       width: max-content;
+      height: max-content;
+      max-height: max-content;
       color: ${({ theme }) => theme.colors.dark};
       border-bottom: ${`2px solid ${gray[7]}`};
       text-transform: uppercase;
-      margin: 0 15px 0 0;
     }
 
     .options-cont {
       position: absolute;
       border-radius: 14px;
-      border: ${`2px solid ${gray[7]}`};
+      border: ${`2px solid ${gray[4]}`};
       overflow: hidden;
-      top: 40px;
+      top: 30px;
       left: 0;
+      z-index: 100;
 
       .option {
         width: 100%;
@@ -39,12 +44,13 @@ export const Wrapper = styled.div`
         }
 
         &:hover {
+          background: ${gray[3]};
           cursor: pointer;
         }
       }
 
       .selected-lang {
-        color: ${gray[7]};
+        color: ${gray[4]};
 
         &:hover {
           cursor: not-allowed;

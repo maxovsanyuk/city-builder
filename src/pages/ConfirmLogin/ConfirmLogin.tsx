@@ -56,10 +56,10 @@ const ConfirmLogin: FC = () => {
           label={formatMessage({ id: 'mTAN.for.serial.number' })}
           name="mTAN"
           rules={[{ required: true, message: formatMessage({ id: 'please.input.mTAN' }) }]}
-          style={{ margin: '0 0 10px 0' }}
-        >
-          <Input.Password placeholder={formatMessage({ id: 'enter.mTAN' })} />
-        </Form.Item>
+          style={{ margin: 0 }}
+        />
+
+        <Input.Password placeholder={formatMessage({ id: 'enter.mTAN' })} style={{ margin: '5px 0' }} />
 
         <Text>
           {formatMessage({ id: 'receive.your.code.text' })}
