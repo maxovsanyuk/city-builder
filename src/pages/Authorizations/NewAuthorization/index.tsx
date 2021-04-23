@@ -39,30 +39,30 @@ export const useFormSteps = () => {
   console.log(formState, 'formState')
 
   const steps = [
-    // {
-    //   title: formatMessage({ id: 'personal.info' }),
-    //   content: (
-    //     <PersonalInfoComponent
-    //       currentStep={currentStep}
-    //       setCurrentStep={setCurrentStep}
-    //       stepsCounter={STEPS_COUNTER}
-    //       formState={formState}
-    //       setFormState={setFormState}
-    //     />
-    //   ),
-    // },
-    // {
-    //   title: formatMessage({ id: 'address.details' }),
-    //   content: (
-    //     <AdressDetailsComponent
-    //       currentStep={currentStep}
-    //       setCurrentStep={setCurrentStep}
-    //       stepsCounter={STEPS_COUNTER}
-    //       formState={formState}
-    //       setFormState={setFormState}
-    //     />
-    //   ),
-    // },
+    {
+      title: formatMessage({ id: 'personal.info' }),
+      content: (
+        <PersonalInfoComponent
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          stepsCounter={STEPS_COUNTER}
+          formState={formState}
+          setFormState={setFormState}
+        />
+      ),
+    },
+    {
+      title: formatMessage({ id: 'address.details' }),
+      content: (
+        <AdressDetailsComponent
+          currentStep={currentStep}
+          setCurrentStep={setCurrentStep}
+          stepsCounter={STEPS_COUNTER}
+          formState={formState}
+          setFormState={setFormState}
+        />
+      ),
+    },
     {
       title: formatMessage({ id: 'documents' }),
       content: (
