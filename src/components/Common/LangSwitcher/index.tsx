@@ -21,7 +21,7 @@ const fancyLang = (lang: string) => {
     case 'en':
       return 'ENG'
     case 'ru':
-      return 'Rus'
+      return 'RUS'
 
     default:
       return null
@@ -29,12 +29,12 @@ const fancyLang = (lang: string) => {
 }
 
 function useComponentVisible() {
-  const [isComponentVisible, setIsComponentVisible] = useState<boolean>(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
   const ref = useRef<HTMLHeadingElement>(null)
 
   const handleClickOutside = (event: MouseEvent) => {
     if (ref.current && !ref.current.contains(event.target as HTMLHeadingElement)) {
-      setIsComponentVisible(false)
+      setIsDropdownOpen(false)
     }
   }
 
@@ -45,11 +45,11 @@ function useComponentVisible() {
     }
   })
 
-  return { ref, isComponentVisible, setIsComponentVisible }
+  return { ref, isDropdownOpen, setIsDropdownOpen }
 }
 
 const LangSwitcher: FC = () => {
-  const { ref, isComponentVisible, setIsComponentVisible } = useComponentVisible()
+  const { ref, isDropdownOpen, setIsDropdownOpen } = useComponentVisible()
   const { lang } = useSelector(({ common }) => common)
 
   const dispatch = useDispatch()
@@ -61,12 +61,12 @@ const LangSwitcher: FC = () => {
 
   return (
     <Wrapper>
-      <div className="current-lang-box" onClick={() => setIsComponentVisible(pr => !pr)} ref={ref}>
+      <div className="current-lang-box" onClick={() => setIsDropdownOpen(isOpen => !isOpen)} ref={ref}>
         <Text className="lang">{fancyLang(lang)}</Text>
-        <DownOutlined className={isComponentVisible && 'rotate-arrow'} />
-        {isComponentVisible && (
+        <DownOutlined className={isDropdownOpen && 'rotate-arrow'} />
+        {isDropdownOpen && (
           <div className="options-cont">
-            {LANGUAGES_CONFIG.map(({ type, name }: any) => (
+            {LANGUAGES_CONFIG.map(({ type, name }: Record<string, string>) => (
               <button
                 className={`option ${lang === type && 'selected-lang'}`}
                 key={type}
