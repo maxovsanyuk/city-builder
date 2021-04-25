@@ -28,7 +28,7 @@ const fancyLang = (lang: string) => {
   }
 }
 
-function useComponentVisible() {
+const useDropdownOpen = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false)
   const ref = useRef<HTMLHeadingElement>(null)
 
@@ -49,7 +49,7 @@ function useComponentVisible() {
 }
 
 const LangSwitcher: FC = () => {
-  const { ref, isDropdownOpen, setIsDropdownOpen } = useComponentVisible()
+  const { ref, isDropdownOpen, setIsDropdownOpen } = useDropdownOpen()
   const { lang } = useSelector(({ common }) => common)
 
   const dispatch = useDispatch()
