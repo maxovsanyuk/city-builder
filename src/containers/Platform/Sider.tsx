@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
 import Colors from 'procredit-bank-design-system/modules/colors'
 import Layout from 'procredit-bank-design-system/modules/layout'
-import Menu, { IMenuItem, IItem } from 'components/Common/Menu'
+import Menu, { IItem, IMenuItem } from 'components/Common/Menu'
 
 const { gray } = Colors
 const { Sider } = Layout
@@ -34,9 +34,8 @@ const SiderComponent: FC<SiderProps> = ({ items }) => {
   // Find id of matching menuItems
   const selectedKeys = useMemo(() => {
     const menuItems = items.map(getMenuItems).flat()
-    const matchedItems = menuItems.filter(i => i?.href === pathname)
-    const ids = matchedItems.map(i => i.id)
-    return ids
+    const matchedItems = menuItems.filter(item => item?.href === pathname)
+    return matchedItems.map(i => i.id)
   }, [items, pathname])
 
   return (

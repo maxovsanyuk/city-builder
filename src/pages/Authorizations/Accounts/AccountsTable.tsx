@@ -64,8 +64,8 @@ interface AccountsTableProps {
 const AccountsTable: FC<AccountsTableProps> = ({ data, loading = false }) => {
   const history = useHistory()
   const columns = useMemo(() => {
-    const accountTypes = Array.from(new Set(data?.map(d => d.accountType) || []))
-    const currencies = Array.from(new Set(data?.map(d => d.currency) || []))
+    const accountTypes = Array.from(new Set(data?.map(account => account.accountType) || []))
+    const currencies = Array.from(new Set(data?.map(account => account.currency) || []))
     return [
       {
         title: 'Account number',

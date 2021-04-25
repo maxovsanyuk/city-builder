@@ -1,7 +1,7 @@
 import { FC } from 'react'
 
 interface NewRelationProps {
-  id: number
+  id: number | string
 }
 const NewRelation: FC<NewRelationProps> = () => {
   return <></>
