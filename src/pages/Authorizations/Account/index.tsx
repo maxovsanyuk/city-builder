@@ -9,8 +9,10 @@ import Authorizations from './Authorizations'
 const { Item } = Breadcrumb
 const { HomeFilled } = Icons
 
-interface CatalogProps {}
-const Catalog: FC<CatalogProps> = () => (
+interface AccountProps {
+  id: string
+}
+const AccountPage: FC<AccountProps> = ({ id }) => (
   <>
     <ContentHeader>
       <Breadcrumb>
@@ -22,14 +24,17 @@ const Catalog: FC<CatalogProps> = () => (
         <Item>
           <Link to="/authorizations">Managing authorizations</Link>
         </Item>
-        <Item>Authorizations</Item>
+        <Item>
+          <Link to="/authorizations/accounts">Accounts</Link>
+        </Item>
+        <Item>{id}</Item>
       </Breadcrumb>
-      <Button type="primary" as={Link} href="/authorizations/create">
-        Add new authorization
+      <Button type="primary" as={Link} href={`/authorizations/accounts/${id}/create`}>
+        Add new relation
       </Button>
     </ContentHeader>
-    <Authorizations />
+    <Authorizations id={id} />
   </>
 )
 
-export default Catalog
+export default AccountPage
