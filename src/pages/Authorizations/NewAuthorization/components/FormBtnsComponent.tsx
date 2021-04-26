@@ -2,13 +2,12 @@ import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 
 import Button from 'procredit-bank-design-system/modules/button'
-import { useEffect, useState } from 'react'
 
 const FormBtnsComponent = ({ currentStep, setCurrentStep, stepsCounter, form }: any) => {
   const { formatMessage } = useIntl()
 
   return (
-    <div>
+    <div style={{ marginBottom: 24 }}>
       {currentStep > 0 ? (
         <Button style={{ margin: '0 8px' }} onClick={() => setCurrentStep((step: number) => step - 1)}>
           {formatMessage({ id: 'back' })}
