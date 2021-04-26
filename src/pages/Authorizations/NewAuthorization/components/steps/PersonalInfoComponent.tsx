@@ -9,6 +9,11 @@ import FormBtnsComponent from '../FormBtnsComponent'
 // procredit-bank-design-system
 
 import Form from 'procredit-bank-design-system/modules/form'
+import DatePicker from 'procredit-bank-design-system/modules/date-picker'
+import Select from 'procredit-bank-design-system/modules/select'
+import Cascader from 'procredit-bank-design-system/modules/cascader'
+
+const { Option } = Select
 
 // todo: replase type any
 
@@ -46,6 +51,10 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
     setCurrentStep((step: number) => step + 1)
   }
 
+  const config = {
+    rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+  }
+
   return (
     <>
       <Form
@@ -59,9 +68,45 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
         <div className="inputs-wrapper">
           <InputsConfigurationComponent config={formInputsConfig} formState={formState} stepNamber={1} />
 
-          {/*<Form.Item name="datePicker" label={formatMessage({ id: 'date.of.birth' })} rules={[{ type: 'object' }]}>*/}
-          {/*  <DatePicker />*/}
-          {/*</Form.Item>*/}
+          <Form.Item
+            name="datePicker"
+            // label={formatMessage({ id: 'date.of.birth' })}
+            label="date-picker"
+            {...config}
+          >
+            <DatePicker />
+          </Form.Item>
+
+          <Form.Item
+            name="select"
+            label="Select"
+            hasFeedback
+            // validateStatus="error"
+          >
+            <Select allowClear>
+              <Option value="1">Option 1</Option>
+              <Option value="2">Option 2</Option>
+              <Option value="3">Option 3</Option>
+            </Select>
+          </Form.Item>
+
+          <Form.Item
+            label="Validating"
+            hasFeedback
+            validateStatus="validating"
+            // help="The information is being validated..."
+            name="cascader"
+          >
+            <Cascader
+              options={[
+                {
+                  value: 'xx',
+                  label: 'xx',
+                },
+              ]}
+              allowClear
+            />
+          </Form.Item>
         </div>
 
         <Form.Item shouldUpdate={true}>

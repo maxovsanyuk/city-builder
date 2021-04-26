@@ -8,7 +8,7 @@ const Accounts: FC<AccountsProps> = () => {
   const { accounts, loading } = useAccounts()
 
   return (
-    <Card title="Accounts" size="small">
+    <Card title="EditAccountComponent" size="small">
       <AccountsTable data={accounts} loading={loading} />
     </Card>
   )
