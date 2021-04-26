@@ -14,6 +14,7 @@ export interface IData {
   name: string
   authorization?: IAuthorization[]
   status: IStatus
+  relation: string
 
   // Currently unused
   type?: 'authorized' | 'contact' | 'empowered'
@@ -28,21 +29,89 @@ const mockData: IData[] = [
     name: 'Esther Howard',
     authorization: [],
     status: 'new',
+    relation: 'authorized',
   },
-  { id: nanoid(), userId: nanoid(), name: 'Jenny Wilson', authorization: ['A', 'B', 'C'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Jacob Jones', authorization: ['C'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Annette Black', authorization: ['A', 'C'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Brooklyn Simmons', authorization: ['A'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Savannah Nguyen', authorization: ['A'], status: 'no-eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Albert Flores', authorization: ['A'], status: 'no-eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Marvin McKinney', authorization: ['A', 'B'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Leslie Alexander', authorization: ['A'], status: 'eba' },
-  { id: nanoid(), userId: nanoid(), name: 'Marvin McKinney', authorization: ['A', 'B'], status: 'dismissed' },
-  { id: nanoid(), userId: nanoid(), name: 'Leslie Alexander', authorization: ['A'], status: 'dismissed' },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Jenny Wilson',
+    authorization: ['A', 'B', 'C'],
+    status: 'eba',
+    relation: 'contactPerson',
+  },
+  { id: nanoid(), userId: nanoid(), name: 'Jacob Jones', authorization: ['C'], status: 'eba', relation: 'authorized' },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Annette Black',
+    authorization: ['A', 'C'],
+    status: 'eba',
+    relation: 'authorized',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Brooklyn Simmons',
+    authorization: ['A'],
+    status: 'eba',
+    relation: 'contactOwner',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Savannah Nguyen',
+    authorization: ['A'],
+    status: 'no-eba',
+    relation: 'contactCoowner',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Albert Flores',
+    authorization: ['A'],
+    status: 'no-eba',
+    relation: 'contactPerson',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Marvin McKinney',
+    authorization: ['A', 'B'],
+    status: 'eba',
+    relation: 'legalRepresentative',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Leslie Alexander',
+    authorization: ['A'],
+    status: 'eba',
+    relation: 'contactPerson',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Marvin McKinney',
+    authorization: ['A', 'B'],
+    status: 'dismissed',
+    relation: 'legalRepresentative',
+  },
+  {
+    id: nanoid(),
+    userId: nanoid(),
+    name: 'Leslie Alexander',
+    authorization: ['A'],
+    status: 'dismissed',
+    relation: 'authorized',
+  },
 ]
 
 // TODO: Link to API
 export const useAuthorizations = (): { data: IData[]; loading: boolean } => ({
+  data: mockData,
+  loading: false,
+})
+export const useRelatedAuthorizations = (id: string): { data: IData[]; loading: boolean } => ({
   data: mockData,
   loading: false,
 })

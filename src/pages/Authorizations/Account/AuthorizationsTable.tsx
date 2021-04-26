@@ -8,7 +8,6 @@ import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
-import RenderStatusTag from 'components/Common/Tables/RenderStatusTag'
 import { IData, IAuthorization } from '../mockData'
 
 const { MoreOutlined } = Icons
@@ -54,12 +53,23 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = fal
   const history = useHistory()
   const columns = useMemo(() => {
     const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
-    const statuses = Array.from(new Set(data?.map(d => d.status) || []))
+    const relations = Array.from(new Set(data?.map(d => d.relation) || []))
     return [
       {
         title: 'Full Name',
         dataIndex: 'name',
         sorter: (a: IData, b: IData) => b.name.localeCompare(a.name),
+      },
+      {
+        title: 'Relations',
+        dataIndex: 'relation',
+        sorter: (a: IData, b: IData) => b.relation.localeCompare(a.relation),
+        filters: relations.map(text => ({
+          text: text,
+          value: text,
+        })),
+        filterMultiple: true,
+        onFilter: (value: IAuthorization, record: IData) => record.relation === value,
       },
       {
         title: 'Authorization',
@@ -73,18 +83,9 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = fal
         onFilter: (value: IAuthorization, record: IData) => record.authorization?.includes(value),
         render: RenderAuthorizationTags,
       },
-      {
-        title: 'Status',
-        dataIndex: 'status',
-        filters: statuses.map(text => ({
-          text: text,
-          value: text,
-        })),
-        filterMultiple: true,
-        onFilter: (value: string, record: IData) => record.status === value,
-        sorter: (a: IData, b: IData) => b.status.localeCompare(a.status),
-        render: RenderStatusTag,
-      },
+      // Start Date
+      // End Date
+      // Comment
       {
         title: '',
         key: 'action',
