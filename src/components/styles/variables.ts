@@ -3,19 +3,11 @@ import { DefaultTheme } from 'styled-components'
 export interface ThemeType {
   fonts: Record<string, string>
   breakpoint: Record<string, number>
-  colors: Record<string, string>
 }
 
 const fonts = {
   arial: 'Arial, sans-serif',
   inter: 'Inter',
-}
-
-const colors = {
-  // basic colors
-  dark: '#000',
-  black: '#181A1A',
-  white: '#fff',
 }
 
 const breakpoint = {
@@ -29,10 +21,9 @@ const breakpoint = {
 
 const Theme: DefaultTheme = {
   fonts,
-  colors,
   breakpoint,
 }
 
 const mq = (minWidth: number, type = 'min'): string => `@media (${type}-width: ${minWidth}px)`
 
-export { Theme, colors, mq }
+export { Theme, mq }

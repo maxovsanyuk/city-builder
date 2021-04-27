@@ -68,9 +68,7 @@ const ConfirmLogin: FC = () => {
             <Button
               type="primary"
               htmlType="submit"
-              disabled={
-                !form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }: any) => errors.length).length
-              }
+              disabled={!!form.getFieldsError().filter(({ errors }: any) => errors.length).length}
             >
               {formatMessage({ id: 'confirm' })}
             </Button>

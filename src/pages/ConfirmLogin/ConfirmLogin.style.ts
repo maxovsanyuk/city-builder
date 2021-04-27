@@ -6,7 +6,7 @@ const { gray } = Colors
 export const Wrapper = styled.div`
   width: 432px;
   height: 460px;
-  color: ${gray[1]};
+  background: ${gray[1]};
   border-radius: 16px;
   padding: 40px;
 
