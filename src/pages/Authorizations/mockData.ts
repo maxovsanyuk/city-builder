@@ -14,6 +14,7 @@ export interface IData {
   name: string
   authorization?: IAuthorization[]
   status: IStatus
+  relation: string
 
   // Currently unused
   type?: 'authorized' | 'contact' | 'empowered'
@@ -40,6 +41,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'authorized',
   },
   {
     id: nanoid(),
@@ -55,6 +57,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'contactPerson',
   },
   {
     id: nanoid(),
@@ -69,6 +72,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'authorized',
   },
   {
     id: nanoid(),
@@ -84,6 +88,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'authorized',
   },
   {
     id: nanoid(),
@@ -99,6 +104,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'contactOwner',
   },
   {
     id: nanoid(),
@@ -113,6 +119,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'contactCoowner',
   },
   {
     id: nanoid(),
@@ -127,6 +134,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'contactPerson',
   },
   {
     id: nanoid(),
@@ -141,6 +149,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'legalRepresentative',
   },
   {
     id: nanoid(),
@@ -155,6 +164,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'contactPerson',
   },
   {
     id: nanoid(),
@@ -169,6 +179,7 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'legalRepresentative',
   },
   {
     id: nanoid(),
@@ -183,11 +194,16 @@ const mockData: IData[] = [
     endDate: '23/01/2021',
     comment:
       'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
+    relation: 'authorized',
   },
 ]
 
 // TODO: Link to API
 export const useAuthorizations = (): { data: IData[]; loading: boolean } => ({
+  data: mockData,
+  loading: false,
+})
+export const useRelatedAuthorizations = (id: string): { data: IData[]; loading: boolean } => ({
   data: mockData,
   loading: false,
 })
