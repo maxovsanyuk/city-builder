@@ -4,10 +4,9 @@ import * as CommonActions from 'store/common/actions'
 
 import { Wrapper } from './style'
 
-// procredit-bank-design-system
-
 import Typography from 'procredit-bank-design-system/modules/typography'
 import Icons from 'procredit-bank-design-system/modules/icons'
+
 const { DownOutlined } = Icons
 const { Text } = Typography
 

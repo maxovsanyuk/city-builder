@@ -8,8 +8,6 @@ import { Wrapper } from './Login.style'
 
 import HorizontalLogo from '../../assets/horizontal-logo.svg'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
 import Button from 'procredit-bank-design-system/modules/button'
