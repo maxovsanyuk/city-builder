@@ -32,12 +32,18 @@ const Authorizations: FC<AuthorizationsProps> = ({ user, selectedRowKeys, onSele
 
   const userId = user?.id
   const { data, loading } = useAuthorizations()
-  const relatedAuthorizations = useMemo(() => data.filter(d => d.userId === userId), [userId, data])
+  const relatedAuthorizations = useMemo(() => data.filter(authorization => authorization.userId === userId), [
+    userId,
+    data,
+  ])
 
   const filteredData = useMemo(() => {
     if (!search) return relatedAuthorizations
     if (!relatedAuthorizations) return relatedAuthorizations
-    return relatedAuthorizations.filter(d => (d.accountNumber || '').toLowerCase().includes(search.toLowerCase()))
+    const lowercaseSearch = search.toLowerCase()
+    return relatedAuthorizations.filter(authorization =>
+      (authorization.accountNumber || '').toLowerCase().includes(lowercaseSearch)
+    )
   }, [relatedAuthorizations, search])
 
   return (
