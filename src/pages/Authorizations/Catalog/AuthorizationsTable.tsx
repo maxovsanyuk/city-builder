@@ -9,6 +9,7 @@ import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
 import RenderStatusTag from 'components/Common/Tables/RenderStatusTag'
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
 
 const { MoreOutlined } = Icons
@@ -53,8 +54,8 @@ interface AuthorizationsTableProps {
 const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = false }) => {
   const history = useHistory()
   const columns = useMemo(() => {
-    const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
-    const statuses = Array.from(new Set(data?.map(d => d.status) || []))
+    const authorizations = getUniqueValuesFromObjectArray<string>(data, 'authorization')
+    const statuses = getUniqueValuesFromObjectArray<string>(data, 'status')
     return [
       {
         title: 'Full Name',

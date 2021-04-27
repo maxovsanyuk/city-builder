@@ -39,10 +39,10 @@ const ConfirmLogin: FC = () => {
   return (
     <Wrapper>
       <Link to="/">
-        <img src={HorizontalLogo} alt="horizontalLogo.svg" />
+        <img src={HorizontalLogo} alt="horizontal-logo" />
       </Link>
 
-      <Title className="h-4" level={4} style={{ margin: '40px 0 30px 0' }}>
+      <Title className="h-4" level={4}>
         {formatMessage({ id: 'confirm.login' })}
       </Title>
 

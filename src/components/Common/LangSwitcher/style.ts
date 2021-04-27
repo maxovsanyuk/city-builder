@@ -13,8 +13,8 @@ export const Wrapper = styled.div`
 
     .lang {
       width: 30px;
-      color: ${({ theme }) => theme.colors.dark};
-      border-bottom: ${`2px solid ${gray[7]}`};
+      color: ${gray[8]};
+      border-bottom: 2px solid ${gray[7]};
       text-transform: uppercase;
       margin: 0 15px 0 0;
     }
@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
       height: min-content;
       position: absolute;
       border-radius: 14px;
-      border: ${`2px solid ${gray[4]}`};
+      border: 2px solid ${gray[4]};
       overflow: hidden;
       top: 30px;
       left: 0;
@@ -32,7 +32,7 @@ export const Wrapper = styled.div`
 
       .option {
         width: 100%;
-        background: ${({ theme }) => theme.colors.white};
+        background: ${gray[1]};
         text-transform: uppercase;
         padding: 10px;
 
