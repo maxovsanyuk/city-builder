@@ -8,6 +8,7 @@ import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import Tag from 'procredit-bank-design-system/modules/tag'
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IAccount } from './mockData'
 
 const { MoreOutlined } = Icons
@@ -64,8 +65,8 @@ interface AccountsTableProps {
 const AccountsTable: FC<AccountsTableProps> = ({ data, loading = false }) => {
   const history = useHistory()
   const columns = useMemo(() => {
-    const accountTypes = Array.from(new Set(data?.map(d => d.accountType) || []))
-    const currencies = Array.from(new Set(data?.map(d => d.currency) || []))
+    const accountTypes = getUniqueValuesFromObjectArray<string>(data, 'accountType')
+    const currencies = getUniqueValuesFromObjectArray<string>(data, 'currency')
     return [
       {
         title: 'Account number',
