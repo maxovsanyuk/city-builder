@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Tooltip from 'procredit-bank-design-system/modules/tooltip'
 import Table from 'procredit-bank-design-system/modules/table'
 import Tag from 'procredit-bank-design-system/modules/tag'
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
 
 const TagList = styled.ul`
@@ -52,10 +53,10 @@ interface AuthorizationsTableProps {
 }
 const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = false, rowSelection }) => {
   const columns = useMemo(() => {
-    const accountTypes = Array.from(new Set(data?.map(d => d.accountType).flat() || []))
-    const currencies = Array.from(new Set(data?.map(d => d.currency) || []))
-    const relations = Array.from(new Set(data?.map(d => d.relations) || []))
-    const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
+    const accountTypes = getUniqueValuesFromObjectArray<string>(data, 'accountType')
+    const currencies = getUniqueValuesFromObjectArray<string>(data, 'currency')
+    const relations = getUniqueValuesFromObjectArray<string>(data, 'relations')
+    const authorizations = getUniqueValuesFromObjectArray<string>(data, 'authorization')
     return [
       {
         title: 'Account number',
