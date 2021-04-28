@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
-import { history } from '../../../../../store/configureStore'
-
-// Components
+import { history } from 'store/configureStore'
 
 import FormUploadItem from '../FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
