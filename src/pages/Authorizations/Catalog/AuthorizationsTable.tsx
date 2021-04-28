@@ -7,7 +7,9 @@ import Button from 'procredit-bank-design-system/modules/button'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
-import Tag from 'procredit-bank-design-system/modules/tag'
+import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
+import RenderStatusTag from 'components/Common/Tables/RenderStatusTag'
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
 
 const { MoreOutlined } = Icons
@@ -17,12 +19,6 @@ const StyledTable = styled(Table)`
   & tbody tr {
     cursor: pointer;
   }
-`
-const TagList = styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
 `
 
 const MoreOptions = (value: any, record: IData) => {
@@ -51,36 +47,6 @@ const MoreOptions = (value: any, record: IData) => {
   )
 }
 
-const RenderAuthorizationTags = (tags: string[]) => {
-  if (!tags || tags.length === 0) return '-'
-  return (
-    <TagList>
-      {tags.map(tag => {
-        if (!tag) return null
-        let color = ''
-        if (tag === 'A') color = 'green'
-        if (tag === 'B') color = 'yellow'
-        if (tag === 'C') color = 'blue'
-        return (
-          <li key={tag}>
-            <Tag color={color}>{tag}</Tag>
-          </li>
-        )
-      })}
-    </TagList>
-  )
-}
-
-const RenderStatusTag = (text: string) => {
-  if (!text) return '-'
-  let color = ''
-  if (text === 'new') color = 'volcano'
-  if (text === 'eba') color = 'green'
-  if (text === 'no-eba') color = 'magenta'
-  if (text === 'dismissed') color = 'red'
-  return <Tag color={color}>{text}</Tag>
-}
-
 interface AuthorizationsTableProps {
   data: IData[]
   loading?: boolean
@@ -88,8 +54,8 @@ interface AuthorizationsTableProps {
 const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = false }) => {
   const history = useHistory()
   const columns = useMemo(() => {
-    const authorizations = Array.from(new Set(data?.map(d => d.authorization).flat() || []))
-    const statuses = Array.from(new Set(data?.map(d => d.status) || []))
+    const authorizations = getUniqueValuesFromObjectArray<string>(data, 'authorization')
+    const statuses = getUniqueValuesFromObjectArray<string>(data, 'status')
     return [
       {
         title: 'Full Name',

@@ -1,4 +1,5 @@
 import { FC, useState, useEffect } from 'react'
+import { ActionType } from '../../store/authentication/model'
 import { useIntl } from 'react-intl'
 
 import { useDispatch } from 'react-redux'
@@ -8,13 +9,11 @@ import { Wrapper } from './ConfirmLogin.style'
 
 import HorizontalLogo from '../../assets/horizontal-logo.svg'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
 import Button from 'procredit-bank-design-system/modules/button'
 import Typography from 'procredit-bank-design-system/modules/typography'
-import { ActionType } from '../../store/authentication/model'
+
 const { Title, Text } = Typography
 
 const ConfirmLogin: FC = () => {
@@ -40,10 +39,10 @@ const ConfirmLogin: FC = () => {
   return (
     <Wrapper>
       <Link to="/">
-        <img src={HorizontalLogo} alt="horizontalLogo.svg" />
+        <img src={HorizontalLogo} alt="pro-credit-logo" />
       </Link>
 
-      <Title className="h-4" level={4} style={{ margin: '40px 0 30px 0' }}>
+      <Title className="h-4" level={4}>
         {formatMessage({ id: 'confirm.login' })}
       </Title>
 
@@ -69,9 +68,7 @@ const ConfirmLogin: FC = () => {
             <Button
               type="primary"
               htmlType="submit"
-              disabled={
-                !form.isFieldsTouched(true) || form.getFieldsError().filter(({ errors }: any) => errors.length).length
-              }
+              disabled={!!form.getFieldsError().filter(({ errors }: any) => errors.length).length}
             >
               {formatMessage({ id: 'confirm' })}
             </Button>

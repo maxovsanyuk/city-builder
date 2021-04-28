@@ -24,7 +24,7 @@ const Catalog: FC<CatalogProps> = () => (
         </Item>
         <Item>Authorizations</Item>
       </Breadcrumb>
-      <Button key="1" type="primary" as={Link} href="/authorizations/create">
+      <Button type="primary" as={Link} href="/authorizations/create">
         Add new authorization
       </Button>
     </ContentHeader>

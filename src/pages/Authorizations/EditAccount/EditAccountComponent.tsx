@@ -5,8 +5,6 @@ import { useIntl } from 'react-intl'
 
 import { Wrapper } from './styles'
 
-// procredit-bank-design-system
-
 import Card from 'procredit-bank-design-system/modules/card'
 import Form from 'procredit-bank-design-system/modules/form'
 import InputAmount from 'procredit-bank-design-system/modules/input-amount'

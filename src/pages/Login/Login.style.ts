@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
+import Colors from 'procredit-bank-design-system/modules/colors'
+
+const { gray } = Colors
+
 export const Wrapper = styled.div`
   width: 432px;
   height: 460px;
-  background: ${({ theme }) => theme.colors.white};
+  background: ${gray[1]};
   border-radius: 16px;
   padding: 60px 40px;
 

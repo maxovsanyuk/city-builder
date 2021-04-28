@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 import LangSwitcher from '../../components/Common/LangSwitcher'
 
 import { Wrapper } from './style'
