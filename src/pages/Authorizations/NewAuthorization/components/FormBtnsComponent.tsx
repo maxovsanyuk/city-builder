@@ -32,7 +32,7 @@ const FormBtnsComponent = ({ currentStep, setCurrentStep, stepsCounter, form }: 
         <Button
           type="primary"
           htmlType="submit"
-          disabled={!!form.getFieldsError().filter(({ errors }: any) => errors.length).length}
+          disabled={form.getFieldsError().some(({ errors }: any) => errors?.length > 0)}
         >
           {formatMessage({ id: 'save' })}
         </Button>

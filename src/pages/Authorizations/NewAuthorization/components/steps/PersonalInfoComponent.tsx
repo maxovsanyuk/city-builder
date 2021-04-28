@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
-// Components
-
 import InputsConfigurationComponent from '../InputsConfigurationComponent'
 import FormBtnsComponent from '../FormBtnsComponent'
 

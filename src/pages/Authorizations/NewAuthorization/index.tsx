@@ -2,8 +2,6 @@ import React, { FC, useState } from 'react'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 
-// Components
-
 import PersonalInfoComponent from './components/steps/PersonalInfoComponent'
 import AdressDetailsComponent from './components/steps/AdressDetailsComponent'
 import DocumentsComponent from './components/steps/DocumentsComponent'
