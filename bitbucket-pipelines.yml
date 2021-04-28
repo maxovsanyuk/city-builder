@@ -9,6 +9,6 @@ pipelines:
           caches:
             - node
           script:
-            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && git reset --hard && git pull origin staging'
-            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && npm i'
+            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && git reset --hard && git pull origin staging && rm -rf ./package-lock.json && rm -rf ./node_modules'
+            - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && npm i --force'
             - ssh -p $ARTKAI_DEV_PORT $ARTKAI_DEV_USER@$ARTKAI_DEV_HOST 'cd quipy-portal && npm run build'
