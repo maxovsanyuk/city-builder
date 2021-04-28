@@ -29,7 +29,7 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
         )
       })}
 
-      <div className="additional-file-box">
+      <div className="additional-file-box">gst
         {additionalFileNameList.map((name: string) => {
           return <FormUploadItem name={name} key={name} />
         })}
