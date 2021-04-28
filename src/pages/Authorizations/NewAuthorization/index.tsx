@@ -6,7 +6,7 @@ import PersonalInfoComponent from './components/steps/PersonalInfoComponent'
 import AdressDetailsComponent from './components/steps/AdressDetailsComponent'
 import DocumentsComponent from './components/steps/DocumentsComponent'
 
-import Breadcrumb from '../../../components/Common/Breadcrumb'
+import Breadcrumb from 'components/Common/Breadcrumb'
 import { Wrapper } from './style'
 
 import Steps from 'procredit-bank-design-system/modules/steps'
