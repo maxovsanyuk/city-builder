@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { history } from '../../../store/configureStore'
+import { history } from 'store/configureStore'
 import { useIntl } from 'react-intl'
 
 import { Wrapper } from './styles'
@@ -90,8 +90,7 @@ const EditAccount: FC<AccountsProps> = () => {
                   htmlType="submit"
                   style={{ marginLeft: 15 }}
                   disabled={
-                    !form.isFieldsTouched(true) ||
-                    form.getFieldsError().filter(({ errors }: any) => errors.length).length
+                    !form.isFieldsTouched(true) || form.getFieldsError().some(({ errors }: any) => errors?.length > 0)
                   }
                 >
                   {formatMessage({ id: 'save' })}
