@@ -39,7 +39,7 @@ const ConfirmLogin: FC = () => {
   return (
     <Wrapper>
       <Link to="/">
-        <img src={HorizontalLogo} alt="horizontal-logo" />
+        <img src={HorizontalLogo} alt="pro-credit-logo" />
       </Link>
 
       <Title className="h-4" level={4}>

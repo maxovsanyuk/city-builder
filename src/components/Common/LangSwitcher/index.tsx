@@ -1,26 +1,51 @@
-import { FC, FormEvent, useEffect, useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import * as CommonActions from 'store/common/actions'
+import { FC, FormEvent } from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
+// import * as CommonActions from 'store/common/actions'
 
-import { Wrapper } from './style'
+// import Icons from 'procredit-bank-design-system/modules/icons'
+// import Menu from 'procredit-bank-design-system/modules/menu'
+// import Dropdown from 'procredit-bank-design-system/modules/dropdown'
+// import Button from 'procredit-bank-design-system/modules/button'
 
-import Typography from 'procredit-bank-design-system/modules/typography'
-import Icons from 'procredit-bank-design-system/modules/icons'
+// const { DownOutlined } = Icons
+// const { Item } = Menu
 
-const { DownOutlined } = Icons
-const { Text } = Typography
+// const fancyLang = (lang = '') => {
+//   switch (lang) {
+//     case 'en':
+//       return 'ENG'
+//     case 'ru':
+//       return 'RUS'
+//
+//     default:
+//       return null
+//   }
+//
+//   return null
+// }
 
 const LangSwitcher: FC = () => {
-  const { lang } = useSelector(({ common }) => common)
+  // const { lang } = useSelector(({ common }) => common)
+  // const dispatch = useDispatch()
+  //
+  // const changeLang = (event: FormEvent, lang: string) => {
+  //   event.preventDefault()
+  //   dispatch(CommonActions.changeLangAction({ lang }))
+  // }
 
-  const dispatch = useDispatch()
+  // const menu = (
+  //   <Menu onSelect={changeLang}>
+  //     <Item key="en">Eng</Item>
+  //     <Item key="ru">Rus</Item>
+  //   </Menu>
+  // )
 
-  const changeLang = (event: FormEvent, lang: string) => {
-    event.preventDefault()
-    dispatch(CommonActions.changeLangAction({ lang }))
-  }
-
-  return <Wrapper />
+  return <div />
+  // <Dropdown overlay={menu}>
+  //   <Button type="text">
+  //     {fancyLang(lang)} <DownOutlined />
+  //   </Button>
+  // </Dropdown>
 }
 
 export default LangSwitcher
