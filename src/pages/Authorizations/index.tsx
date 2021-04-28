@@ -23,6 +23,10 @@ const Authorizations: FC<AuthorizationsProps> = () => (
       path="/authorizations/accounts/:id/create"
       render={props => <NewRelation {...props} id={props.match.params.id} />}
     />
+
+    <Route exact path="/authorizations/accounts/edit/:id">
+      <EditAccount />
+    </Route>
     <Route
       exact
       path="/authorizations/accounts/:id"
@@ -31,9 +35,7 @@ const Authorizations: FC<AuthorizationsProps> = () => (
     <Route exact path="/authorizations/accounts">
       <Accounts />
     </Route>
-    <Route exact path="/authorizations/accounts/edit/:accountId">
-      <EditAccount />
-    </Route>
+
     <Route path="/authorizations/modifications">
       <Modifications />
     </Route>

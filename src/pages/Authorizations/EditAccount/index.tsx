@@ -17,13 +17,13 @@ const { Title } = Typography
 
 interface AccountsProps {}
 interface ParamsProps {
-  accountId: string
+  id: string
 }
 
 const EditAccount: FC<AccountsProps> = () => {
   const [form] = Form.useForm()
   const { formatMessage } = useIntl()
-  const { accountId }: ParamsProps = useParams()
+  const { id }: ParamsProps = useParams()
 
   const [, forceUpdate] = useState<any>()
 
@@ -47,7 +47,7 @@ const EditAccount: FC<AccountsProps> = () => {
             {formatMessage({ id: 'account.number' })} :
           </Title>
           <Title level={5} style={{ marginLeft: 10 }}>
-            {accountId}
+            {id}
           </Title>
         </div>
 
