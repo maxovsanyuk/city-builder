@@ -16,6 +16,16 @@ interface FormProps {
   setFormState: any
 }
 
+const formInputsConfig = [
+  { name: 'region', required: true },
+  { name: 'zip.code', type: 'number', required: true },
+  { name: 'city', required: true },
+  { name: 'street', required: true },
+  { name: 'number', type: 'number', required: true },
+  { name: 'city', required: true },
+  { name: 'additionalInfo', id: 'additional.info', required: false },
+]
+
 const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, formState, setFormState }: FormProps) => {
   const [form] = Form.useForm()
   const [, forceUpdate] = useState<any>()
@@ -33,16 +43,6 @@ const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, for
 
     setCurrentStep((step: number) => step + 1)
   }
-
-  const formInputsConfig = [
-    { name: 'region', required: true },
-    { name: 'zip.code', type: 'number', required: true },
-    { name: 'city', required: true },
-    { name: 'street', required: true },
-    { name: 'number', type: 'number', required: true },
-    { name: 'city', required: true },
-    { name: 'additionalInfo', id: 'additional.info', required: false },
-  ]
 
   return (
     <>
