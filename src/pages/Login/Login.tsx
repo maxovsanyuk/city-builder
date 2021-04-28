@@ -1,8 +1,7 @@
 import { FC } from 'react'
-import { useIntl } from 'react-intl'
-
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { useIntl } from 'react-intl'
 
 import { Wrapper } from './Login.style'
 

@@ -9,7 +9,7 @@ import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import Tag from 'procredit-bank-design-system/modules/tag'
 import { IAccount } from './mockData'
-import {getUniqueValuesFromObjectArray} from "../../../utils/helpers";
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 
 const { MoreOutlined } = Icons
 const { Item } = Menu
@@ -46,13 +46,17 @@ const MoreOptions = (value: any, record: IAccount) => {
 }
 
 const RenderAccountTypeTag = (tag: string) => {
-  if (!tag) return '-'
+  switch (tag) {
+    case 'current':
+      return <Tag color="volcano">{tag}</Tag>
+    case 'creditLine':
+      return <Tag color="green">{tag}</Tag>
+    case 'flexSave':
+      return <Tag color="volcano">{tag}</Tag>
 
-  let color = ''
-  if (tag === 'current') color = 'volcano'
-  if (tag === 'creditLine') color = 'green'
-  if (tag === 'flexSave') color = 'purple'
-  return <Tag color={color}>{tag}</Tag>
+    default:
+      return '-'
+  }
 }
 
 const PrettyNumber = (num: number) =>
