@@ -16,20 +16,21 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
     get(e, 'target.checked')
       ? setAdditionalFileNameList([...additionalFileNameList, get(e, 'target.name')])
       : additionalFileNameList.length &&
-        setAdditionalFileNameList(additionalFileNameList.filter((s: string) => s !== get(e, 'target.name')))
+        setAdditionalFileNameList(additionalFileNameList.filter((name: string) => name !== get(e, 'target.name')))
   }
 
   return (
     <>
-      {config.map((el: string) => {
+      {config.map((elem: string) => {
         return (
-          <Checkbox name={el} key={el} onChange={checkBoxChangeHandler}>
-            {formatMessage({ id: el })}
+          <Checkbox name={elem} key={elem} onChange={checkBoxChangeHandler}>
+            {formatMessage({ id: elem })}
           </Checkbox>
         )
       })}
 
-      <div className="additional-file-box">gst
+      <div className="additional-file-box">
+        gst
         {additionalFileNameList.map((name: string) => {
           return <FormUploadItem name={name} key={name} />
         })}
