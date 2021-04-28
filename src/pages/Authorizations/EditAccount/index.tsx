@@ -1,4 +1,4 @@
-import React, { FC, useState, useEffect } from 'react'
+import { FC, useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { history } from '../../../store/configureStore'
 import { useIntl } from 'react-intl'
