@@ -34,8 +34,7 @@ Instructions on how to use them in your own application are linked below.
 | Redux Persist | [GitHub](https://github.com/rt2zz/redux-persist/blob/master/README.md) |
 | Redux Saga | [GitHub](https://github.com/redux-saga/redux-saga/blob/master/README.md) |
 | Axios | [GitHub](https://github.com/axios/axios/blob/master/README.md) |
-| Shortid | [GitHub](https://github.com/dylang/shortid/blob/master/README.md) |
-| React hook form | [GitHub](https://github.com/react-hook-form/react-hook-form/blob/master/docs/README.ru-RU.md) |
+| NanoID | [GitHub](https://github.com/ai/nanoid#readme) |
 | React Intl | [Documentation](https://formatjs.io/docs/getting-started/installation/) |
 | Styled components | [GitHub](https://github.com/styled-components/styled-components/blob/master/README.md) |
 | Lodash | [Documentation](https://lodash.com/) |

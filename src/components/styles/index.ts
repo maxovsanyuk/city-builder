@@ -1,11 +1,15 @@
 import { createGlobalStyle, css } from 'styled-components'
 
+import Colors from 'procredit-bank-design-system/modules/colors'
+
+const { gray } = Colors
+
 export const GlobalStyle = createGlobalStyle`
   ${({ theme }) => css`
     body {
       font-size: 16px;
       line-height: 1.5;
-      color: ${theme.colors.black};
+      color: ${gray[8]};
       font-family: ${theme.fonts.inter}, ${theme.fonts.arial}};
     }
   `}
