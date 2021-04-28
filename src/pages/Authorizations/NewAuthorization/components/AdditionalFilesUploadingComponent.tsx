@@ -21,10 +21,10 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
 
   return (
     <>
-      {config.map((el: string) => {
+      {config.map((elem: string) => {
         return (
-          <Checkbox name={el} key={el} onChange={checkBoxChangeHandler}>
-            {formatMessage({ id: el })}
+          <Checkbox name={elem} key={elem} onChange={checkBoxChangeHandler}>
+            {formatMessage({ id: elem })}
           </Checkbox>
         )
       })}
