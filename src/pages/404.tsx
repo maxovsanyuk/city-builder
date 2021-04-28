@@ -20,8 +20,8 @@ const NotFound: FC<NotFoundProps> = () => {
   const { formatMessage } = useIntl()
   return (
     <Wrapper>
-      <Title level={2}>{formatMessage({ id: '404-not-found', defaultMessage: '404 | Not found' })}</Title>
-      <Link to="/">{formatMessage({ id: 'back-to-main-page', defaultMessage: 'Back to main page' })}</Link>
+      <Title level={2}>{formatMessage({ id: '404.not.found', defaultMessage: '404 | Not found' })}</Title>
+      <Link to="/">{formatMessage({ id: 'back.to.main.page', defaultMessage: 'Back to main page' })}</Link>
     </Wrapper>
   )
 }

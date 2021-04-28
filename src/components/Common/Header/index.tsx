@@ -17,12 +17,17 @@ const HeaderWrapper = styled.div`
 `
 
 const StyledHeader = styled(Header)`
-  align-items: center;
-  background-color: ${gray[1]};
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  background-color: ${gray[1]};
   padding-left: 24px;
   padding-right: 56px;
+
+  .ant-col {
+    display: flex;
+    align-items: center;
+  }
 `
 
 interface HeaderProps {}
@@ -36,9 +41,11 @@ const HeaderComponent: FC<HeaderProps> = () => (
         <Col style={{ marginRight: '16px' }}>
           <UserProfile />
         </Col>
-        <Col>
+
+        <Col style={{ marginRight: '16px' }}>
           <LangSwitcher />
         </Col>
+
         <Col>
           <LogoutButton />
         </Col>

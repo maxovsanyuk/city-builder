@@ -17,7 +17,7 @@ const App: FC = () => {
       <GlobalStyle />
       <Sprite />
       <Router history={history}>
-        {!user?.token ? (
+        {user?.token ? (
           <Switch>
             {PlatformRoutes.map(({ component: Component, ...elem }) => (
               <Route

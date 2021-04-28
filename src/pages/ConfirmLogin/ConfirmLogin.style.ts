@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 import Colors from 'procredit-bank-design-system/modules/colors'
-
 const { gray } = Colors
 
 export const Wrapper = styled.div`
@@ -9,7 +8,7 @@ export const Wrapper = styled.div`
   height: 460px;
   background: ${gray[1]};
   border-radius: 16px;
-  padding: 60px 40px;
+  padding: 40px;
 
   .h-4 {
     margin: 40px 0 30px 0;

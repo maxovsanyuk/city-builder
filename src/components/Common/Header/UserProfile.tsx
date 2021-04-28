@@ -16,7 +16,7 @@ interface UserProfileProps {}
 const UserProfile: FC<UserProfileProps> = () => {
   const user = mockedUser
   return (
-    <div>
+    <div style={{ marginTop: 5 }}>
       <Avatar size={40} src={user.avatar} />
       <UserName>{user.name}</UserName>
     </div>
