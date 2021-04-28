@@ -30,7 +30,7 @@ const EditAccount: FC<AccountsProps> = () => {
   const onFinish = (values: Record<string, string | number | unknown>) => {
     console.log(values, 'values')
 
-    Message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
+    Message.success({ content: formatMessage({ id: 'processing.complete' }), duration: 2 })
     history.push('/authorizations/accounts')
   }
 
@@ -60,7 +60,7 @@ const EditAccount: FC<AccountsProps> = () => {
           </Title>
         </div>
 
-        <Form form={form} name="horizontal_login" layout="vertical" onFinish={onFinish}>
+        <Form form={form} name="edit_account" layout="vertical" onFinish={onFinish}>
           <div className="form-items-box">
             <Form.Item
               label={formatMessage({ id: 'limit.amount' })}
