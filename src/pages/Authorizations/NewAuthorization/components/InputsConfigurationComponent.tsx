@@ -16,8 +16,6 @@ interface ConfigProps {
 const InputsConfigurationComponent = ({ config, formState, stepNamber }: ConfigProps) => {
   const { formatMessage } = useIntl()
 
-  console.log(formState, 'formState')
-
   return (
     <>
       {config.map(({ name, id, type, required }: Record<string, string | unknown>) => {
