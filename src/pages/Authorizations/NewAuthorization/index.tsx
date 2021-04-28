@@ -11,8 +11,6 @@ import DocumentsComponent from './components/steps/DocumentsComponent'
 import Breadcrumb from '../../../components/Common/Breadcrumb'
 import { Wrapper } from './style'
 
-// procredit-bank-design-syste
-
 import Steps from 'procredit-bank-design-system/modules/steps'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Card from 'procredit-bank-design-system/modules/card'
@@ -31,12 +29,10 @@ interface FormProps {
 
 const STEPS_COUNTER = 3
 
-export const useFormSteps = () => {
+export const useFormSteps = (): FormProps => {
   const [currentStep, setCurrentStep] = useState<number>(0)
   const [formState, setFormState] = useState<Record<string, FormStepProps>>({})
   const { formatMessage } = useIntl()
-
-  console.log(formState, 'formState')
 
   const steps = [
     {
@@ -81,7 +77,7 @@ export const useFormSteps = () => {
 }
 
 const NewAuthorization: FC = () => {
-  const { currentStep, steps }: FormProps = useFormSteps()
+  const { currentStep, steps = [] } = useFormSteps()
   const { formatMessage } = useIntl()
 
   return (
@@ -103,7 +99,7 @@ const NewAuthorization: FC = () => {
 
       <Card className="card">
         <Steps type="navigation" current={currentStep} className="steps">
-          {steps.map(item => (
+          {steps.map((item: Record<string, string>) => (
             <Step key={item.title} title={item.title} />
           ))}
         </Steps>

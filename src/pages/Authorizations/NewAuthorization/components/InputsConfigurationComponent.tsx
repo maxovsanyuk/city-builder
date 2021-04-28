@@ -1,7 +1,5 @@
 import { useIntl } from 'react-intl'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
 
