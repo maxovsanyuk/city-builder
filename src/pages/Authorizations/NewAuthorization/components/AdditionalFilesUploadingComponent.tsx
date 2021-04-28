@@ -19,7 +19,7 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
     get(e, 'target.checked')
       ? setAdditionalFileNameList([...additionalFileNameList, get(e, 'target.name')])
       : additionalFileNameList.length &&
-        setAdditionalFileNameList(additionalFileNameList.filter((s: string) => s !== get(e, 'target.name')))
+        setAdditionalFileNameList(additionalFileNameList.filter((name: string) => name !== get(e, 'target.name')))
   }
 
   return (
