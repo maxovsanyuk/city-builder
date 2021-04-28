@@ -1,11 +1,7 @@
 import { useIntl } from 'react-intl'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
-
-// LODASH
 
 import get from 'lodash/get'
 
@@ -17,8 +13,6 @@ interface ConfigProps {
 
 const InputsConfigurationComponent = ({ config, formState, stepNamber }: ConfigProps) => {
   const { formatMessage } = useIntl()
-
-  console.log(formState, 'formState')
 
   return (
     <>
