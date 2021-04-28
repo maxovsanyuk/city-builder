@@ -8,8 +8,6 @@ import FormUploadItem from '../FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
 import AdditionalFilesUploadingComponent from '../AdditionalFilesUploadingComponent'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Message from 'procredit-bank-design-system/modules/message'
 

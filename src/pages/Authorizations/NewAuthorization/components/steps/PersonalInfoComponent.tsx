@@ -6,8 +6,6 @@ import { useIntl } from 'react-intl'
 import InputsConfigurationComponent from '../InputsConfigurationComponent'
 import FormBtnsComponent from '../FormBtnsComponent'
 
-// procredit-bank-design-system
-
 import Form from 'procredit-bank-design-system/modules/form'
 import DatePicker from 'procredit-bank-design-system/modules/date-picker'
 import Select from 'procredit-bank-design-system/modules/select'
