@@ -8,6 +8,7 @@ import NewRelation from './NewRelation'
 import Accounts from './Accounts'
 import Account from './Account'
 import Catalog from './Catalog'
+import EditAccount from './EditAccount'
 
 interface AuthorizationsProps {}
 const Authorizations: FC<AuthorizationsProps> = () => (
@@ -22,9 +23,16 @@ const Authorizations: FC<AuthorizationsProps> = () => (
       path="/authorizations/accounts/:id/create"
       render={props => <NewRelation {...props} id={props.match.params.id} />}
     />
-    <Route path="/authorizations/accounts/:id" render={props => <Account {...props} id={props.match.params.id} />} />
-    <Route path="/authorizations/accounts">
+    <Route
+      exact
+      path="/authorizations/accounts/:id"
+      render={props => <Account {...props} id={props.match.params.id} />}
+    />
+    <Route exact path="/authorizations/accounts">
       <Accounts />
+    </Route>
+    <Route exact path="/authorizations/accounts/edit/:accountId">
+      <EditAccount />
     </Route>
     <Route path="/authorizations/modifications">
       <Modifications />

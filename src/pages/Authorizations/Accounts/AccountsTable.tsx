@@ -9,7 +9,7 @@ import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
 import Tag from 'procredit-bank-design-system/modules/tag'
 import { IAccount } from './mockData'
-import {getUniqueValuesFromObjectArray} from "../../../utils/helpers";
+import { getUniqueValuesFromObjectArray } from '../../../utils/helpers'
 
 const { MoreOutlined } = Icons
 const { Item } = Menu

@@ -17,7 +17,7 @@ const { Title } = Typography
 
 interface AccountsProps {}
 interface ParamsProps {
-  accountId: string | undefined
+  accountId: string
 }
 
 const EditAccount: FC<AccountsProps> = () => {
