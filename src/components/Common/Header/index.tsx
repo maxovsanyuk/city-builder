@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-// import Layout from 'procredit-bank-design-system/modules/layout'
+import Layout from 'procredit-bank-design-system/modules/layout'
 import Colors from 'procredit-bank-design-system/modules/colors'
 import Row from 'procredit-bank-design-system/modules/row'
 import Col from 'procredit-bank-design-system/modules/col'
@@ -10,13 +10,13 @@ import UserProfile from './UserProfile'
 import Logo from './Logo'
 
 const { gray } = Colors
-// const { Header } = Layout
+const { Header } = Layout
 
 const HeaderWrapper = styled.div`
   border-bottom: 1px solid ${gray[3]};
 `
 
-const StyledHeader = styled.div`
+const StyledHeader = styled(Header)`
   display: flex;
   align-items: center;
   justify-content: space-between;

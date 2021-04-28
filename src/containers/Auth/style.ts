@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: ${`${gray[2]} url(${PCBpattern}) no-repeat right bottom`};
+  background: ${gray[2]} ${`url(${PCBpattern}) no-repeat right bottom`};
   padding: 0 5% 5% 5%;
   overflow: auto;
 
