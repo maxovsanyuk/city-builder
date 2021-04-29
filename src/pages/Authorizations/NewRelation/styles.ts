@@ -10,12 +10,12 @@ export const Wrapper = styled.div`
     border: none;
   }
 
-  .ant-card-body {
-    height: calc(100% - 80px);
-  }
-
   .ant-card-head-title {
     padding: 22.5px 0 0 0;
+  }
+
+  .ant-card-body {
+    height: calc(100% - 68px);
   }
 
   .text-cont {
@@ -29,7 +29,9 @@ export const Wrapper = styled.div`
   }
 
   .card {
-    height: 100%;
+    height: calc(100% - 40px);
+    margin: 20px 0;
+    overflow: auto;
   }
 
   form {
@@ -37,10 +39,17 @@ export const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    width: 100%;
+  }
+
+  .ant-form-item {
+    margin-bottom: 0;
+    padding: 10px 0;
   }
 
   .form-items-box {
-    width: 200px;
+    width: 290px;
     margin: 40px 0 20px 0;
+    height: max-content;
   }
 `

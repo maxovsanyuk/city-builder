@@ -55,7 +55,7 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
         onFinish={onFinish}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={1} />
+          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={1} withSteps />
         </div>
 
         <Form.Item shouldUpdate={true}>

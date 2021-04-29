@@ -56,7 +56,7 @@ const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, for
         }}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={2} />
+          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={2} withSteps />
         </div>
 
         <Form.Item shouldUpdate={true}>

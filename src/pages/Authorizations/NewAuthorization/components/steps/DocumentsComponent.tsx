@@ -31,7 +31,6 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
     setFormState((prevFormState: Record<string, string | number | unknown>) => {
       return { ...prevFormState, step3: values }
     })
-
     Message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
     history.push('/authorizations')
   }
