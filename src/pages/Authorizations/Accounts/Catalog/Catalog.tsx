@@ -3,8 +3,8 @@ import Card from 'procredit-bank-design-system/modules/card'
 import AccountsTable from './AccountsTable'
 import { useAccounts } from './mockData'
 
-interface AccountsProps {}
-const Accounts: FC<AccountsProps> = () => {
+interface CatalogProps {}
+const Catalog: FC<CatalogProps> = () => {
   const { accounts, loading } = useAccounts()
 
   return (
@@ -14,4 +14,4 @@ const Accounts: FC<AccountsProps> = () => {
   )
 }
 
-export default Accounts
+export default Catalog

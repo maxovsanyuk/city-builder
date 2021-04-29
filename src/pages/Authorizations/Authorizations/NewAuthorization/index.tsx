@@ -1,17 +1,14 @@
-import React, { FC, useState } from 'react'
+import { FC, useState } from 'react'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-
-import PersonalInfoComponent from './components/steps/PersonalInfoComponent'
-import AdressDetailsComponent from './components/steps/AdressDetailsComponent'
-import DocumentsComponent from './components/steps/DocumentsComponent'
-
-import Breadcrumb from 'components/Common/Breadcrumb'
-import { Wrapper } from './style'
-
 import Steps from 'procredit-bank-design-system/modules/steps'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Card from 'procredit-bank-design-system/modules/card'
+import Breadcrumb from 'components/Common/Breadcrumb'
+import AdressDetailsComponent from './components/steps/AdressDetailsComponent'
+import PersonalInfoComponent from './components/steps/PersonalInfoComponent'
+import DocumentsComponent from './components/steps/DocumentsComponent'
+import { Wrapper } from './style'
 
 const { Step } = Steps
 const { HomeFilled } = Icons
@@ -87,10 +84,10 @@ const NewAuthorization: FC = () => {
           </Link>
         </Item>
         <Item>
-          <Link to="/authorizations">{formatMessage({ id: 'managing.authorizations' })}</Link>
+          <Link to="/manage-authorizations">{formatMessage({ id: 'managing.authorizations' })}</Link>
         </Item>
         <Item>
-          <Link to="/authorizations">{formatMessage({ id: 'authorizations' })}</Link>
+          <Link to="/manage-authorizations/authorizations">{formatMessage({ id: 'authorizations' })}</Link>
         </Item>
         <Item>{formatMessage({ id: 'new.authorizations' })}</Item>
       </Breadcrumb>

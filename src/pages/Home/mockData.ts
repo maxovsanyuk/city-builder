@@ -21,7 +21,7 @@ const mockCards: ICard[] = [
     cover: '/mocks/mockCardCover2.jpg',
     title: 'Managing authorizations',
     description: 'Description Managing users',
-    href: '/authorizations',
+    href: '/manage-authorizations',
   },
   {
     id: nanoid(),

@@ -127,7 +127,7 @@ const AccountsTable: FC<AccountsTableProps> = ({ data, loading = false }) => {
       loading={loading}
       pagination={{ position: ['bottomLeft'], showSizeChanger: true }}
       onRow={(account: IAccount) => ({
-        onClick: () => history.push(`/authorizations/accounts/${account.accountNumber}`),
+        onClick: () => history.push(`/manage-authorizations/accounts/${account.accountNumber}`),
       })}
     />
   )
