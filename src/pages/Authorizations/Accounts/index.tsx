@@ -1,31 +1,31 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
-import Icons from 'procredit-bank-design-system/modules/icons'
-import ContentHeader from 'components/Common/ContentHeader'
-import Breadcrumb from 'components/Common/Breadcrumb'
-import Accounts from './Accounts'
+import { Route, Switch } from 'react-router-dom'
+import NotFound from 'pages/404'
 
-const { Item } = Breadcrumb
-const { HomeFilled } = Icons
+import EditAccount from './EditAccount'
+import NewRelation from './NewRelation'
+import Account from './Account'
+import Catalog from './Catalog'
 
-interface AccountsProps {}
-const AccountsPage: FC<AccountsProps> = () => (
-  <>
-    <ContentHeader>
-      <Breadcrumb>
-        <Item>
-          <Link to="/">
-            <HomeFilled /> <span className="breadcrumb-item-text">Home</span>
-          </Link>
-        </Item>
-        <Item>
-          <Link to="/authorizations">Managing authorizations</Link>
-        </Item>
-        <Item>Accounts</Item>
-      </Breadcrumb>
-    </ContentHeader>
-    <Accounts />
-  </>
+const AccountsRoutes: FC = () => (
+  <Switch>
+    <Route path="/manage-authorizations/accounts/edit/:id">
+      <EditAccount />
+    </Route>
+    <Route path="/manage-authorizations/accounts/new-relation/:id">
+      <NewRelation />
+    </Route>
+    <Route
+      path="/manage-authorizations/accounts/:id"
+      render={props => <Account {...props} id={props.match.params.id} />}
+    />
+    <Route path="/manage-authorizations/accounts">
+      <Catalog />
+    </Route>
+    <Route path="*">
+      <NotFound />
+    </Route>
+  </Switch>
 )
 
-export default AccountsPage
+export default AccountsRoutes

@@ -31,7 +31,7 @@ const EditAccount: FC<AccountsProps> = () => {
     console.log(values, 'values')
 
     Message.success({ content: formatMessage({ id: 'processing.complete' }), duration: 2 })
-    history.push('/authorizations/accounts')
+    history.push('/manage-authorizations/accounts')
   }
 
   // To disable submit button at the beginning.
@@ -81,7 +81,7 @@ const EditAccount: FC<AccountsProps> = () => {
           <Form.Item shouldUpdate={true}>
             {() => (
               <div style={{ display: 'flex' }}>
-                <Link to="/authorizations/accounts">
+                <Link to="/manage-authorizations/accounts">
                   <Button type="primary">{formatMessage({ id: 'cancel' })}</Button>
                 </Link>
 

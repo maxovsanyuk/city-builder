@@ -5,9 +5,6 @@ import { useIntl } from 'react-intl'
 
 import { Wrapper } from './styles'
 
-import AdditionalFilesUploadingComponent from '../NewAuthorization/components/AdditionalFilesUploadingComponent'
-import InputsConfigurationComponent from '../NewAuthorization/components/InputsConfigurationComponent'
-
 import Card from 'procredit-bank-design-system/modules/card'
 import Form from 'procredit-bank-design-system/modules/form'
 import Message from 'procredit-bank-design-system/modules/message'
@@ -15,6 +12,10 @@ import Breadcrumb from 'components/Common/Breadcrumb'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Button from 'procredit-bank-design-system/modules/button'
 import Typography from 'procredit-bank-design-system/modules/typography'
+import AdditionalFilesUploadingComponent
+  from "../../Authorizations/NewAuthorization/components/AdditionalFilesUploadingComponent";
+import InputsConfigurationComponent
+  from "../../Authorizations/NewAuthorization/components/InputsConfigurationComponent";
 
 const { Title } = Typography
 const { HomeFilled } = Icons

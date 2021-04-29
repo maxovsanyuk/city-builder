@@ -1,49 +1,26 @@
 import { FC } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from 'pages/404'
-import NewAuthorization from './NewAuthorization'
-import Authorization from './Authorization'
-import Modifications from './Modifications'
-import NewRelation from './NewRelation'
-import Accounts from './Accounts'
-import Account from './Account'
-import Catalog from './Catalog'
-import EditAccount from './EditAccount'
+
+import AuthorizationsRoutes from './Authorizations'
+import AccountsRoutes from './Accounts'
+import ModificationsRoutes from './Modifications'
 
 interface AuthorizationsProps {}
 const Authorizations: FC<AuthorizationsProps> = () => (
   <Switch>
-    <Route path="/authorizations/catalog">
-      <Catalog />
+    <Route path="/manage-authorizations/authorizations">
+      <AuthorizationsRoutes />
     </Route>
-    <Route path="/authorizations/create">
-      <NewAuthorization />
+    <Route path="/manage-authorizations/accounts">
+      <AccountsRoutes />
     </Route>
-    <Route path="/authorizations/accounts/new-relation/:id/">
-      <NewRelation />
-    </Route>
-
-    <Route exact path="/authorizations/accounts/edit/:id">
-      <EditAccount />
-    </Route>
-    <Route
-      exact
-      path="/authorizations/accounts/:id"
-      render={props => <Account {...props} id={props.match.params.id} />}
-    />
-    <Route exact path="/authorizations/accounts">
-      <Accounts />
+    <Route path="/manage-authorizations/modifications">
+      <ModificationsRoutes />
     </Route>
 
-    <Route path="/authorizations/modifications">
-      <Modifications />
-    </Route>
-    <Route
-      path="/authorizations/:id"
-      render={routeProps => <Authorization {...routeProps} id={routeProps.match.params.id} />}
-    />
-    <Route path="/authorizations" exact>
-      <Redirect to="/authorizations/catalog" />
+    <Route path="/manage-authorizations" exact>
+      <Redirect to="/manage-authorizations/authorizations" />
     </Route>
     <Route path="*">
       <NotFound />
