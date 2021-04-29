@@ -1,42 +1,11 @@
 import { FC, useMemo } from 'react'
-import styled from 'styled-components'
 import Tooltip from 'procredit-bank-design-system/modules/tooltip'
 import Table from 'procredit-bank-design-system/modules/table'
-import Tag from 'procredit-bank-design-system/modules/tag'
+import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
+import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
 
-const TagList = styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-`
-
-const RenderAuthorizationTags = (tags: string[]) => (
-  <TagList>
-    {tags.map(tag => {
-      let color = ''
-      if (tag === 'A') color = 'green'
-      if (tag === 'B') color = 'yellow'
-      if (tag === 'C') color = 'blue'
-      return (
-        <li key={tag}>
-          <Tag color={color}>{tag}</Tag>
-        </li>
-      )
-    })}
-  </TagList>
-)
-
-const RenderAccountTypeTag = (text: string) => {
-  if (!text) return null
-  let color = ''
-  if (text === 'current') color = 'volcano'
-  if (text === 'creditLine') color = 'green'
-  if (text === 'flexSave') color = 'magenta'
-  return <Tag color={color}>{text}</Tag>
-}
 const RenderComment = (text: string) => (
   <Tooltip placement="bottomRight" title={text}>
     {text}
@@ -149,6 +118,7 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = fal
         ...(rowSelection || {}),
         type: 'checkbox',
       }}
+      tableLayout="fixed"
     />
   )
 }

@@ -1,215 +1,136 @@
 import { nanoid } from 'nanoid'
 
 // !TODO: swap with actual fields from the API
+export type IType =
+  | 'New authorization'
+  | 'New relation'
+  | 'Edit authorization'
+  | 'Edit relation'
+  | 'Edit required authorizations'
+  | 'Disable EBA access'
+  | 'Enable EBA access'
+  | 'Dismissal'
 export type IAuthorization = 'A' | 'B' | 'C'
-export type IStatus = 'new' | 'eba' | 'no-eba' | 'dismissed'
-export interface IUser {
-  id: string
-  name: string
-}
+export type IStatus = 'Pending' | 'Legal representative'
 
 export interface IData {
   id: string
-  userId: string
-  name: string
-  authorization?: IAuthorization[]
-  status: IStatus
-  relation: string
-
-  // Currently unused
-  type?: 'authorized' | 'contact' | 'empowered'
-  startDate?: string
-  endDate?: string
-  comment?: string
-
-  accountNumber?: string
-  accountType?: string
-  currency?: string
-  relations?: string
+  type: IType
+  userId: string | null
+  name: string | null
+  accountNumber: string | null
+  accountType: string | null
+  authorization: IAuthorization[]
+  date: string
+  status: IStatus[]
 }
 
 const mockData: IData[] = [
   {
     id: nanoid(),
+    type: 'New authorization',
     userId: nanoid(),
     name: 'Esther Howard',
+    accountNumber: null,
+    accountType: null,
     authorization: [],
-    status: 'new',
-    accountNumber: 'EUR13499492584785387',
-    accountType: 'current',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'authorized',
+    date: '23/01/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Edit authorization',
     userId: nanoid(),
     name: 'Jenny Wilson',
-    authorization: ['A', 'B', 'C'],
-    status: 'eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    accountType: 'current',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'contactPerson',
+    accountNumber: null,
+    accountType: null,
+    authorization: [],
+    date: '15/01/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'New relation',
     userId: nanoid(),
     name: 'Jacob Jones',
+    accountNumber: 'EUR43434358238935493',
+    accountType: 'Credit line',
     authorization: ['C'],
-    status: 'eba',
-    currency: 'EUR',
-    accountNumber: 'EUR13499492584785387',
-    accountType: 'creditLine',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'authorized',
+    date: '16/01/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Edit relation',
     userId: nanoid(),
     name: 'Annette Black',
-    authorization: ['A', 'C'],
-    status: 'eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    accountType: 'current',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'authorized',
-  },
-  {
-    id: nanoid(),
-    userId: nanoid(),
-    name: 'Brooklyn Simmons',
+    accountNumber: 'EUR43434358238935454',
+    accountType: 'Current account',
     authorization: ['A'],
-    status: 'eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    accountType: 'flexSave',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'contactOwner',
+    date: '28/01/2020',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Edit required authorizations',
+    userId: null,
+    name: null,
+    accountNumber: 'EUR43434358238935454',
+    accountType: 'FlexSave',
+    authorization: ['A'],
+    date: '07/02/2021',
+    status: ['Pending', 'Legal representative'],
+  },
+  {
+    id: nanoid(),
+    type: 'Disable EBA access',
     userId: nanoid(),
     name: 'Savannah Nguyen',
-    authorization: ['A'],
-    status: 'no-eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'contactCoowner',
+    accountNumber: null,
+    accountType: null,
+    authorization: [],
+    date: '18/01/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Enable EBA access',
     userId: nanoid(),
     name: 'Albert Flores',
-    authorization: ['A'],
-    status: 'no-eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'contactPerson',
+    accountNumber: null,
+    accountType: null,
+    authorization: [],
+    date: '16/01/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Dismissal',
     userId: nanoid(),
     name: 'Marvin McKinney',
-    authorization: ['A', 'B'],
-    status: 'eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'legalRepresentative',
+    accountNumber: null,
+    accountType: null,
+    authorization: [],
+    date: '07/02/2021',
+    status: ['Pending', 'Legal representative'],
   },
   {
     id: nanoid(),
+    type: 'Dismissal',
     userId: nanoid(),
     name: 'Leslie Alexander',
-    authorization: ['A'],
-    status: 'eba',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'contactPerson',
-  },
-  {
-    id: nanoid(),
-    userId: nanoid(),
-    name: 'Marvin McKinney',
-    authorization: ['A', 'B'],
-    status: 'dismissed',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'legalRepresentative',
-  },
-  {
-    id: nanoid(),
-    userId: nanoid(),
-    name: 'Leslie Alexander',
-    authorization: ['A'],
-    status: 'dismissed',
-    currency: 'EUR',
-    relations: 'Authorized person',
-    accountNumber: 'EUR13499492584785387',
-    startDate: '23/01/2021',
-    endDate: '23/01/2021',
-    comment:
-      'Wireframes can be pencil drawings or sketches on a whiteboard, or they can be produced by means of a broad array of free or commercial software applications.',
-    relation: 'authorized',
+    accountNumber: null,
+    accountType: null,
+    authorization: [],
+    date: '12/06/2020',
+    status: ['Pending', 'Legal representative'],
   },
 ]
 
 // TODO: Link to API
-export const useAuthorizations = (): { data: IData[]; loading: boolean } => ({
+export const useModifications = (): { data: IData[]; loading: boolean } => ({
   data: mockData,
   loading: false,
-})
-export const useRelatedAuthorizations = (id: string): { data: IData[]; loading: boolean } => ({
-  data: mockData,
-  loading: false,
-})
-export const useUser = (id: string): IUser => ({
-  id,
-  name: 'Jenny Wilson',
 })
 
 export default mockData

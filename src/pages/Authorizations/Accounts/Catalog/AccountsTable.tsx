@@ -7,7 +7,7 @@ import Button from 'procredit-bank-design-system/modules/button'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Space from 'procredit-bank-design-system/modules/space'
 import Menu from 'procredit-bank-design-system/modules/menu'
-import Tag from 'procredit-bank-design-system/modules/tag'
+import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
 import { IAccount } from './mockData'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 
@@ -43,20 +43,6 @@ const MoreOptions = (value: any, record: IAccount) => {
       </Dropdown>
     </Space>
   )
-}
-
-const RenderAccountTypeTag = (tag: string) => {
-  switch (tag) {
-    case 'current':
-      return <Tag color="volcano">{tag}</Tag>
-    case 'creditLine':
-      return <Tag color="green">{tag}</Tag>
-    case 'flexSave':
-      return <Tag color="volcano">{tag}</Tag>
-
-    default:
-      return '-'
-  }
 }
 
 const PrettyNumber = (num: number) =>
