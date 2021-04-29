@@ -28,7 +28,7 @@ export const DefaultItems: IMenuItem[] = [
   {
     id: nanoid(),
     title: 'Managing authorizations',
-    href: '/authorizations',
+    href: '/manage-authorizations',
     icon: <TeamOutlined />,
     type: 'item',
   },
@@ -70,21 +70,21 @@ export const AuthorizationsItems: IMenuItem[] = [
       {
         id: nanoid(),
         title: 'Authorizations',
-        href: '/authorizations/catalog',
+        href: '/manage-authorizations/authorizations',
         icon: <TeamOutlined />,
         type: 'item',
       },
       {
         id: nanoid(),
         title: 'Accounts',
-        href: '/authorizations/accounts',
+        href: '/manage-authorizations/accounts',
         icon: <CreditCardOutlined />,
         type: 'item',
       },
       {
         id: nanoid(),
         title: 'Modifications',
-        href: '/authorizations/modifications',
+        href: '/manage-authorizations/modifications',
         icon: <UserAddOutlined />,
         type: 'item',
       },

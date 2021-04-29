@@ -33,8 +33,8 @@ const SiderComponent: FC<SiderProps> = ({ items }) => {
 
   // Find id of matching menuItems
   const selectedKeys = useMemo(() => {
-    const menuItems = items.map(getMenuItems).flat()
-    const matchedItems = menuItems.filter(item => item?.href === pathname)
+    const menuItems = items.map(getMenuItems).flat().filter(Boolean)
+    const matchedItems = menuItems.filter(({ href }) => (href === '/' ? href === pathname : pathname.startsWith(href)))
     return matchedItems.map(item => item.id)
   }, [items, pathname])
 

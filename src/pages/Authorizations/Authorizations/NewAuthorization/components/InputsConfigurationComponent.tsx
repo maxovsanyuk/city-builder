@@ -1,8 +1,6 @@
 import { useIntl } from 'react-intl'
-
-import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
-
+import Form from 'procredit-bank-design-system/modules/form'
 import get from 'lodash/get'
 
 interface ConfigProps {

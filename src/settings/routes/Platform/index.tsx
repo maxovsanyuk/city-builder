@@ -27,7 +27,7 @@ const routes: RouteProperties[] = [
   {
     id: 'authorizations',
     component: Authorizations,
-    path: '/authorizations',
+    path: '/manage-authorizations',
     name: 'Managing authorizations',
     layout: AuthorizationsLayout,
   },

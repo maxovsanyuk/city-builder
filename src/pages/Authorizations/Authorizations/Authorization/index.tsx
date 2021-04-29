@@ -45,10 +45,10 @@ const Authorization: FC<AuthorizationProps> = ({ id }) => {
             </Link>
           </Item>
           <Item>
-            <Link to="/authorizations">Managing authorizations</Link>
+            <Link to="/manage-authorizations">Managing authorizations</Link>
           </Item>
           <Item>
-            <Link to="/authorizations/catalog">Authorizations</Link>
+            <Link to="/manage-authorizations/authorizations">Authorizations</Link>
           </Item>
           <Item>{user.name}</Item>
         </Breadcrumb>
@@ -58,7 +58,7 @@ const Authorization: FC<AuthorizationProps> = ({ id }) => {
               Disable selected
             </Button>
           )}
-          <Button type="primary" as={Link} href="/authorizations/create">
+          <Button type="primary" as={Link} href="/manage-authorizations/authorizations/create">
             Add new relation
           </Button>
         </Actions>

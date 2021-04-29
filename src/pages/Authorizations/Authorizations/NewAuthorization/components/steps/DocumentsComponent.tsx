@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
+import Form from 'procredit-bank-design-system/modules/form'
+import Message from 'procredit-bank-design-system/modules/message'
 import { history } from 'store/configureStore'
-
 import FormUploadItem from '../FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
 import AdditionalFilesUploadingComponent from '../AdditionalFilesUploadingComponent'
-
-import Form from 'procredit-bank-design-system/modules/form'
-import Message from 'procredit-bank-design-system/modules/message'
 
 // todo: replace type any
 
@@ -33,7 +31,7 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
     })
 
     Message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
-    history.push('/authorizations')
+    history.push('/manage-authorizations/authorizations')
   }
 
   // To disable submit button at the beginning.

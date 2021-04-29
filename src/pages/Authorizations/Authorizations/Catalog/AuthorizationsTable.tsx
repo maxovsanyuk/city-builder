@@ -101,7 +101,7 @@ const AuthorizationsTable: FC<AuthorizationsTableProps> = ({ data, loading = fal
       loading={loading}
       pagination={{ position: ['bottomLeft'], showSizeChanger: true }}
       onRow={(record: IData) => ({
-        onClick: () => history.push(`/authorizations/${record.userId}`),
+        onClick: () => history.push(`/manage-authorizations/authorizations/${record.userId}`),
       })}
     />
   )

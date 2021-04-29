@@ -1,16 +1,15 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
 import Icons from 'procredit-bank-design-system/modules/icons'
-import Button from 'procredit-bank-design-system/modules/button'
 import ContentHeader from 'components/Common/ContentHeader'
 import Breadcrumb from 'components/Common/Breadcrumb'
-import Authorizations from './Authorizations'
+import Catalog from './Catalog'
 
 const { Item } = Breadcrumb
 const { HomeFilled } = Icons
 
-interface CatalogProps {}
-const Catalog: FC<CatalogProps> = () => (
+interface AccountsProps {}
+const AccountsPage: FC<AccountsProps> = () => (
   <>
     <ContentHeader>
       <Breadcrumb>
@@ -20,16 +19,13 @@ const Catalog: FC<CatalogProps> = () => (
           </Link>
         </Item>
         <Item>
-          <Link to="/authorizations">Managing authorizations</Link>
+          <Link to="/manage-authorizations">Managing authorizations</Link>
         </Item>
-        <Item>Authorizations</Item>
+        <Item>Accounts</Item>
       </Breadcrumb>
-      <Button type="primary" as={Link} href="/authorizations/create">
-        Add new authorization
-      </Button>
     </ContentHeader>
-    <Authorizations />
+    <Catalog />
   </>
 )
 
-export default Catalog
+export default AccountsPage

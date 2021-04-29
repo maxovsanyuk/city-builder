@@ -1,13 +1,11 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
-
-import InputsConfigurationComponent from '../InputsConfigurationComponent'
-import FormBtnsComponent from '../FormBtnsComponent'
-
 import Form from 'procredit-bank-design-system/modules/form'
-import DatePicker from 'procredit-bank-design-system/modules/date-picker'
 import Select from 'procredit-bank-design-system/modules/select'
 import Cascader from 'procredit-bank-design-system/modules/cascader'
+import DatePicker from 'procredit-bank-design-system/modules/date-picker'
+import InputsConfigurationComponent from '../InputsConfigurationComponent'
+import FormBtnsComponent from '../FormBtnsComponent'
 
 const { Option } = Select
 

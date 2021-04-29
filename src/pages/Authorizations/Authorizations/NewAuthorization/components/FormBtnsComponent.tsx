@@ -1,6 +1,5 @@
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-
 import Button from 'procredit-bank-design-system/modules/button'
 
 const FormBtnsComponent = ({ currentStep, setCurrentStep, stepsCounter, form }: any) => {
@@ -13,7 +12,7 @@ const FormBtnsComponent = ({ currentStep, setCurrentStep, stepsCounter, form }: 
           {formatMessage({ id: 'back' })}
         </Button>
       ) : (
-        <Link to="/authorizations">
+        <Link to="/manage-authorizations/authorizations">
           <Button style={{ margin: '0 8px' }}>{formatMessage({ id: 'cancel' })}</Button>
         </Link>
       )}
