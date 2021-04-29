@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
-import Form from 'procredit-bank-design-system/modules/form'
+import { Form } from 'procredit-bank-design-system'
 import InputsConfigurationComponent from '../InputsConfigurationComponent'
 import FormBtnsComponent from '../FormBtnsComponent'
 

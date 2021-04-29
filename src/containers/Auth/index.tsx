@@ -1,6 +1,5 @@
 import { FC } from 'react'
-import LangSwitcher from '../../components/Common/LangSwitcher'
-
+import LangSwitcher from 'components/Common/LangSwitcher'
 import { Wrapper } from './style'
 
 const AuthLayout: FC = ({ children }) => {

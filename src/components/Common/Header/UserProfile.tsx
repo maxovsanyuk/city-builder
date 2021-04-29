@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Avatar from 'procredit-bank-design-system/modules/avatar'
+import { Avatar } from 'procredit-bank-design-system'
 
 const UserName = styled.span`
   margin-left: 1em;

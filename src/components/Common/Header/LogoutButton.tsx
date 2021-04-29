@@ -1,9 +1,7 @@
 import { FC } from 'react'
-import Button from 'procredit-bank-design-system/modules/button'
-import Icons from 'procredit-bank-design-system/modules/icons'
+import { Button, Icons } from 'procredit-bank-design-system'
 import { useDispatch } from 'react-redux'
-import { ActionType } from '../../../store/authentication/model'
-
+import { ActionType } from 'store/authentication/model'
 const { LogoutOutlined } = Icons
 
 interface LogoutButtonProps {}

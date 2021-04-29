@@ -2,17 +2,8 @@ import { FC, useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { history } from 'store/configureStore'
 import { useIntl } from 'react-intl'
-
 import { Wrapper } from './styles'
-
-import Card from 'procredit-bank-design-system/modules/card'
-import Form from 'procredit-bank-design-system/modules/form'
-import InputAmount from 'procredit-bank-design-system/modules/input-amount'
-import Typography from 'procredit-bank-design-system/modules/typography'
-import Input from 'procredit-bank-design-system/modules/input'
-import Button from 'procredit-bank-design-system/modules/button'
-import Message from 'procredit-bank-design-system/modules/message'
-
+import { Card, InputAmount, Typography, Input, Button, Form, Message } from 'procredit-bank-design-system'
 const { Title } = Typography
 
 interface AccountsProps {}

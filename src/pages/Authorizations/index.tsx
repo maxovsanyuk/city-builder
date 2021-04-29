@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from 'pages/404'
-
 import AuthorizationsRoutes from './Authorizations'
 import AccountsRoutes from './Accounts'
 import ModificationsRoutes from './Modifications'

@@ -1,6 +1,6 @@
 import React from 'react'
 import { nanoid } from 'nanoid'
-import Icons from 'procredit-bank-design-system/modules/icons'
+import { Icons } from 'procredit-bank-design-system'
 import { IMenuItem } from 'components/Common/Menu'
 
 const {

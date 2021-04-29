@@ -1,4 +1,4 @@
-import Tag from 'procredit-bank-design-system/modules/tag'
+import { Tag } from 'procredit-bank-design-system'
 
 const RenderStatusTag = (text: string) => {
   if (!text) return '-'

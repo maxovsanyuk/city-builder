@@ -1,6 +1,6 @@
 import { FC, useState, useMemo, ChangeEvent } from 'react'
 import styled from 'styled-components'
-import {Card,Input,Icons,Skeleton,Typography} from 'procredit-bank-design-system'
+import { Card, Input, Icons, Skeleton, Typography } from 'procredit-bank-design-system'
 import AuthorizationsTable from './AuthorizationsTable'
 import { useAuthorizations, IUser } from '../mockData'
 const { SearchOutlined } = Icons

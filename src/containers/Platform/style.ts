@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Layout from 'procredit-bank-design-system/modules/layout'
+import { Layout } from 'procredit-bank-design-system'
 
 export const Wrapper = styled(Layout)`
   height: 100vh;

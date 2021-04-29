@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { Route, Switch } from 'react-router-dom'
 import NotFound from 'pages/404'
-
 import EditAccount from './EditAccount'
 import NewRelation from './NewRelation'
 import Account from './Account'

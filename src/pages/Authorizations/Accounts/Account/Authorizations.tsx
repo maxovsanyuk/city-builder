@@ -1,10 +1,8 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Card from 'procredit-bank-design-system/modules/card'
-import Typography from 'procredit-bank-design-system/modules/typography'
+import { Card, Typography } from 'procredit-bank-design-system'
 import AuthorizationsTable from './AuthorizationsTable'
 import { useRelatedAuthorizations } from '../mockData'
-
 const { Text } = Typography
 
 const SubTitle = styled(Text)`

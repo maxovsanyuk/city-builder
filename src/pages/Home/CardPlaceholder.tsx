@@ -1,9 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Card from 'procredit-bank-design-system/modules/card'
-import Colors from 'procredit-bank-design-system/modules/colors'
-import Skeleton from 'procredit-bank-design-system/modules/skeleton'
-
+import { Card, Colors, Skeleton } from 'procredit-bank-design-system'
 const { Meta } = Card
 const { gray } = Colors
 
