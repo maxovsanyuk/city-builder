@@ -16,14 +16,14 @@ interface FormProps {
   setFormState: any
 }
 
-const formInputsConfig = [
-  { name: 'region', required: true },
-  { name: 'zip.code', type: 'number', required: true },
-  { name: 'city', required: true },
-  { name: 'street', required: true },
-  { name: 'number', type: 'number', required: true },
-  { name: 'city', required: true },
-  { name: 'additionalInfo', id: 'additional.info', required: false },
+const formConfig = [
+  { name: 'region', required: true, type: 'input' },
+  { name: 'zip.code', required: true, type: 'input', subType: 'number' },
+  { name: 'city', required: true, type: 'input' },
+  { name: 'street', required: true, type: 'input' },
+  { name: 'number', required: true, type: 'input', subType: 'number' },
+  { name: 'city', required: true, type: 'input' },
+  { name: 'additionalInfo', id: 'additional.info', required: false, type: 'input' },
 ]
 
 const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, formState, setFormState }: FormProps) => {
@@ -56,7 +56,7 @@ const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, for
         }}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formInputsConfig} formState={formState} stepNamber={2} />
+          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={2} />
         </div>
 
         <Form.Item shouldUpdate={true}>

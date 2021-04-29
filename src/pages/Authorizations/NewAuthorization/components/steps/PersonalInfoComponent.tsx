@@ -5,11 +5,6 @@ import InputsConfigurationComponent from '../InputsConfigurationComponent'
 import FormBtnsComponent from '../FormBtnsComponent'
 
 import Form from 'procredit-bank-design-system/modules/form'
-import DatePicker from 'procredit-bank-design-system/modules/date-picker'
-import Select from 'procredit-bank-design-system/modules/select'
-import Cascader from 'procredit-bank-design-system/modules/cascader'
-
-const { Option } = Select
 
 // todo: replase type any
 
@@ -21,12 +16,14 @@ interface FormProps {
   setFormState: any
 }
 
-const formInputsConfig = [
-  { name: 'name', required: true },
-  { name: 'surname', required: true },
-  { name: 'middleName', id: 'middle.name', required: false },
-  { name: 'taxpayerCode', type: 'number', id: 'taxpayer.code', required: true },
-  { name: 'email', required: true },
+const formConfig = [
+  { name: 'name', required: true, type: 'input' },
+  { name: 'surname', required: true, type: 'input' },
+  { name: 'middleName', id: 'middle.name', required: false, type: 'input' },
+  { name: 'taxpayerCode', id: 'taxpayer.code', required: true, type: 'input', subType: 'number' },
+  { name: 'birthDate', id: 'birth.date', required: false, type: 'date-picker' },
+  { name: 'email', required: true, type: 'input' },
+  { name: 'email', required: true, type: 'select' },
 ]
 
 const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, formState, setFormState }: FormProps) => {
@@ -47,10 +44,6 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
     setCurrentStep((step: number) => step + 1)
   }
 
-  const config = {
-    rules: [{ type: 'object', required: true, message: 'Please select time!' }],
-  }
-
   return (
     <>
       <Form
@@ -62,47 +55,7 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
         onFinish={onFinish}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formInputsConfig} formState={formState} stepNamber={1} />
-
-          <Form.Item
-            name="datePicker"
-            // label={formatMessage({ id: 'date.of.birth' })}
-            label="date-picker"
-            {...config}
-          >
-            <DatePicker />
-          </Form.Item>
-
-          <Form.Item
-            name="select"
-            label="Select"
-            hasFeedback
-            // validateStatus="error"
-          >
-            <Select allowClear>
-              <Option value="1">Option 1</Option>
-              <Option value="2">Option 2</Option>
-              <Option value="3">Option 3</Option>
-            </Select>
-          </Form.Item>
-
-          <Form.Item
-            label="Validating"
-            hasFeedback
-            validateStatus="validating"
-            // help="The information is being validated..."
-            name="cascader"
-          >
-            <Cascader
-              options={[
-                {
-                  value: 'xx',
-                  label: 'xx',
-                },
-              ]}
-              allowClear
-            />
-          </Form.Item>
+          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={1} />
         </div>
 
         <Form.Item shouldUpdate={true}>

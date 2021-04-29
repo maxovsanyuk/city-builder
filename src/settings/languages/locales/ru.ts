@@ -40,6 +40,7 @@ const translations = {
   'account.type': 'Account type ru',
   'account.number': 'Cccount number ru',
   'limit.amount': 'Limit amount ru',
+  'birth.date': 'Date of birth ru',
   'required.authorization': 'Required authorization ru',
   'upload.idScan': 'Upload ID scan ru',
   'upload.drivingLicence': 'Upload driving licence ru',
@@ -56,6 +57,7 @@ const translations = {
   'please.input.your.street': 'Please input your street ru',
   'please.input.your.number': 'Please input your number ru',
   'please.input.your.middle.name': 'Please input your middlename ru',
+  'please.input.your.birth.date': 'Please input your date of birth ru',
   'please.upload.idScan': 'Please upload ID scan ru',
   'please.upload.drivingLicence': 'Please upload driving licence ru',
   'please.upload.proofAddress': 'Please upload proof of address ru',
@@ -89,7 +91,7 @@ const translations = {
   'confirm.login': 'Confirm login ru',
   'mTAN.for.serial.number': 'mTAN for serial number 247 ru',
   'resend.new.code': 'Resend a new code ru',
-  'receive.your.code.text': "It may take a minute to receive your code. Haven't received it?",
+  'receive.your.code.text': "It may take a minute to receive your code. Haven't received it? ru",
 }
 
 export default translations
