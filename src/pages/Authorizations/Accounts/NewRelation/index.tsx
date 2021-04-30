@@ -11,7 +11,7 @@ import Breadcrumb from 'components/Common/Breadcrumb'
 
 import get from 'lodash/get'
 
-import { Card, Form, Message, Icons, Button, Typography, Select, Checkbox } from 'procredit-bank-design-system'
+import { Card, Form, message, Icons, Button, Typography, Select, Checkbox } from 'procredit-bank-design-system'
 const { Option } = Select
 
 const { Title } = Typography
@@ -44,7 +44,7 @@ const NewRelation: FC<AccountsProps> = () => {
 
   const onFinish = (values: Record<string, string | number | unknown>) => {
     console.log(values, 'values')
-    Message.success({ content: formatMessage({ id: 'processing.complete' }), duration: 2 })
+    message.success({ content: formatMessage({ id: 'processing.complete' }), duration: 2 })
     history.push('/manage-authorizations/accounts')
   }
 

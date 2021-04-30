@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 import { history } from 'store/configureStore'
 
-import { Form, Message } from 'procredit-bank-design-system'
+import { Form, message } from 'procredit-bank-design-system'
 
 import FormUploadItem from 'components/Common/AdditionalFilesUpload/FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
@@ -30,7 +30,7 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
     setFormState((prevFormState: Record<string, string | number | unknown>) => {
       return { ...prevFormState, step3: values }
     })
-    Message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
+    message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
     history.push('/manage-authorizations/authorizations')
   }
 
