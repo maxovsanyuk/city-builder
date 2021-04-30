@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
-import { Form, Message } from 'procredit-bank-design-system'
 import { history } from 'store/configureStore'
-import FormUploadItem from '../FormUploadItem'
+
+import { Form, message } from 'procredit-bank-design-system'
+
+import FormUploadItem from 'components/Common/AdditionalFilesUpload/FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
-import AdditionalFilesUploadingComponent from '../AdditionalFilesUploadingComponent'
+import AdditionalFilesUpload from 'components/Common/AdditionalFilesUpload'
 
 // todo: replace type any
 
@@ -28,8 +30,7 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
     setFormState((prevFormState: Record<string, string | number | unknown>) => {
       return { ...prevFormState, step3: values }
     })
-
-    Message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
+    message.success({ content: `${formatMessage({ id: 'processing.complete' })}`, duration: 2 })
     history.push('/manage-authorizations/authorizations')
   }
 
@@ -45,7 +46,7 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
           <FormUploadItem name="idScan" withLabel />
           <Form.Item label={formatMessage({ id: 'additional.documents' })} style={{ margin: '40px 0 20px 0' }} />
 
-          <AdditionalFilesUploadingComponent config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
+          <AdditionalFilesUpload config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
         </div>
 
         <Form.Item shouldUpdate={true}>

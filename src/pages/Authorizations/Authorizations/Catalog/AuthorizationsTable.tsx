@@ -1,11 +1,17 @@
 import { FC, useMemo, MouseEvent } from 'react'
-import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-import { Dropdown, Table, Button, Icons, Space, Menu } from 'procredit-bank-design-system'
+import { getUniqueValuesFromObjectArray } from 'utils/helpers'
+import { history } from 'store/configureStore'
+import { useIntl } from 'react-intl'
+
+import styled from 'styled-components'
+
 import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
 import RenderStatusTag from 'components/Common/Tables/RenderStatusTag'
-import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
+
+import { Dropdown, Table, Button, Icons, Space, Menu } from 'procredit-bank-design-system'
+
 const { MoreOutlined } = Icons
 const { Item } = Menu
 
@@ -16,17 +22,30 @@ const StyledTable = styled(Table)`
 `
 
 const MoreOptions = (value: any, record: IData) => {
+  const { formatMessage } = useIntl()
+
   const handleAction = ({ key }: { key: string }) => {
-    // !TODO: Handle selected action here
-    // ...
+    switch (key) {
+      case 'edit':
+        return history.push(`/manage-authorizations/accounts/new-relation/${record.accountNumber}`)
+      case 'disable_eba':
+        return history.push('/404')
+      case 'dismiss':
+        return history.push('/404')
+      case 'add_relation':
+        return history.push('/404')
+
+      default:
+        return
+    }
   }
 
   const menu = (
-    <Menu onSelect={handleAction}>
-      <Item key="edit">Edit</Item>
-      <Item key="disable_eba">Disable EBA access</Item>
-      <Item key="dismiss">Dismiss</Item>
-      <Item key="add_relation">Add new relation</Item>
+    <Menu onClick={handleAction}>
+      <Item key="edit">{formatMessage({ id: 'edit' })}</Item>
+      <Item key="disable_eba">{formatMessage({ id: 'disable.eba.access' })}</Item>
+      <Item key="dismiss">{formatMessage({ id: 'dismiss' })}</Item>
+      <Item key="add_relation">{formatMessage({ id: 'add.new.relation' })}</Item>
     </Menu>
   )
 
