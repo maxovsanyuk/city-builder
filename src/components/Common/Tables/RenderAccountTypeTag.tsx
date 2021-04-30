@@ -1,11 +1,21 @@
 import Tag from 'procredit-bank-design-system/modules/tag'
 
+const getTagColor = (text: string) => {
+  switch (text) {
+    case 'Current account':
+      return 'volcano'
+    case 'Credit line':
+      return 'green'
+    case 'FlexSave':
+      return 'magenta'
+    default:
+      return ''
+  }
+}
+
 const RenderAccountTypeTag = (text: string) => {
   if (!text) return '-'
-  let color = ''
-  if (text === 'Current account') color = 'volcano'
-  if (text === 'Credit line') color = 'green'
-  if (text === 'FlexSave') color = 'magenta'
+  const color = getTagColor(text)
   return <Tag color={color}>{text}</Tag>
 }
 
