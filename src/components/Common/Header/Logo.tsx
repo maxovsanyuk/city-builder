@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
+import LogoSvg from 'assets/logos/logo.svg'
 
 const Link = styled.a`
   height: inherit;
@@ -14,7 +15,7 @@ interface LogoProps {}
 const Logo: FC<LogoProps> = () => {
   return (
     <Link href="/">
-      <img src="/logos/logo.svg" alt="" />
+      <img src={LogoSvg} alt="" />
     </Link>
   )
 }
