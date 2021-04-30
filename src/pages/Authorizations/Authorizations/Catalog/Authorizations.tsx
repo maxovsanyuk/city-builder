@@ -1,10 +1,7 @@
 import { FC, useState, useMemo, ChangeEvent } from 'react'
-import Card from 'procredit-bank-design-system/modules/card'
-import Input from 'procredit-bank-design-system/modules/input'
-import Icons from 'procredit-bank-design-system/modules/icons'
+import { Card, Input, Icons } from 'procredit-bank-design-system'
 import AuthorizationsTable from './AuthorizationsTable'
 import { useAuthorizations } from '../mockData'
-
 const { SearchOutlined } = Icons
 
 interface AuthorizationsProps {}

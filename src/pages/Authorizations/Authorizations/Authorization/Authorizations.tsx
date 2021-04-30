@@ -1,15 +1,9 @@
 import { FC, useState, useMemo, ChangeEvent } from 'react'
 import styled from 'styled-components'
-import Card from 'procredit-bank-design-system/modules/card'
-import Input from 'procredit-bank-design-system/modules/input'
-import Icons from 'procredit-bank-design-system/modules/icons'
-import Skeleton from 'procredit-bank-design-system/modules/skeleton'
-import Typography from 'procredit-bank-design-system/modules/typography'
+import { Card, Input, Icons, Skeleton, Typography } from 'procredit-bank-design-system'
 import AuthorizationsTable from './AuthorizationsTable'
 import { useAuthorizations, IUser } from '../mockData'
-
 const { SearchOutlined } = Icons
-
 const { Text } = Typography
 
 const SubTitle = styled(Text)`

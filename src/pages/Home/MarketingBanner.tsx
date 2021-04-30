@@ -1,10 +1,7 @@
 import { FC, ReactNode } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import Card from 'procredit-bank-design-system/modules/card'
-import Colors from 'procredit-bank-design-system/modules/colors'
-import Typography from 'procredit-bank-design-system/modules/typography'
-
+import { Card, Colors, Typography } from 'procredit-bank-design-system'
 const { Title } = Typography
 const { gray } = Colors
 

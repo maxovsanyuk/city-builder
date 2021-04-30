@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import ProBreadcrumb from 'procredit-bank-design-system/modules/breadcrumb'
+import { Breadcrumb } from 'procredit-bank-design-system'
 
-const Breadcrumb = styled(ProBreadcrumb)`
+const BreadcrumbStyled = styled(Breadcrumb)`
   // Remove item's underline from first icon
   & > span {
     &:first-of-type {
@@ -23,4 +23,4 @@ const Breadcrumb = styled(ProBreadcrumb)`
   }
 `
 
-export default Breadcrumb
+export default BreadcrumbStyled

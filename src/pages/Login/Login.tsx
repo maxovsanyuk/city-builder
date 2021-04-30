@@ -2,16 +2,10 @@ import { FC } from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useIntl } from 'react-intl'
-
 import { Wrapper } from './Login.style'
-
-import HorizontalLogo from '../../assets/horizontal-logo.svg'
-
-import Form from 'procredit-bank-design-system/modules/form'
-import Input from 'procredit-bank-design-system/modules/input'
-import Button from 'procredit-bank-design-system/modules/button'
-import Typography from 'procredit-bank-design-system/modules/typography'
-import { ActionType } from '../../store/authentication/model'
+import HorizontalLogo from 'assets/horizontal-logo.svg'
+import { Form, Input, Button, Typography } from 'procredit-bank-design-system'
+import { ActionType } from 'store/authentication/model'
 const { Title } = Typography
 
 type FormValues = {

@@ -1,7 +1,7 @@
 import { ChangeEvent, useState } from 'react'
 import { useIntl } from 'react-intl'
 import get from 'lodash/get'
-import Checkbox from 'procredit-bank-design-system/modules/checkbox'
+import { Checkbox } from 'procredit-bank-design-system'
 import FormUploadItem from './FormUploadItem'
 
 interface ConfigProps {

@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Avatar from 'procredit-bank-design-system/modules/avatar'
+import { Avatar } from 'procredit-bank-design-system'
 import MockedUserAvatar from 'assets/mocks/userAvatar.jpg'
 
 const UserName = styled.span`

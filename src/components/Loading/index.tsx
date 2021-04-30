@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import Spin from 'procredit-bank-design-system/modules/spin'
+import { Spin } from 'procredit-bank-design-system'
 
 const Wrapper = styled.div`
   position: absolute;
