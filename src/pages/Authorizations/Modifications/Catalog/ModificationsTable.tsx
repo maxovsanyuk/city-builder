@@ -1,37 +1,14 @@
 import { FC, useMemo } from 'react'
-import styled from 'styled-components'
 import Button from 'procredit-bank-design-system/modules/button'
 import Space from 'procredit-bank-design-system/modules/space'
 import Table from 'procredit-bank-design-system/modules/table'
-import Tag from 'procredit-bank-design-system/modules/tag'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
 import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
+import RenderStatusTags from 'components/Common/Tables/RenderStatusTags'
 import RenderTextCell from 'components/Common/Tables/RenderTextCell'
 
 import { IData, IType, IAuthorization } from '../mockData'
-
-const TagList = styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-`
-
-const RenderStatusTags = (tags: string[]) => (
-  <TagList>
-    {tags.map(tag => {
-      let color = ''
-      if (tag === 'Pending') color = 'orange'
-      if (tag === 'Legal representative') color = 'blue'
-      return (
-        <li key={tag}>
-          <Tag color={color}>{tag}</Tag>
-        </li>
-      )
-    })}
-  </TagList>
-)
 
 const MoreOptions = (value: any, record: IData) => {
   const approveModification = () => {

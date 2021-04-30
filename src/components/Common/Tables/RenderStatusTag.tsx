@@ -1,12 +1,23 @@
 import Tag from 'procredit-bank-design-system/modules/tag'
 
+const getTagColor = (text: string) => {
+  switch (text) {
+    case 'new':
+      return 'volcano'
+    case 'eba':
+      return 'green'
+    case 'no-eba':
+      return 'magenta'
+    case 'dismissed':
+      return 'red'
+    default:
+      return ''
+  }
+}
+
 const RenderStatusTag = (text: string) => {
   if (!text) return '-'
-  let color = ''
-  if (text === 'new') color = 'volcano'
-  if (text === 'eba') color = 'green'
-  if (text === 'no-eba') color = 'magenta'
-  if (text === 'dismissed') color = 'red'
+  const color = getTagColor(text)
   return <Tag color={color}>{text}</Tag>
 }
 

@@ -10,18 +10,17 @@ const TagList = styled.ul`
 
 const getTagColor = (text: string) => {
   switch (text) {
-    case 'A':
-      return 'green'
-    case 'B':
-      return 'yellow'
-    case 'C':
+    case 'Pending':
+      return 'orange'
+    case 'Legal representative':
       return 'blue'
+
     default:
       return ''
   }
 }
 
-const RenderAuthorizationTags = (tags: string[]) => {
+const RenderStatusTags = (tags: string[]) => {
   if (!tags || tags.length === 0) return '-'
   return (
     <TagList>
@@ -38,4 +37,4 @@ const RenderAuthorizationTags = (tags: string[]) => {
   )
 }
 
-export default RenderAuthorizationTags
+export default RenderStatusTags
