@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 
-import InputsConfigurationComponent from '../InputsConfigurationComponent'
+import InputsConfiguration from 'components/Common/InputsConfiguration'
 import FormBtnsComponent from '../FormBtnsComponent'
 
 import Form from 'procredit-bank-design-system/modules/form'
@@ -54,7 +54,7 @@ const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, form
         onFinish={onFinish}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={1} withSteps />
+          <InputsConfiguration config={formConfig} formState={formState} stepNamber={1} withSteps />
         </div>
 
         <Form.Item shouldUpdate={true}>

@@ -1,5 +1,4 @@
 import { useIntl } from 'react-intl'
-
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
 import DatePicker from 'procredit-bank-design-system/modules/date-picker'
@@ -33,7 +32,7 @@ const DefineOptions = ({ name }: Record<string, string | unknown>) => {
   }
 }
 
-const InputsConfigurationComponent = ({ config, formState, stepNamber, withSteps }: ConfigProps) => {
+const InputsConfiguration = ({ config, formState, stepNamber, withSteps }: ConfigProps) => {
   const { formatMessage } = useIntl()
 
   return (
@@ -123,4 +122,4 @@ const InputsConfigurationComponent = ({ config, formState, stepNamber, withSteps
   )
 }
 
-export default InputsConfigurationComponent
+export default InputsConfiguration

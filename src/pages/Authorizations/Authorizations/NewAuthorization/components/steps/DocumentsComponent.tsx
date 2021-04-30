@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
+import { history } from 'store/configureStore'
+
 import Form from 'procredit-bank-design-system/modules/form'
 import Message from 'procredit-bank-design-system/modules/message'
-import { history } from 'store/configureStore'
-import FormUploadItem from '../FormUploadItem'
+
+import FormUploadItem from 'components/Common/AdditionalFilesUpload/FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'
-import AdditionalFilesUploadingComponent from '../AdditionalFilesUploadingComponent'
+import AdditionalFilesUpload from 'components/Common/AdditionalFilesUpload'
 
 // todo: replace type any
 
@@ -45,7 +47,7 @@ const DocumentsComponent = ({ currentStep, setCurrentStep, stepsCounter, setForm
           <FormUploadItem name="idScan" withLabel />
           <Form.Item label={formatMessage({ id: 'additional.documents' })} style={{ margin: '40px 0 20px 0' }} />
 
-          <AdditionalFilesUploadingComponent config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
+          <AdditionalFilesUpload config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
         </div>
 
         <Form.Item shouldUpdate={true}>

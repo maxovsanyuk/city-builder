@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
-import Form from 'procredit-bank-design-system/modules/form'
-import InputsConfigurationComponent from '../InputsConfigurationComponent'
+
+import InputsConfiguration from 'components/Common/InputsConfiguration'
 import FormBtnsComponent from '../FormBtnsComponent'
+import Form from 'procredit-bank-design-system/modules/form'
 
 // todo: replace type any
 
@@ -54,7 +55,7 @@ const AdressDetailsComponent = ({ currentStep, setCurrentStep, stepsCounter, for
         }}
       >
         <div className="inputs-wrapper">
-          <InputsConfigurationComponent config={formConfig} formState={formState} stepNamber={2} withSteps />
+          <InputsConfiguration config={formConfig} formState={formState} stepNamber={2} withSteps />
         </div>
 
         <Form.Item shouldUpdate={true}>

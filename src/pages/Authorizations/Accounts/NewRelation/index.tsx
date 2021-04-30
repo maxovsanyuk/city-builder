@@ -5,17 +5,16 @@ import { useIntl } from 'react-intl'
 
 import { Wrapper } from './styles'
 
+import InputsConfiguration from 'components/Common/InputsConfiguration'
+import AdditionalFilesUpload from 'components/Common/AdditionalFilesUpload'
+import Breadcrumb from 'components/Common/Breadcrumb'
+
 import Card from 'procredit-bank-design-system/modules/card'
 import Form from 'procredit-bank-design-system/modules/form'
 import Message from 'procredit-bank-design-system/modules/message'
-import Breadcrumb from 'components/Common/Breadcrumb'
 import Icons from 'procredit-bank-design-system/modules/icons'
 import Button from 'procredit-bank-design-system/modules/button'
 import Typography from 'procredit-bank-design-system/modules/typography'
-import AdditionalFilesUploadingComponent
-  from "../../Authorizations/NewAuthorization/components/AdditionalFilesUploadingComponent";
-import InputsConfigurationComponent
-  from "../../Authorizations/NewAuthorization/components/InputsConfigurationComponent";
 
 const { Title } = Typography
 const { HomeFilled } = Icons
@@ -47,7 +46,7 @@ const NewRelation: FC<AccountsProps> = () => {
   const onFinish = (values: Record<string, string | number | unknown>) => {
     console.log(values, 'values')
     Message.success({ content: formatMessage({ id: 'processing.complete' }), duration: 2 })
-    history.push('/authorizations/accounts')
+    history.push('/manage-authorizations/accounts')
   }
 
   // To disable submit button at the beginning.
@@ -64,10 +63,10 @@ const NewRelation: FC<AccountsProps> = () => {
           </Link>
         </Item>
         <Item>
-          <Link to="/authorizations">{formatMessage({ id: 'managing.authorizations' })}</Link>
+          <Link to="/manage-authorizations">{formatMessage({ id: 'managing.authorizations' })}</Link>
         </Item>
         <Item>
-          <Link to="/authorizations">{formatMessage({ id: 'accounts' })}</Link>
+          <Link to="/manage-authorizations/accounts">{formatMessage({ id: 'accounts' })}</Link>
         </Item>
 
         <Item>
@@ -86,22 +85,22 @@ const NewRelation: FC<AccountsProps> = () => {
           </Title>
         </div>
 
-        <Form form={form} name="edit_account" layout="vertical" onFinish={onFinish}>
+        <Form form={form} name="new_relation" layout="vertical" onFinish={onFinish}>
           <div>
             <div className="form-items-box">
-              <InputsConfigurationComponent config={formConfig} stepNamber={2} />
+              <InputsConfiguration config={formConfig} stepNamber={2} />
             </div>
 
             <Title level={5} style={{ fontWeight: 400 }}>
               {formatMessage({ id: 'additional.documents' })}
             </Title>
-            <AdditionalFilesUploadingComponent config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
+            <AdditionalFilesUpload config={ADDITIONALL_FILE_NAME_LIST_CONFIG} />
           </div>
 
           <Form.Item shouldUpdate={true}>
             {() => (
               <div style={{ display: 'flex', paddingTop: 20 }}>
-                <Link to="/authorizations/accounts">
+                <Link to="/manage-authorizations/accounts">
                   <Button type="primary">{formatMessage({ id: 'cancel' })}</Button>
                 </Link>
 

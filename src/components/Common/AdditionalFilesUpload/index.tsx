@@ -8,7 +8,7 @@ interface ConfigProps {
   config: string[]
 }
 
-const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
+const AdditionalFilesUpload = ({ config }: ConfigProps) => {
   const [additionalFileNameList, setAdditionalFileNameList] = useState<string[]>([])
   const { formatMessage } = useIntl()
 
@@ -38,4 +38,4 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
   )
 }
 
-export default AdditionalFilesUploadingComponent
+export default AdditionalFilesUpload
