@@ -1,9 +1,10 @@
 import { FC, useMemo, MouseEvent } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-import { Dropdown, Table, Button, Icons, Space, Menu, Tag } from 'procredit-bank-design-system'
-import { IAccount } from './mockData'
+import { Dropdown, Table, Button, Icons, Space, Menu } from 'procredit-bank-design-system'
+import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
+import { IAccount } from './mockData'
 
 const { MoreOutlined } = Icons
 const { Item } = Menu
@@ -37,20 +38,6 @@ const MoreOptions = (value: any, record: IAccount) => {
       </Dropdown>
     </Space>
   )
-}
-
-const RenderAccountTypeTag = (tag: string) => {
-  switch (tag) {
-    case 'current':
-      return <Tag color="volcano">{tag}</Tag>
-    case 'creditLine':
-      return <Tag color="green">{tag}</Tag>
-    case 'flexSave':
-      return <Tag color="volcano">{tag}</Tag>
-
-    default:
-      return '-'
-  }
 }
 
 const PrettyNumber = (num: number) =>

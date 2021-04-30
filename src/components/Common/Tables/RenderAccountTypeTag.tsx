@@ -2,23 +2,21 @@ import { Tag } from 'procredit-bank-design-system'
 
 const getTagColor = (text: string) => {
   switch (text) {
-    case 'new':
+    case 'Current account':
       return 'volcano'
-    case 'eba':
+    case 'Credit line':
       return 'green'
-    case 'no-eba':
+    case 'FlexSave':
       return 'magenta'
-    case 'dismissed':
-      return 'red'
     default:
       return ''
   }
 }
 
-const RenderStatusTag = (text: string) => {
+const RenderAccountTypeTag = (text: string) => {
   if (!text) return '-'
   const color = getTagColor(text)
   return <Tag color={color}>{text}</Tag>
 }
 
-export default RenderStatusTag
+export default RenderAccountTypeTag

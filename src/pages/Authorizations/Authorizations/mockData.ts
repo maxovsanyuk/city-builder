@@ -36,7 +36,7 @@ const mockData: IData[] = [
     authorization: [],
     status: 'new',
     accountNumber: 'EUR13499492584785387',
-    accountType: 'current',
+    accountType: 'Current account',
     startDate: '23/01/2021',
     endDate: '23/01/2021',
     comment:
@@ -52,7 +52,7 @@ const mockData: IData[] = [
     currency: 'EUR',
     relations: 'Authorized person',
     accountNumber: 'EUR13499492584785382',
-    accountType: 'current',
+    accountType: 'Current account',
     startDate: '23/01/2021',
     endDate: '23/01/2021',
     comment:
@@ -67,7 +67,7 @@ const mockData: IData[] = [
     status: 'eba',
     currency: 'EUR',
     accountNumber: 'EUR13499492584785387',
-    accountType: 'creditLine',
+    accountType: 'Credit line',
     startDate: '23/01/2021',
     endDate: '23/01/2021',
     comment:
@@ -83,7 +83,7 @@ const mockData: IData[] = [
     currency: 'EUR',
     relations: 'Authorized person',
     accountNumber: 'EUR13499492584785383',
-    accountType: 'current',
+    accountType: 'Current account',
     startDate: '23/01/2021',
     endDate: '23/01/2021',
     comment:
@@ -99,7 +99,7 @@ const mockData: IData[] = [
     currency: 'EUR',
     relations: 'Authorized person',
     accountNumber: 'EUR13499492584785387',
-    accountType: 'flexSave',
+    accountType: 'FlexSave',
     startDate: '23/01/2021',
     endDate: '23/01/2021',
     comment:
