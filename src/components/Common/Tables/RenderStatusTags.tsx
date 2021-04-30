@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Tag from 'procredit-bank-design-system/modules/tag'
+import { Tag } from 'procredit-bank-design-system'
 
 const TagList = styled.ul`
   display: flex;

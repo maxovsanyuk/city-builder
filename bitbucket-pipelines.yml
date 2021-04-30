@@ -5,7 +5,7 @@ pipelines:
     staging:
       - step:
           size: 2x
-          name: Build and deploy to the staging
+          name: Build and deploy
           deployment: Staging
           script:
             - export NODE_OPTIONS=--max-old-space-size=6144
