@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 import { Wrapper } from './ConfirmLogin.style'
 
-import HorizontalLogo from '../../assets/horizontal-logo.svg'
+import HorizontalLogo from 'assets/horizontal-logo.svg'
 
 import Form from 'procredit-bank-design-system/modules/form'
 import Input from 'procredit-bank-design-system/modules/input'
