@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import { useIntl } from 'react-intl'
-import Upload from 'procredit-bank-design-system/modules/upload'
-import Icons from 'procredit-bank-design-system/modules/icons'
-import Form from 'procredit-bank-design-system/modules/form'
-
+import { Upload, Icons, Form } from 'procredit-bank-design-system'
 const { QuestionCircleOutlined } = Icons
 
 interface FormItemProps {

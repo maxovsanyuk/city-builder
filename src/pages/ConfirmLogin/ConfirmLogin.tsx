@@ -1,19 +1,11 @@
 import { FC, useState, useEffect } from 'react'
 import { ActionType } from '../../store/authentication/model'
 import { useIntl } from 'react-intl'
-
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-
 import { Wrapper } from './ConfirmLogin.style'
-
 import HorizontalLogo from 'assets/horizontal-logo.svg'
-
-import Form from 'procredit-bank-design-system/modules/form'
-import Input from 'procredit-bank-design-system/modules/input'
-import Button from 'procredit-bank-design-system/modules/button'
-import Typography from 'procredit-bank-design-system/modules/typography'
-
+import { Form, Input, Button, Typography } from 'procredit-bank-design-system'
 const { Title, Text } = Typography
 
 const ConfirmLogin: FC = () => {

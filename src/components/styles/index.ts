@@ -1,7 +1,5 @@
 import { createGlobalStyle, css } from 'styled-components'
-
-import Colors from 'procredit-bank-design-system/modules/colors'
-
+import { Colors } from 'procredit-bank-design-system'
 const { gray } = Colors
 
 export const GlobalStyle = createGlobalStyle`

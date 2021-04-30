@@ -1,7 +1,6 @@
 import styled from 'styled-components'
-import PCBpattern from '../../assets/PCBpattern.svg'
-import Colors from 'procredit-bank-design-system/modules/colors'
-
+import PCBpattern from 'assets/PCBpattern.svg'
+import { Colors } from 'procredit-bank-design-system'
 const { gray } = Colors
 
 export const Wrapper = styled.div`

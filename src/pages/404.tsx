@@ -2,8 +2,7 @@ import { FC } from 'react'
 import { useIntl } from 'react-intl'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import Typography from 'procredit-bank-design-system/modules/typography'
-
+import { Typography } from 'procredit-bank-design-system'
 const { Title } = Typography
 
 const Wrapper = styled.div`

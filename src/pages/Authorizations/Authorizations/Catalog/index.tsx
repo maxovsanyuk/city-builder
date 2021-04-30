@@ -1,7 +1,6 @@
 import { FC } from 'react'
 import { Link } from 'react-router-dom'
-import Icons from 'procredit-bank-design-system/modules/icons'
-import Button from 'procredit-bank-design-system/modules/button'
+import { Icons, Button } from 'procredit-bank-design-system'
 import ContentHeader from 'components/Common/ContentHeader'
 import Breadcrumb from 'components/Common/Breadcrumb'
 import Authorizations from './Authorizations'

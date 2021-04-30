@@ -1,6 +1,6 @@
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-import Button from 'procredit-bank-design-system/modules/button'
+import { Button } from 'procredit-bank-design-system'
 
 const FormBtnsComponent = ({ currentStep, setCurrentStep, stepsCounter, form }: any) => {
   const { formatMessage } = useIntl()
