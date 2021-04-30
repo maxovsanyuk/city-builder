@@ -11,10 +11,9 @@ const AccountsRoutes: FC = () => (
     <Route path="/manage-authorizations/accounts/edit/:id">
       <EditAccount />
     </Route>
-    <Route
-      path="/manage-authorizations/accounts/:id/create"
-      render={props => <NewRelation {...props} id={props.match.params.id} />}
-    />
+    <Route path="/manage-authorizations/accounts/new-relation/:id">
+      <NewRelation />
+    </Route>
     <Route
       path="/manage-authorizations/accounts/:id"
       render={props => <Account {...props} id={props.match.params.id} />}

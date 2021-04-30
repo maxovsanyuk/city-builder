@@ -8,7 +8,7 @@ interface ConfigProps {
   config: string[]
 }
 
-const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
+const AdditionalFilesUpload = ({ config }: ConfigProps) => {
   const [additionalFileNameList, setAdditionalFileNameList] = useState<string[]>([])
   const { formatMessage } = useIntl()
 
@@ -30,7 +30,6 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
       })}
 
       <div className="additional-file-box">
-        gst
         {additionalFileNameList.map((name: string) => {
           return <FormUploadItem name={name} key={name} />
         })}
@@ -39,4 +38,4 @@ const AdditionalFilesUploadingComponent = ({ config }: ConfigProps) => {
   )
 }
 
-export default AdditionalFilesUploadingComponent
+export default AdditionalFilesUpload
