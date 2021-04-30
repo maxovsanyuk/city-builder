@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import { useIntl } from 'react-intl'
 import { history } from 'store/configureStore'
 
-import Form from 'procredit-bank-design-system/modules/form'
-import Message from 'procredit-bank-design-system/modules/message'
+import { Form, Message } from 'procredit-bank-design-system'
 
 import FormUploadItem from 'components/Common/AdditionalFilesUpload/FormUploadItem'
 import FormBtnsComponent from '../FormBtnsComponent'

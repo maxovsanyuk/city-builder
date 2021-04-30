@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Colors from 'procredit-bank-design-system/modules/colors'
+import { Colors } from 'procredit-bank-design-system'
 const { gray } = Colors
 
 export const Wrapper = styled.div`
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   }
 
   .ant-card-body {
-    height: calc(100% - 68px);
+    height: calc(100% - 80px);
   }
 
   .text-cont {
@@ -26,6 +26,7 @@ export const Wrapper = styled.div`
 
   .secondary-title {
     color: ${gray[5]};
+    margin: 0 15px 0 0;
   }
 
   .card {

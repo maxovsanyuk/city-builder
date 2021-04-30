@@ -1,8 +1,5 @@
 import { useIntl } from 'react-intl'
-import Form from 'procredit-bank-design-system/modules/form'
-import Input from 'procredit-bank-design-system/modules/input'
-import DatePicker from 'procredit-bank-design-system/modules/date-picker'
-import Select from 'procredit-bank-design-system/modules/select'
+import { Form, Input, DatePicker, Select } from 'procredit-bank-design-system'
 
 const { TextArea } = Input
 const { Item } = Form
@@ -17,20 +14,14 @@ interface ConfigProps {
   withSteps?: boolean
 }
 
-const DefineOptions = ({ name }: Record<string, string | unknown>) => {
-  switch (name) {
-    // todo: create controllers for different cases
-
-    default:
-      return (
-        <>
-          {[1, 2, 3].map(number => (
-            <Option key={number}>{number}</Option>
-          ))}
-        </>
-      )
-  }
-}
+// const DefineOptions = ({ name }: Record<string, string | unknown>) => {
+//   switch (name) {
+//     // todo: create controllers for different cases
+//
+//     default:
+//       return [1, 2, 3].map(number => <Option key={number}>{number}</Option>)
+//   }
+// }
 
 const InputsConfiguration = ({ config, formState, stepNamber, withSteps }: ConfigProps) => {
   const { formatMessage } = useIntl()
@@ -91,7 +82,10 @@ const InputsConfiguration = ({ config, formState, stepNamber, withSteps }: Confi
                     optionFilterProp={optionFilterProp}
                     mode={mode}
                   >
-                    <DefineOptions name={name} />
+                    {/*<DefineOptions name={name} />*/}
+                    {[1, 2, 3].map(number => (
+                      <Option key={number}>{number}</Option>
+                    ))}
                   </Select>
                 </Form.Item>
               )

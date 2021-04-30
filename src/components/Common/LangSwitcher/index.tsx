@@ -1,11 +1,8 @@
-import { FC, FormEvent } from 'react'
+import { FC } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import * as CommonActions from 'store/common/actions'
 
-import Icons from 'procredit-bank-design-system/modules/icons'
-import Menu from 'procredit-bank-design-system/modules/menu'
-import Dropdown from 'procredit-bank-design-system/modules/dropdown'
-import Button from 'procredit-bank-design-system/modules/button'
+import { Icons, Menu, Dropdown, Button } from 'procredit-bank-design-system'
 
 const { DownOutlined } = Icons
 const { Item } = Menu
@@ -26,15 +23,18 @@ const LangSwitcher: FC = () => {
   const { lang } = useSelector(({ common }) => common)
   const dispatch = useDispatch()
 
-  const changeLang = (event: FormEvent, lang: string) => {
-    event.preventDefault()
-    dispatch(CommonActions.changeLangAction({ lang }))
+  const changeLang = (event: Record<string, string | any>) => {
+    dispatch(CommonActions.changeLangAction({ lang: event?.key }))
   }
 
   const menu = (
-    <Menu onSelect={changeLang}>
-      <Item key="en">Eng</Item>
-      <Item key="ru">Rus</Item>
+    <Menu onClick={changeLang}>
+      <Item key="en" disabled={lang === 'en'}>
+        Eng
+      </Item>
+      <Item key="ru" disabled={lang === 'ru'}>
+        Rus
+      </Item>
     </Menu>
   )
 

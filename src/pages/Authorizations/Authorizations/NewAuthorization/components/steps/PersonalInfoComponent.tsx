@@ -4,7 +4,7 @@ import { useIntl } from 'react-intl'
 import InputsConfiguration from 'components/Common/InputsConfiguration'
 import FormBtnsComponent from '../FormBtnsComponent'
 
-import Form from 'procredit-bank-design-system/modules/form'
+import { Form } from 'procredit-bank-design-system'
 
 // todo: replase type any
 
@@ -21,7 +21,7 @@ const formConfig = [
   { name: 'surname', required: true, type: 'input' },
   { name: 'middleName', id: 'middle.name', required: false, type: 'input' },
   { name: 'taxpayerCode', id: 'taxpayer.code', required: true, type: 'input', subType: 'number' },
-  { name: 'birthDate', id: 'birth.date', required: false, type: 'date-picker' },
+  { name: 'birthDate', id: 'birth.date', required: true, type: 'date-picker' },
   { name: 'email', required: true, type: 'input' },
 ]
 
