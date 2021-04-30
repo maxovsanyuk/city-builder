@@ -1,15 +1,10 @@
 import { FC, useMemo, MouseEvent } from 'react'
 import styled from 'styled-components'
 import { useHistory } from 'react-router-dom'
-import Dropdown from 'procredit-bank-design-system/modules/dropdown'
-import Table from 'procredit-bank-design-system/modules/table'
-import Button from 'procredit-bank-design-system/modules/button'
-import Icons from 'procredit-bank-design-system/modules/icons'
-import Space from 'procredit-bank-design-system/modules/space'
-import Menu from 'procredit-bank-design-system/modules/menu'
+import { Dropdown, Table, Button, Icons, Space, Menu } from 'procredit-bank-design-system'
 import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
-import { IAccount } from './mockData'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
+import { IAccount } from './mockData'
 
 const { MoreOutlined } = Icons
 const { Item } = Menu

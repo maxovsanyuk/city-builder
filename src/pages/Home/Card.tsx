@@ -1,7 +1,6 @@
 import { FC } from 'react'
-import Card from 'procredit-bank-design-system/modules/card'
+import { Card } from 'procredit-bank-design-system'
 import { ICard } from './mockData'
-
 const { Meta } = Card
 
 interface CardProps {

@@ -1,4 +1,4 @@
-import Tag from 'procredit-bank-design-system/modules/tag'
+import { Tag } from 'procredit-bank-design-system'
 
 const getTagColor = (text: string) => {
   switch (text) {

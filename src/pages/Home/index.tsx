@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import MockedCardImage from 'assets/mocks/mockCardProCreditPlaceholder.jpg'
 import MarketingBanner from './MarketingBanner'
 import mockCards, { ICard } from './mockData'
 import Cards from './Cards'
@@ -15,7 +16,7 @@ const useCards = (): {
 const useMarketingBanner = () => ({
   banner: {
     href: '/marketing',
-    bgImage: '/mocks/mockCardProCreditPlaceholder.jpg',
+    bgImage: MockedCardImage,
     title: 'ProCredit Marketing placeholder',
   },
   loading: false,

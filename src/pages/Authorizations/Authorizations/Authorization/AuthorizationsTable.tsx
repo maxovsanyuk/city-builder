@@ -1,8 +1,7 @@
 import { FC, useMemo } from 'react'
-import Tooltip from 'procredit-bank-design-system/modules/tooltip'
-import Table from 'procredit-bank-design-system/modules/table'
-import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
+import { Tooltip, Table } from 'procredit-bank-design-system'
 import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'
+import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import { IData, IAuthorization } from '../mockData'
 

@@ -1,10 +1,8 @@
 import React, { FC, useMemo } from 'react'
 import styled from 'styled-components'
 import { useLocation } from 'react-router-dom'
-import Colors from 'procredit-bank-design-system/modules/colors'
-import Layout from 'procredit-bank-design-system/modules/layout'
+import { Colors, Layout } from 'procredit-bank-design-system'
 import Menu, { IItem, IMenuItem } from 'components/Common/Menu'
-
 const { gray } = Colors
 const { Sider } = Layout
 

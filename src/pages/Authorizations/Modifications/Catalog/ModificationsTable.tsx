@@ -1,7 +1,5 @@
 import { FC, useMemo } from 'react'
-import Button from 'procredit-bank-design-system/modules/button'
-import Space from 'procredit-bank-design-system/modules/space'
-import Table from 'procredit-bank-design-system/modules/table'
+import { Button, Space, Table } from 'procredit-bank-design-system'
 import { getUniqueValuesFromObjectArray } from 'utils/helpers'
 import RenderAuthorizationTags from 'components/Common/Tables/RenderAuthorizationTags'
 import RenderAccountTypeTag from 'components/Common/Tables/RenderAccountTypeTag'

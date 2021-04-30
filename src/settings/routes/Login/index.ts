@@ -1,8 +1,5 @@
 import { RouteProperties } from '../types/RouteProperties'
 import { nanoid } from 'nanoid'
-
-// PAGES
-
 import { Login } from 'pages/Login'
 import { ConfirmLogin } from 'pages/ConfirmLogin'
 
