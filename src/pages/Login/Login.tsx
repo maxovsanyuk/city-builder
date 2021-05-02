@@ -3,8 +3,7 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useIntl } from 'react-intl'
 import { Wrapper } from './Login.style'
-import HorizontalLogo from 'assets/horizontal-logo.svg'
-import { Form, Input, Button, Typography } from 'procredit-bank-design-system'
+import { Form, Input, Button, Typography } from 'ant'
 import { ActionType } from 'store/authentication/model'
 const { Title } = Typography
 
@@ -30,10 +29,6 @@ const Login: FC = () => {
 
   return (
     <Wrapper>
-      <Link to="/">
-        <img src={HorizontalLogo} alt="horizontalLogo.svg" />
-      </Link>
-
       <Title className="h-4" level={4}>
         {formatMessage({ id: 'welcome.to.procredit' })}
       </Title>
