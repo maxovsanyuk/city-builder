@@ -1,6 +1,5 @@
 import { FC } from 'react'
 import styled from 'styled-components'
-import { Spin } from 'procredit-bank-design-system'
 
 const Wrapper = styled.div`
   position: absolute;
@@ -15,10 +14,6 @@ const Wrapper = styled.div`
 `
 
 interface LoadingProps {}
-const Loading: FC<LoadingProps> = () => (
-  <Wrapper>
-    <Spin />
-  </Wrapper>
-)
+const Loading: FC<LoadingProps> = () => <Wrapper>loading...</Wrapper>
 
 export default Loading

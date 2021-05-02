@@ -17,12 +17,12 @@ interface FormProps {
 }
 
 const formConfig = [
-  { name: 'name', required: true, type: 'input' },
-  { name: 'surname', required: true, type: 'input' },
-  { name: 'middleName', id: 'middle.name', required: false, type: 'input' },
+  // { name: 'name', required: true, type: 'input' },
+  // { name: 'surname', required: true, type: 'input' },
+  // { name: 'middleName', id: 'middle.name', required: false, type: 'input' },
   { name: 'taxpayerCode', id: 'taxpayer.code', required: true, type: 'input', subType: 'number' },
-  { name: 'birthDate', id: 'birth.date', required: true, type: 'date-picker' },
-  { name: 'email', required: true, type: 'input' },
+  // { name: 'birthDate', id: 'birth.date', required: true, type: 'date-picker' },
+  // { name: 'email', required: true, type: 'input' },
 ]
 
 const PersonalInfoComponent = ({ currentStep, setCurrentStep, stepsCounter, formState, setFormState }: FormProps) => {

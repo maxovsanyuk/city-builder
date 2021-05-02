@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     body {
       font-size: 16px;
       line-height: 1.5;
-      color: ${gray[8]};
+      color: #000;
       font-family: ${theme.fonts.inter}, ${theme.fonts.arial}};
     }
   `}
