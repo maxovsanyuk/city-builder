@@ -1,5 +1,6 @@
 import { FC } from 'react'
 import styled from 'styled-components'
+import { CircularProgress } from '@material-ui/core'
 
 const Wrapper = styled.div`
   position: absolute;
@@ -14,6 +15,10 @@ const Wrapper = styled.div`
 `
 
 interface LoadingProps {}
-const Loading: FC<LoadingProps> = () => <Wrapper>loading...</Wrapper>
+const Loading: FC<LoadingProps> = () => (
+  <Wrapper>
+    <CircularProgress />
+  </Wrapper>
+)
 
 export default Loading

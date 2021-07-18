@@ -1,9 +1,8 @@
 import { FC } from 'react'
 import { useIntl } from 'react-intl'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { Typography } from 'procredit-bank-design-system'
-const { Title } = Typography
+import styled from 'styled-components'
+import { Typography } from '@material-ui/core'
 
 const Wrapper = styled.div`
   align-items: center;
@@ -11,7 +10,10 @@ const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   height: 95%;
-  width: 100%;
+
+  .link:hover {
+    text-decoration: underline;
+  }
 `
 
 interface NotFoundProps {}
@@ -19,8 +21,14 @@ const NotFound: FC<NotFoundProps> = () => {
   const { formatMessage } = useIntl()
   return (
     <Wrapper>
-      <Title level={2}>{formatMessage({ id: '404.not.found', defaultMessage: '404 | Not found' })}</Title>
-      <Link to="/">{formatMessage({ id: 'back.to.main.page', defaultMessage: 'Back to main page' })}</Link>
+      <Typography variant="h3" style={{ margin: '20px' }}>
+        {formatMessage({ id: '404.not.found', defaultMessage: '404 | Not found' })}
+      </Typography>
+      <Typography variant="h6">
+        <Link to="/" className="link">
+          {formatMessage({ id: 'back.to.main.page', defaultMessage: 'Back to main page' })}
+        </Link>
+      </Typography>
     </Wrapper>
   )
 }

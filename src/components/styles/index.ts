@@ -1,14 +1,9 @@
 import { createGlobalStyle, css } from 'styled-components'
-import { Colors } from 'procredit-bank-design-system'
-const { gray } = Colors
 
 export const GlobalStyle = createGlobalStyle`
   ${({ theme }) => css`
     body {
-      font-size: 16px;
-      line-height: 1.5;
-      color: #000;
-      font-family: ${theme.fonts.inter}, ${theme.fonts.arial}};
+      font-family: ${theme.fonts.arial}, ${theme.fonts.inter};
     }
   `}
 
@@ -175,20 +170,5 @@ export const GlobalStyle = createGlobalStyle`
       position: absolute;
       overflow: hidden;
     }
-  }
-
-  .fit-cover {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    font-family: 'object-fit: cover; object-position: center;';
-  }
-
-  .fit-contain {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    font-family: 'object-fit: contain;';
   }
 `

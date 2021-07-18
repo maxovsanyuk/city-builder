@@ -8,9 +8,22 @@ export enum ActionType {
 
   // logout
   LOGOUT_USER = 'LOGOUT_USER',
+
+  SET_AUTH_ERR = 'SET_AUTH_ERR',
+  REGISTER_NEW_USER = 'REGISTER_NEW_USER',
 }
 
 export interface LoginData {
-  email: string | null
-  password: string | null
+  email?: string | null
+  password?: string | null
+}
+
+export interface RigisterData {
+  token?: any
+  email: string
+  password: string
+  fullName: string
+  authorizationType: string
+  userCountry: string
+  userCity: string
 }

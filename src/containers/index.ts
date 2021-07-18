@@ -1,4 +1,4 @@
 import AuthLayout from './Auth'
-import PlatformLayout from './Platform'
+import DashboardLayout from './DashboardLayout'
 
-export { AuthLayout, PlatformLayout }
+export { AuthLayout, DashboardLayout }
