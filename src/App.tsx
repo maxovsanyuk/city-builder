@@ -1,13 +1,16 @@
+import AuthLayout from './pages/templates/AuthLayout'
+import Loading from './features/Common/ui/molecules/Loading'
+import DashboardLayout from './pages/templates/DashboardLayout'
+import NotFoundRoutes from './features/Common/ui/molecules/NotFoundRoutes'
 import { FC, Suspense } from 'react'
-import { history } from 'store/configureStore'
-import { useSelector } from 'react-redux'
+import { useStore } from 'effector-react'
+import { $user } from './pages/Auth/Login/model'
 import { ThemeProvider } from 'styled-components'
+import { history } from './shared/services/navigation'
 import { Router, Route, Switch } from 'react-router-dom'
-import { AuthLayout, DashboardLayout } from 'containers/index'
-import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
-import { GlobalStyle, Theme } from 'components'
-import NotFoundRoutes from './components/Common/NotFoundRoutes'
-import Loading from './components/Loading'
+import { GlobalStyle, Theme } from 'shared/settings/theme'
+import { $theme } from './features/Common/model/ThemeSwitcher/model'
+import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'shared/settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
   switch (authorizationType.toLowerCase()) {
@@ -80,11 +83,14 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
 }
 
 const App: FC = () => {
-  const { user } = useSelector(({ auth }: any) => auth)
+  const user = useStore($user)
+  const theme = useStore($theme)
 
   return (
-    <ThemeProvider theme={Theme}>
+    // @ts-ignore
+    <ThemeProvider theme={Theme[theme]}>
       <GlobalStyle />
+
       <Router history={history}>
         <Switch>
           {HomeRoutes.map(({ component: Component, ...elem }) => (

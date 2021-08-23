@@ -1,12 +1,12 @@
+import Content from 'features/Common/ui/templates/Content'
+import Header from '../../features/Common/ui/organisms/Header'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import TopAdvertisements from '../../features/Common/ui/organisms/TopAdvertisements'
+import MostPopularInCountry from '../../entities/ui/organisms/HomePage/MostPopularInCountry'
+import MostPopularInCitizenRequests from '../../entities/ui/organisms/HomePage/MostPopularInCitizenRequests'
+import MostPopularInEntrepreneurRequests from '../../entities/ui/organisms/HomePage/MostPopularInEntrepreneurRequests'
 import { Wrapper } from './styles'
-import { Header } from 'components/Common'
-import Content from 'containers/Content'
-import { Container } from 'components/Common/Grid'
-import SearchForm from 'components/Common/SearchForm'
-import MostPopularInCountry from './Components/MostPopularInCountry'
-import MostPopularInCitizenRequests from './Components/MostPopularInCitizenRequests'
-import MostPopularInEntrepreneurRequests from './Components/MostPopularInEntrepreneurRequests'
-import Advertisements from './Components/Advertisements'
+import { Container } from 'features/Common/ui/molecules/Grid'
 
 interface HomePageProps {}
 
@@ -20,7 +20,7 @@ const HomePage: any = (): HomePageProps => {
           <MostPopularInCountry />
           <MostPopularInCitizenRequests />
           <MostPopularInEntrepreneurRequests />
-          <Advertisements />
+          <TopAdvertisements />
         </Content>
       </Container>
     </Wrapper>

@@ -1,9 +1,9 @@
 import { Wrapper } from './styles'
-import { Header } from 'components/Common'
-import Content from 'containers/Content'
-import SearchForm from 'components/Common/SearchForm'
-import { Container } from 'components/Common/Grid'
-import CountryCategoryPageContent from './Components/CountryCategoryPageContent'
+import Content from 'features/Common/ui/templates/Content'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import { Container } from 'features/Common/ui/molecules/Grid'
+import CountryCategoryContent from '../../entities/ui/organisms/CountryCategoryPage/CountryCategoryContent'
+import Header from '../../features/Common/ui/organisms/Header'
 
 interface CountryCategoryPageProps {}
 
@@ -14,7 +14,7 @@ const CountryCategoryPage: any = (): CountryCategoryPageProps => {
       <Container>
         <Content>
           <SearchForm />
-          <CountryCategoryPageContent />
+          <CountryCategoryContent />
         </Content>
       </Container>
     </Wrapper>

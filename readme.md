@@ -1,8 +1,6 @@
 # React starter boilerplate
 
-[![N|Solid](https://artk.ai/artkai.svg)](https://artk.ai)
-
-This boilerplate was developed by [ARTKAI Company](https://artk.ai), mobile-ready, offline-storage compatible,
+This boilerplate was developed by Ovsianiuk Maksym, mobile-ready, offline-storage compatible,
 ReactJS-powered HTML5 Markdown editor.
 
 ## Installation
@@ -13,7 +11,7 @@ Install the dependencies and devDependencies and start the server.
 
 ```sh
 npm i
-npm run start
+npm run dev
 ```
 
 For production environments...

@@ -1,9 +1,8 @@
-import { useHistory } from 'react-router-dom'
-// import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
-import { useIntl } from 'react-intl'
+import { message } from 'antd'
 import { Wrapper } from './styles'
-
+import { useIntl } from 'react-intl'
+import { useForm } from 'react-hook-form'
+import { historyPush } from 'shared/services/navigation'
 import { Button, Typography, TextField } from '@material-ui/core'
 
 const ForgotPassword: any = () => {
@@ -13,14 +12,11 @@ const ForgotPassword: any = () => {
     formState: { errors },
   } = useForm<Record<string, any>>()
 
-  // const dispatch = useDispatch()
   const { formatMessage } = useIntl()
-  const history = useHistory()
 
   const onSubmit = handleSubmit(data => {
-    alert(`Sent to ${data?.email}`)
-    // dispatch({ type: ActionType.LOGIN_USER, payload: data })
-    history.push('/login')
+    message.success(`Sent to ${data?.email}`)
+    historyPush('/login')
   })
 
   return (

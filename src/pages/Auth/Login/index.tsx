@@ -1,12 +1,9 @@
-import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
+import * as model from './model'
+import PasswordInput from 'features/Common/ui/molecules/PasswordInput/PasswordInput'
+import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-
-import { loginUserAction } from 'store/authentication/actions'
-import PasswordInput from 'components/Common/PasswordInput/PasswordInput'
-import { Wrapper } from './styles'
-
+import { useForm } from 'react-hook-form'
 import { Button, Typography, TextField } from '@material-ui/core'
 
 const Login: any = () => {
@@ -19,9 +16,9 @@ const Login: any = () => {
   } = useForm<Record<string, any>>()
 
   const password = watch('password')
-  const dispatch = useDispatch()
   const { formatMessage } = useIntl()
-  const onSubmit = handleSubmit(data => dispatch(loginUserAction(data)))
+
+  const onSubmit = handleSubmit((data: model.UserInterface) => model.$loginUser(data))
 
   return (
     <Wrapper>

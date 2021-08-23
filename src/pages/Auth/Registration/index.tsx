@@ -1,14 +1,10 @@
-import { useDispatch } from 'react-redux'
-import { useForm } from 'react-hook-form'
-import { useIntl } from 'react-intl'
+import * as model from './model'
+import AutocompleteInput from 'features/Common/ui/molecules/AutocomplateInpyt'
+import PasswordInput from 'features/Common/ui/molecules/PasswordInput/PasswordInput'
+import GoogleMapsLocationsInput from 'features/Common/ui/organisms/GoogleMapsLocationsInput'
 import { Wrapper } from './styles'
-
-import { registerNewUserAction } from 'store/authentication/actions'
-
-import PasswordInput from 'components/Common/PasswordInput/PasswordInput'
-import GoogleMapsLocationsInput from 'components/Common/GooglemapsLocationsInput'
-import AutocompleteInput from 'components/Common/AutocomplateInpyt'
-
+import { useIntl } from 'react-intl'
+import { useForm } from 'react-hook-form'
 import { Button, Typography, TextField } from '@material-ui/core'
 
 const categoryOptions = [
@@ -26,11 +22,10 @@ const Registration: any = () => {
     formState: { errors },
   } = useForm<Record<string, any>>()
 
-  const dispatch = useDispatch()
   const { formatMessage } = useIntl()
   const password = watch('password')
 
-  const onSubmit = handleSubmit((data: any) => dispatch(registerNewUserAction({ ...data, token: 'JWT_TOKEN' })))
+  const onSubmit = handleSubmit((data: any) => model.$registerationNewUser({ ...data, token: 'JWT_TOKEN' }))
 
   return (
     <Wrapper>
@@ -42,14 +37,27 @@ const Registration: any = () => {
         <div className="form-content">
           <TextField
             className="login-input"
-            placeholder="Max Ovsianiuk"
-            error={!!errors?.fullName}
-            label={!!errors?.fullName ? errors.fullName.message : formatMessage({ id: 'full.name' })}
+            placeholder="Max"
+            error={!!errors?.firstName}
+            label={!!errors?.firstName ? errors.firstName.message : formatMessage({ id: 'firstName' })}
             required
-            {...register('fullName', {
+            {...register('firstName', {
               required: true,
-              minLength: { value: 10, message: formatMessage({ id: 'min.length.10' }) },
-              maxLength: { value: 30, message: formatMessage({ id: 'max.length.30' }) },
+              minLength: { value: 3, message: formatMessage({ id: 'min.length.3' }) },
+              maxLength: { value: 20, message: formatMessage({ id: 'max.length.20' }) },
+            })}
+          />
+
+          <TextField
+            className="login-input"
+            placeholder="Ovsianiuk"
+            error={!!errors?.surname}
+            label={!!errors?.surname ? errors.surname.message : formatMessage({ id: 'surname' })}
+            required
+            {...register('surname', {
+              required: true,
+              minLength: { value: 5, message: formatMessage({ id: 'min.length.5' }) },
+              maxLength: { value: 20, message: formatMessage({ id: 'max.length.20' }) },
             })}
           />
 

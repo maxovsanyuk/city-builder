@@ -1,9 +1,9 @@
 import { Wrapper } from './styles'
-import { Header } from 'components/Common'
-import Content from 'containers/Content'
-import SearchForm from 'components/Common/SearchForm'
-import { Container } from 'components/Common/Grid'
-import LocationCategoriesPageContent from './Components/LocationCategoriesPageContent'
+import Content from 'features/Common/ui/templates/Content'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import { Container } from 'features/Common/ui/molecules/Grid'
+import LocationCategoriesContent from '../../../entities/ui/organisms/LocationsPages/LocationCategories/LocationCategoriesContent'
+import Header from '../../../features/Common/ui/organisms/Header'
 
 interface HomePageProps {}
 
@@ -14,7 +14,7 @@ const LocationCategoriesPage: any = (): HomePageProps => {
       <Container>
         <Content>
           <SearchForm />
-          <LocationCategoriesPageContent />
+          <LocationCategoriesContent />
         </Content>
       </Container>
     </Wrapper>

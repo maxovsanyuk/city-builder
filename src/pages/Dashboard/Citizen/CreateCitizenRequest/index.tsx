@@ -1,16 +1,11 @@
 import { FC } from 'react'
-import { useIntl } from 'react-intl'
-// import { useSelector } from 'react-redux'
-import { Container } from 'components/Common/Grid'
-
-import { Typography } from '@material-ui/core'
 import { Wrapper } from './style'
+import { useIntl } from 'react-intl'
+import { Typography } from '@material-ui/core'
+import { Container } from 'features/Common/ui/molecules/Grid'
 
 interface CreateCitizenRequestProps {}
 const CreateCitizenRequest: FC<CreateCitizenRequestProps> = () => {
-  // const { user } = useSelector(({ auth }) => auth)
-  // const { authorizationType, fullName, location, email }: Record<string, any> = user
-
   const { formatMessage } = useIntl()
 
   return (

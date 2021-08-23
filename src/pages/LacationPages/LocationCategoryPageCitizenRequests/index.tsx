@@ -1,9 +1,9 @@
 import { Wrapper } from './styles'
-import { Header } from 'components/Common'
-import Content from 'containers/Content'
-import SearchForm from 'components/Common/SearchForm'
-import { Container } from 'components/Common/Grid'
-import LocationCategoryPageCitizenRequestsContent from './Components/LocationCategoryPageCitizenRequestsContent'
+import Content from 'features/Common/ui/templates/Content'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import { Container } from 'features/Common/ui/molecules/Grid'
+import LocationCategoryCitizenRequestsContent from '../../../entities/ui/organisms/LocationsPages/LocationCategoryCitizenRequestsContent'
+import Header from '../../../features/Common/ui/organisms/Header'
 
 interface LocationCategoryPageCitizenRequestsProps {}
 
@@ -14,7 +14,7 @@ const LocationCategoryPageCitizenRequests: any = (): LocationCategoryPageCitizen
       <Container>
         <Content>
           <SearchForm />
-          <LocationCategoryPageCitizenRequestsContent />
+          <LocationCategoryCitizenRequestsContent />
         </Content>
       </Container>
     </Wrapper>

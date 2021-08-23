@@ -1,9 +1,9 @@
-import SearchForm from 'components/Common/SearchForm'
-import MostPopularInCountry from '../../../HomePage/Components/MostPopularInCountry'
-import MostPopularInCategory from '../../../HomePage/Components/MostPopularInCitizenRequests'
-import Advertisements from '../../../HomePage/Components/Advertisements'
-import Content from '../../../../containers/Content'
-import { Container } from 'components/Common/Grid'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import Content from '../../../../features/Common/ui/templates/Content'
+import TopAdvertisements from '../../../../features/Common/ui/organisms/TopAdvertisements'
+import MostPopularInCountry from '../../../../entities/ui/organisms/HomePage/MostPopularInCountry'
+import MostPopularInCategory from '../../../../entities/ui/organisms/HomePage/MostPopularInCitizenRequests'
+import { Container } from 'features/Common/ui/molecules/Grid'
 
 const AdminHomePage = () => {
   return (
@@ -12,7 +12,7 @@ const AdminHomePage = () => {
         <SearchForm />
         <MostPopularInCountry />
         <MostPopularInCategory />
-        <Advertisements />
+        <TopAdvertisements />
       </Content>
     </Container>
   )
