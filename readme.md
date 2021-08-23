@@ -28,9 +28,6 @@ Instructions on how to use them in your own application are linked below.
 | Plugin | README |
 | ------ | ------ |
 | TypeScript | [GitHub](https://github.com/microsoft/TypeScript/blob/master/README.md) |
-| Redux | [GitHub](https://github.com/reduxjs/redux/blob/master/README.md) |
-| Redux Persist | [GitHub](https://github.com/rt2zz/redux-persist/blob/master/README.md) |
-| Redux Saga | [GitHub](https://github.com/redux-saga/redux-saga/blob/master/README.md) |
 | Axios | [GitHub](https://github.com/axios/axios/blob/master/README.md) |
 | NanoID | [GitHub](https://github.com/ai/nanoid#readme) |
 | React Intl | [Documentation](https://formatjs.io/docs/getting-started/installation/) |
