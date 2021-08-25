@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import { createApi, createStore, is, sample, createEvent, Effect, Store, forward } from 'effector'
 import { debounce } from 'patronum/debounce'
+import { createApi, createStore, is, sample, createEvent, Effect, Store, forward } from 'effector'
 
 type Value = string | number | boolean | unknown
 

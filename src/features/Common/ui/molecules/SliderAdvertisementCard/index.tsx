@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 import { useAdvertisement } from 'shared/hook/useAdvertisement'
 import { DefineAdvertisementTypeIcon } from '../../../lib/DefineAdvertisementTypeIcon'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 export const SliderAdvertisementCard = ({ advertisement }: Record<string, any>) => {
   const { setCurrentAdvertisement } = useAdvertisement({ advertisement })
@@ -21,7 +22,8 @@ export const SliderAdvertisementCard = ({ advertisement }: Record<string, any>) 
         onClick={() => setCurrentAdvertisement()}
       >
         <div className="advertisement-box">
-          <img className="advertisement-img" alt="" src={advertisement?.imgLink} />
+          <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
+
           <div className="content">
             <Typography className="title" variant="h6" align="center" gutterBottom>
               {advertisement?.title}

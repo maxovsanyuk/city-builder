@@ -1,6 +1,7 @@
 import AwesomeSlider from 'react-awesome-slider'
 import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { $advertisement } from '../../../model/Advertisement/model'
 
 export const AdvertisementPhotosSlider: React.FC = () => {
@@ -11,7 +12,7 @@ export const AdvertisementPhotosSlider: React.FC = () => {
       <AwesomeSlider animation="foldOutAnimation" style={{ marginBottom: '40px' }}>
         {[1, 2].map(i => (
           <div key={i}>
-            <img src={advertisement?.imgLink} alt="img" />
+            <LazyLoadImage alt="" src={advertisement?.imgLink} />
           </div>
         ))}
       </AwesomeSlider>

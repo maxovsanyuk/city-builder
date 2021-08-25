@@ -8,7 +8,7 @@ import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 import { useAdvertisement } from 'shared/hook/useAdvertisement'
-import { AdvertisementsSlider } from '../../molecules/AdvertisementsSlider'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { DefineAdvertisementTypeIcon } from '../../../lib/DefineAdvertisementTypeIcon'
 
 const AdvertisementCard = ({ advertisement }: Record<string, any>) => {
@@ -17,7 +17,7 @@ const AdvertisementCard = ({ advertisement }: Record<string, any>) => {
   return (
     <Link to={advertisement?.link} onClick={() => setCurrentAdvertisement()}>
       <div className="advertisement-box">
-        <img className="advertisement-img" alt="" src={advertisement?.imgLink} />
+        <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
         <div className="content">
           <Typography variant="h5" align="center" gutterBottom>
             {advertisement?.title}
@@ -62,7 +62,6 @@ const AdvertisementCard = ({ advertisement }: Record<string, any>) => {
             </div>
           </div>
         </div>
-
         {advertisement?.type && (
           <img className="user-type-icon" src={DefineAdvertisementTypeIcon(advertisement?.type)} alt="icon" />
         )}
