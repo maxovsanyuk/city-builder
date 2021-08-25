@@ -10,11 +10,19 @@
     "prettier": "prettier --write ./src --loglevel silent",
     "lint": "eslint . --cache --ext .ts,.tsx",
     "lint:fix": "eslint . --cache --ext .ts,.tsx --fix",
+
+
+
+
+
+
+
+
     "prepare": "husky install"
   },
   "husky": {
     "hooks": {
-      "post-commit": "prettier"
+      "post-commit": "git update-index --again lint prettier"
     }
   },
   "author": {
