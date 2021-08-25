@@ -18,7 +18,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "git update-index --again && npm run prettier && npm run lint"
+      "pre-commit": "npm run prettier && npm run lint"
     }
   },
   "author": {
