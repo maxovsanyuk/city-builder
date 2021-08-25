@@ -1,5 +1,5 @@
-import { FC } from 'react'
 import styled from 'styled-components'
+import { FC } from 'react'
 import { CircularProgress } from '@material-ui/core'
 
 const Wrapper = styled.div`

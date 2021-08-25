@@ -1,7 +1,7 @@
+import styled from 'styled-components'
 import { FC } from 'react'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
 import { Typography } from '@material-ui/core'
 
 const Wrapper = styled.div`

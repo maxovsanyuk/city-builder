@@ -1,12 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
-import { useIntl } from 'react-intl'
-import parse from 'autosuggest-highlight/parse'
 import throttle from 'lodash/throttle'
-
-import { TextField, Typography, Grid } from '@material-ui/core'
+import parse from 'autosuggest-highlight/parse'
 import Autocomplete from '@material-ui/core/Autocomplete'
-import { makeStyles } from '@material-ui/core/styles'
 import LocationOnIcon from '@material-ui/icons/LocationOn'
+import { useIntl } from 'react-intl'
+import { makeStyles } from '@material-ui/core/styles'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { TextField, Typography, Grid } from '@material-ui/core'
 
 function loadScript(src: string, position: HTMLElement | null, id: string) {
   if (!position) {

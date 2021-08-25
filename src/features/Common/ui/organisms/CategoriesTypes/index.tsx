@@ -1,6 +1,6 @@
+import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
-import { Wrapper } from './styles'
 import { Typography } from '@material-ui/core'
 
 const CotegoriesTypes = ({ config, className, style }: Record<string, any>) => {

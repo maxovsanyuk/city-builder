@@ -1,9 +1,9 @@
-import { Wrapper } from './styles'
 import Content from 'features/Common/ui/templates/Content'
-import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import { Container } from 'features/Common/ui/molecules/Grid'
-import CountryCategoryContent from '../../entities/ui/organisms/CountryCategoryPage/CountryCategoryContent'
 import Header from '../../features/Common/ui/organisms/Header'
+import SearchForm from 'features/Common/ui/organisms/SearchForm'
+import CountryCategoryContent from '../../entities/ui/organisms/CountryCategoryPage/CountryCategoryContent'
+import { Wrapper } from './styles'
+import { Container } from 'features/Common/ui/molecules/Grid'
 
 interface CountryCategoryPageProps {}
 

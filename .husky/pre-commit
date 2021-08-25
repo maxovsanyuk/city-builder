@@ -1,0 +1,6 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npm run lint && npm run prettier && git add -A .
+npm run lint && npm run prettier && git add -A .
+git update-index --again && npm run lint:fix && npm run lint && npm run prettier && git add -A .

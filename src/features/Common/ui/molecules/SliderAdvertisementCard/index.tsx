@@ -8,8 +8,8 @@ import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 import { useAdvertisement } from 'shared/hook/useAdvertisement'
-import { DefineAdvertisementTypeIcon } from '../../../lib/DefineAdvertisementTypeIcon'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
+import { DefineAdvertisementTypeIcon } from '../../../lib/DefineAdvertisementTypeIcon'
 
 export const SliderAdvertisementCard = ({ advertisement }: Record<string, any>) => {
   const { setCurrentAdvertisement } = useAdvertisement({ advertisement })

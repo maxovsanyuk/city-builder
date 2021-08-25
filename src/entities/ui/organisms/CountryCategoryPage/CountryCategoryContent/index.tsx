@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom'
-import { useIntl } from 'react-intl'
-import { Wrapper } from './styles'
-import { Typography } from '@material-ui/core'
 import AdvertisementsBox from 'features/Common/ui/organisms/AdvertisementsBox'
 import CotegoriesTypes from '../../../../../features/Common/ui/organisms/CategoriesTypes'
+import { Wrapper } from './styles'
+import { useIntl } from 'react-intl'
+import { useParams } from 'react-router-dom'
+import { Typography } from '@material-ui/core'
 import { GoBackBtn } from '../../../../../features/Common/ui/molecules/Buttons/GoBackBtn'
 import { advertisementsConfig } from '../../../../../shared/settings/mock/advertisements'
 

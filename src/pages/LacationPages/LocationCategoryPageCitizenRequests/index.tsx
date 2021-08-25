@@ -1,9 +1,9 @@
-import { Wrapper } from './styles'
 import Content from 'features/Common/ui/templates/Content'
 import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import { Container } from 'features/Common/ui/molecules/Grid'
-import LocationCategoryCitizenRequestsContent from '../../../entities/ui/organisms/LocationsPages/LocationCategoryCitizenRequestsContent'
 import Header from '../../../features/Common/ui/organisms/Header'
+import { Wrapper } from './styles'
+import LocationCategoryCitizenRequestsContent from '../../../entities/ui/organisms/LocationsPages/LocationCategoryCitizenRequestsContent'
+import { Container } from 'features/Common/ui/molecules/Grid'
 
 interface LocationCategoryPageCitizenRequestsProps {}
 

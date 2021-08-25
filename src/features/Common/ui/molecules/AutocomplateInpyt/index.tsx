@@ -1,7 +1,7 @@
-import { useIntl } from 'react-intl'
 import match from 'autosuggest-highlight/match'
 import parse from 'autosuggest-highlight/parse'
 import Autocomplete from '@material-ui/core/Autocomplete'
+import { useIntl } from 'react-intl'
 import { TextField } from '@material-ui/core'
 
 const AutocompleteInput = ({

@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { useIntl } from 'react-intl'
 import { useStore } from 'effector-react'
-import { $setTheme, $theme } from '../../../model/ThemeSwitcher/model'
 import { FormControl, MenuItem, Select } from '@material-ui/core'
+import { $setTheme, $theme } from '../../../model/ThemeSwitcher/model'
 
 const ThemeSwitcher: FC = () => {
   const { formatMessage } = useIntl()

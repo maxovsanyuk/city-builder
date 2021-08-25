@@ -1,10 +1,10 @@
-import { useIntl } from 'react-intl'
-import { Link } from 'react-router-dom'
-import { Wrapper } from './styles'
-import { Typography } from '@material-ui/core'
-import { useMemo, useState } from 'react'
 import OutsideClickHandler from 'react-outside-click-handler'
 import SelectIcon from '../../../../../shared/assets/icons/icon-selection.png'
+import { Wrapper } from './styles'
+import { useIntl } from 'react-intl'
+import { Link } from 'react-router-dom'
+import { useMemo, useState } from 'react'
+import { Typography } from '@material-ui/core'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 
 const CurrentCategoryList = ({ categoryCurrentState }: Record<string, any>) => {

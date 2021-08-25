@@ -5,9 +5,9 @@ import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
 import { useIntl } from 'react-intl'
 import { StyledForm } from './styles'
-import { historyPush } from 'shared/services/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { Button, TextField } from '@material-ui/core'
+import { historyPush } from 'shared/services/navigation'
 
 const SearchForm = () => {
   const { handleSubmit, register, watch, setValue, control } = useForm<Record<string, any>>()

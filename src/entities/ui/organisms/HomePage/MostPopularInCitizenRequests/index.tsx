@@ -1,7 +1,7 @@
-import { useIntl } from 'react-intl'
-import { Wrapper } from './styles'
-import { Typography } from '@material-ui/core'
 import CotegoriesBox from '../../../../../features/Common/ui/organisms/CategoriesBox'
+import { Wrapper } from './styles'
+import { useIntl } from 'react-intl'
+import { Typography } from '@material-ui/core'
 import { categoriesCitizenConfig } from '../../../../../shared/settings/mock/categories'
 
 const MostPopularInCitizenRequests = () => {
