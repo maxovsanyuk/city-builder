@@ -14,7 +14,7 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "git update-index --again lint prettier"
+      "post-commit": "prettier"
     }
   },
   "author": {
