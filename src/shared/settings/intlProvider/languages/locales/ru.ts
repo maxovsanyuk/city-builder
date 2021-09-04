@@ -59,7 +59,7 @@ const translations = {
     'Most popular entrepreneurs categories requests in the country ru',
   'most.popular.country.citiziens.categories.requests': 'Most popular citiziens categories requests in the country ru',
   'country.category': 'Country category ru',
-  advertisement: 'Advertisement ru',
+  advertisement: 'AdvertisementCard ru',
   'entrepreneur.requests': 'entrepreneurs requests ru',
   'citizen.requests': 'citizen requests ru',
   top: 'Top ru',

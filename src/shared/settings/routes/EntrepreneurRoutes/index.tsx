@@ -3,18 +3,9 @@ import { nanoid } from 'nanoid'
 import { RouteProperties } from '../types/RouteProperties'
 
 const PersonalDataPage = lazy(() => import('pages/Dashboard/PersonalDataPage'))
-const EntrepreneurHomePage = lazy(() => import('pages/Dashboard/Entrepreneur/EntrepreneurHomePage'))
 const CreateEntrepreneurRequest = lazy(() => import('pages/Dashboard/Entrepreneur/CreateEntrepreneurRequest'))
 
 const routes: RouteProperties[] = [
-  {
-    id: nanoid(),
-    component: EntrepreneurHomePage,
-    exact: true,
-    path: '/',
-    name: 'Entrepreneur',
-  },
-
   {
     id: nanoid(),
     component: PersonalDataPage,

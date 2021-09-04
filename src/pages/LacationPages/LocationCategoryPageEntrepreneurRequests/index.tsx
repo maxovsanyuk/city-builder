@@ -1,9 +1,8 @@
-import Content from 'features/Common/ui/templates/Content'
-import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import Header from '../../../features/Common/ui/organisms/Header'
 import { Wrapper } from './styles'
-import LocationCategoryPageEntrepreneurRequestsContent from '../../../entities/ui/organisms/LocationsPages/LocationCategoryEntrepreneurRequestsContent'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { Header } from 'shared/ui/organisms'
+import { Content } from 'shared/ui/templates'
+import { Container, SearchForm } from 'shared/ui/molecules'
+import { LocationCategoryEntrepreneurRequestsContent } from 'entities/ui/organisms'
 
 interface LocationCategoryPageEntrepreneurRequestsProps {}
 
@@ -14,7 +13,7 @@ const LocationCategoryPageEntrepreneurRequests: any = (): LocationCategoryPageEn
       <Container>
         <Content>
           <SearchForm />
-          <LocationCategoryPageEntrepreneurRequestsContent />
+          <LocationCategoryEntrepreneurRequestsContent />
         </Content>
       </Container>
     </Wrapper>

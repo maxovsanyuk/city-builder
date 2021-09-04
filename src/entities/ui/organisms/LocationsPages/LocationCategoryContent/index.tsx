@@ -1,12 +1,10 @@
-import AdvertisementsBox from 'features/Common/ui/organisms/AdvertisementsBox'
-import CotegoriesTypes from '../../../../../features/Common/ui/organisms/CategoriesTypes'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useParams } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
-import { GoBackBtn } from '../../../../../features/Common/ui/molecules/Buttons/GoBackBtn'
+import { GoBackBtn, AdvertisementsBox, CotegoriesTypes } from 'shared/ui/molecules'
 
-const LocationCategoryContent = () => {
+export const LocationCategoryContent = () => {
   const { formatMessage } = useIntl()
   const { locationId, categoryId }: Record<string, any> = useParams()
 
@@ -49,5 +47,3 @@ const LocationCategoryContent = () => {
     </Wrapper>
   )
 }
-
-export default LocationCategoryContent

@@ -1,10 +1,9 @@
-import Content from 'features/Common/ui/templates/Content'
-import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import Header from '../../../features/Common/ui/organisms/Header'
-import TopAdvertisements from '../../../features/Common/ui/organisms/TopAdvertisements'
 import { Wrapper } from './styles'
-import CountryCategoryLocationAdvertisementContent from '../../../entities/ui/organisms/AdvertisementPage/CountryCategoryLocationAdvertisementContent'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { Header } from 'shared/ui/organisms'
+import { Content } from 'shared/ui/templates'
+import { TopAdvertisements } from 'shared/ui/organisms'
+import { Container, SearchForm } from 'shared/ui/molecules'
+import { CountryCategoryLocationAdvertisementContent } from 'entities/ui/organisms'
 
 interface CountryCategoryLocationAdvertisementProps {}
 

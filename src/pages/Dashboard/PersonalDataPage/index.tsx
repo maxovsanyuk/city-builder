@@ -2,9 +2,9 @@ import { FC } from 'react'
 import { Wrapper } from './style'
 import { useIntl } from 'react-intl'
 import { useStore } from 'effector-react'
+import { Container } from 'shared/ui/molecules/Grid'
 import { Paper, Typography } from '@material-ui/core'
-import { $user, UserInterface } from '../../Auth/Login/model'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { $user, UserInterface } from 'processes/auth/login-model'
 
 interface PersonalDataPageProps {}
 const PersonalDataPage: FC<PersonalDataPageProps> = () => {

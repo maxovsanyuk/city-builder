@@ -1,15 +1,15 @@
 import AuthLayout from './pages/templates/AuthLayout'
-import Loading from './features/Common/ui/molecules/Loading'
 import DashboardLayout from './pages/templates/DashboardLayout'
-import NotFoundRoutes from './features/Common/ui/molecules/NotFoundRoutes'
 import { FC, Suspense } from 'react'
+import { NotFound } from './pages/404'
 import { useStore } from 'effector-react'
-import { $user } from './pages/Auth/Login/model'
+import { Loading } from './shared/ui/molecules'
 import { ThemeProvider } from 'styled-components'
+import { $user } from './processes/auth/login-model'
 import { history } from './shared/services/navigation'
 import { Router, Route, Switch } from 'react-router-dom'
 import { GlobalStyle, Theme } from 'shared/settings/theme'
-import { $theme } from './features/Common/model/ThemeSwitcher/model'
+import { $theme } from './shared/model/ThemeSwitcher/model'
 import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'shared/settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
@@ -31,7 +31,7 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
             />
           ))}
 
-          <NotFoundRoutes />
+          <NotFound />
         </Switch>
       )
 
@@ -52,7 +52,7 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
             />
           ))}
 
-          <NotFoundRoutes />
+          <NotFound />
         </Switch>
       )
 
@@ -73,7 +73,7 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
             />
           ))}
 
-          <NotFoundRoutes />
+          <NotFound />
         </Switch>
       )
 
@@ -123,7 +123,7 @@ const App: FC = () => {
             ))
           )}
 
-          <NotFoundRoutes />
+          <NotFound />
         </Switch>
       </Router>
     </ThemeProvider>

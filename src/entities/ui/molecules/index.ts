@@ -1,0 +1,1 @@
+export { SliderAdvertisementCard } from './SliderAdvertisementCard'

@@ -1,5 +1,5 @@
 import axios, { Method } from 'axios'
-import { getCookie } from 'shared/utils'
+import { getCookie } from 'shared/lib/utils'
 
 interface AxiosParams {
   method?: Method

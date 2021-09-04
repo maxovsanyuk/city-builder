@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Wrapper } from './style'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { Container } from 'shared/ui/molecules/Grid'
 
 interface CreateCitizenRequestProps {}
 const CreateCitizenRequest: FC<CreateCitizenRequestProps> = () => {

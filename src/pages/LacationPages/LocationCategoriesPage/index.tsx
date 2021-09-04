@@ -1,9 +1,8 @@
-import Content from 'features/Common/ui/templates/Content'
-import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import Header from '../../../features/Common/ui/organisms/Header'
-import LocationCategoriesContent from '../../../entities/ui/organisms/LocationsPages/LocationCategories/LocationCategoriesContent'
 import { Wrapper } from './styles'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { Header } from 'shared/ui/organisms'
+import { Content } from 'shared/ui/templates'
+import { SearchForm, Container } from 'shared/ui/molecules'
+import { LocationCategoriesContent } from 'entities/ui/organisms'
 
 interface HomePageProps {}
 

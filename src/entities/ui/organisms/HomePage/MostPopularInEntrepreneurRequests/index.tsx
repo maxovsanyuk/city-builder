@@ -1,10 +1,10 @@
-import CotegoriesBox from '../../../../../features/Common/ui/organisms/CategoriesBox'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
-import { categoriesEntrepreneurConfig } from '../../../../../shared/settings/mock/categories'
+import { CotegoriesBox } from 'shared/ui/organisms'
+import { categoriesEntrepreneurConfig } from 'shared/settings/mock/categories'
 
-const MostPopularInEntrepreneurRequests = () => {
+export const MostPopularInEntrepreneurRequests = () => {
   const { formatMessage } = useIntl()
 
   return (
@@ -17,5 +17,3 @@ const MostPopularInEntrepreneurRequests = () => {
     </Wrapper>
   )
 }
-
-export default MostPopularInEntrepreneurRequests

@@ -1,9 +1,9 @@
-import * as model from './model'
-import PasswordInput from 'features/Common/ui/molecules/PasswordInput/PasswordInput'
+import * as model from 'processes/auth/login-model'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
+import { PasswordInput } from 'shared/ui/molecules'
 import { Button, Typography, TextField } from '@material-ui/core'
 
 const Login: any = () => {

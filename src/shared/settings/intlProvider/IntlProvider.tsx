@@ -2,7 +2,7 @@ import React, { FC, Fragment } from 'react'
 import { useStore } from 'effector-react'
 import { IntlProvider as IntlProviderComponent } from 'react-intl'
 import { AppLocale } from 'shared/settings/intlProvider/languages'
-import { $language } from '../../../features/Common/model/LangSwitcher/model'
+import { $language } from '../../model/LangSwitcher/model'
 
 export const IntlProvider: FC = ({ children }) => {
   const lang = useStore($language)

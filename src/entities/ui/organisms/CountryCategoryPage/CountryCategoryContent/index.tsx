@@ -1,13 +1,11 @@
-import AdvertisementsBox from 'features/Common/ui/organisms/AdvertisementsBox'
-import CotegoriesTypes from '../../../../../features/Common/ui/organisms/CategoriesTypes'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useParams } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
-import { GoBackBtn } from '../../../../../features/Common/ui/molecules/Buttons/GoBackBtn'
-import { advertisementsConfig } from '../../../../../shared/settings/mock/advertisements'
+import { advertisementsConfig } from 'shared/settings/mock/advertisements'
+import { GoBackBtn, AdvertisementsBox, CotegoriesTypes } from 'shared/ui/molecules'
 
-const CountryCategoryContent = () => {
+export const CountryCategoryContent = () => {
   const { formatMessage } = useIntl()
   const { categoryId }: Record<string, any> = useParams()
 
@@ -44,5 +42,3 @@ const CountryCategoryContent = () => {
     </Wrapper>
   )
 }
-
-export default CountryCategoryContent

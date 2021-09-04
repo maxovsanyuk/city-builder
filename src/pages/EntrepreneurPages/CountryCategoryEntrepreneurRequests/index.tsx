@@ -1,9 +1,8 @@
-import Content from 'features/Common/ui/templates/Content'
-import SearchForm from 'features/Common/ui/organisms/SearchForm'
-import Header from '../../../features/Common/ui/organisms/Header'
 import { Wrapper } from './styles'
-import CountryCategoryPageEntrepreneurRequestsContent from '../../../entities/ui/organisms/EntrepreneurPages/CountryCategoryEntrepreneurRequestsContent'
-import { Container } from 'features/Common/ui/molecules/Grid'
+import { Header } from 'shared/ui/organisms'
+import { Content } from 'shared/ui/templates'
+import { Container, SearchForm } from 'shared/ui/molecules'
+import { CountryCategoryEntrepreneurRequestsContent } from 'entities/ui/organisms'
 
 interface CountryCategoryPageEntrepreneurRequestsProps {}
 
@@ -14,7 +13,7 @@ const CountryCategoryPageEntrepreneurRequests: any = (): CountryCategoryPageEntr
       <Container>
         <Content>
           <SearchForm />
-          <CountryCategoryPageEntrepreneurRequestsContent />
+          <CountryCategoryEntrepreneurRequestsContent />
         </Content>
       </Container>
     </Wrapper>

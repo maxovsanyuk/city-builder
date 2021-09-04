@@ -1,11 +1,9 @@
-import * as model from './model'
-import AutocompleteInput from 'features/Common/ui/molecules/AutocomplateInpyt'
-import PasswordInput from 'features/Common/ui/molecules/PasswordInput/PasswordInput'
-import GoogleMapsLocationsInput from 'features/Common/ui/organisms/GoogleMapsLocationsInput'
+import * as model from 'processes/auth/registration-model'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useForm } from 'react-hook-form'
 import { Button, Typography, TextField } from '@material-ui/core'
+import { AutocompleteInput, PasswordInput, GoogleMapsLocationsInput } from 'shared/ui/molecules'
 
 const categoryOptions = [
   { fmId: 'citizen', id: 19924 },

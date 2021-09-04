@@ -1,17 +1,17 @@
-import Advertisement from '../Advertisement'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
-import { GoBackBtn } from 'features/Common/ui/molecules/Buttons/GoBackBtn'
+import { GoBackBtn } from 'shared/ui/molecules'
+import { AdvertisementCard } from 'entities/ui/organisms'
+import { AdvertisementsSlider } from 'features/ui/molecules'
 import { advertisementsConfig } from 'shared/settings/mock/advertisements'
-import { AdvertisementsSlider } from 'features/Common/ui/molecules/AdvertisementsSlider'
 
-const AdvertisementPageContent = () => {
+export const AdvertisementPageContent = () => {
   const { formatMessage } = useIntl()
 
   return (
     <Wrapper>
-      <Advertisement />
+      <AdvertisementCard />
       <GoBackBtn />
 
       <Typography variant="h4" className="title">
@@ -22,5 +22,3 @@ const AdvertisementPageContent = () => {
     </Wrapper>
   )
 }
-
-export default AdvertisementPageContent
