@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     justify-content: space-between;
   }
 
-  .advertisement-box {
+  .advertisement-large-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,13 +44,10 @@ export const Wrapper = styled.div`
       justify-content: center;
     }
 
-    .img-wrapper {
-      min-height: 250px;
-    }
-
     .advertisement-img {
       width: 100%;
       margin: 0 0 20px 0;
+      height: 250px;
     }
 
     .info-box {

@@ -21,7 +21,7 @@ export const SliderAdvertisementCard = ({ advertisement }: Record<string, any>) 
         key={advertisement?.name || advertisement?.id}
         onClick={() => setCurrentAdvertisement()}
       >
-        <div className="advertisement-box">
+        <div className="advertisement-small-box">
           <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
 
           <div className="content">

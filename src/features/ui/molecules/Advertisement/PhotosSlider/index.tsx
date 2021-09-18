@@ -8,7 +8,7 @@ export const PhotosSlider: React.FC = () => {
   const advertisement = useStore($advertisement)
 
   return (
-    <Wrapper>
+    <Wrapper className="photos-slider">
       <AwesomeSlider animation="foldOutAnimation" style={{ marginBottom: '40px' }}>
         {[1, 2].map(i => (
           <div key={i}>

@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   margin: 20px 10px 0 10px;
   border-radius: 4px;
 
-  .advertisement-box {
+  .advertisement-small-box {
     display: flex;
     min-height: 400px;
     flex-direction: column;
@@ -13,6 +13,7 @@ export const Wrapper = styled.div`
     position: relative;
 
     .advertisement-img {
+      height: 200px;
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
     }

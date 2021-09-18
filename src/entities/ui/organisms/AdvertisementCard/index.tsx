@@ -1,20 +1,20 @@
 import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
 import { Typography } from '@material-ui/core'
-import { UserInfo, PhotosSlider } from 'features/ui/molecules'
 import { $advertisement } from 'entities/model/Advertisement/model'
+import { UserInfo, PhotosSlider, LocationInfo } from 'features/ui/molecules'
 
 const D = () => {
-  return <div style={{ background: '#ccc' }}>Post info</div>
-}
-
-const E = () => {
-  return <div style={{ background: '#ccc' }}>Location info</div>
+  return (
+    <div className="post-info-box" style={{ background: '#ccc' }}>
+      Post info
+    </div>
+  )
 }
 
 const C = () => {
   return (
-    <div className="contact-box" style={{ background: '#ccc' }}>
+    <div id="chat" className="contact-box" style={{ background: '#ccc' }}>
       Chat & Reviews
     </div>
   )
@@ -22,7 +22,6 @@ const C = () => {
 
 export const AdvertisementCard = () => {
   const advertisement = useStore($advertisement)
-
   if (!advertisement) return null
 
   return (
@@ -33,8 +32,8 @@ export const AdvertisementCard = () => {
       <Wrapper>
         <PhotosSlider />
         <UserInfo />
+        <LocationInfo />
         <D />
-        <E />
         <C />
       </Wrapper>
     </>

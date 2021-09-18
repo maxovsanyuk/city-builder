@@ -50,7 +50,7 @@ export const PasswordInput = ({ password, register, errors, setValue }: Record<s
       {get(passwordState, 'isFocused') && (
         <AnimatedContainer transition={0.4}>
           <div className="check-password-box">
-            <Typography variant="h6" gutterBottom className="title">
+            <Typography variant="subtitle2" gutterBottom className="password-title">
               {formatMessage({ id: 'password.must.contain.the.following' })}
             </Typography>
 

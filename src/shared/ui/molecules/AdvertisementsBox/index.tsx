@@ -16,10 +16,9 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
 
   return (
     <Link to={advertisement?.link} onClick={() => setCurrentAdvertisement()}>
-      <div className="advertisement-box">
-        <div className="img-wrapper">
-          <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
-        </div>
+      <div className="advertisement-large-box">
+        <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
+
         <div className="content">
           <Typography variant="h5" align="center" gutterBottom>
             {advertisement?.title}
@@ -75,9 +74,9 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
 export const AdvertisementsBox = ({ config }: Record<string, any>) => {
   return (
     <Wrapper>
-      {config.map((advertisement: Record<string, any>) => {
-        return <SmallAdvertisementCard key={advertisement?.name || advertisement?.id} advertisement={advertisement} />
-      })}
+      {config.map((advertisement: Record<string, any>) => (
+        <SmallAdvertisementCard key={advertisement?.name || advertisement?.id} advertisement={advertisement} />
+      ))}
     </Wrapper>
   )
 }

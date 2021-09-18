@@ -47,7 +47,7 @@ export const PasswordInputComponent = styled.div`
     font-size: 16px;
     line-height: 24px;
 
-    .title {
+    .password-title {
       display: flex;
       width: 100%;
       white-space: nowrap;
