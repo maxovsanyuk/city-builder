@@ -10,6 +10,15 @@ export const Wrapper = styled.div`
   .link {
     text-decoration: underline;
     margin: 5px 0 0 110px;
+    color: ${({ theme }) => theme.color.blueDefault};
+  }
+
+  .phone-btn {
+    background: ${({ theme }) => theme.color.blueDefault};
+  }
+
+  .user-name {
+    color: ${({ theme }) => theme.color.blueDefault};
   }
 
   .user-info {

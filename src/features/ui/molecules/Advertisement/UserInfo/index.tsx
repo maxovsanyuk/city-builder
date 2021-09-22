@@ -18,7 +18,9 @@ export const UserInfo = () => {
             src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"
           />
           <div className="details-info">
-            <Typography variant="h6">User Name</Typography>
+            <Typography className="user-name" variant="h6">
+              User Name
+            </Typography>
             <Typography variant="body2">on CB since July 2015</Typography>
             <Typography variant="body2">Online today at 08:00</Typography>
           </div>
@@ -32,7 +34,9 @@ export const UserInfo = () => {
       </Box>
 
       <div className="btn-box">
-        <Button variant="contained">Show phone</Button>
+        <Button className="phone-btn" variant="contained">
+          Show phone
+        </Button>
         <Button onClick={scrollToChat} variant="outlined">
           Message
         </Button>

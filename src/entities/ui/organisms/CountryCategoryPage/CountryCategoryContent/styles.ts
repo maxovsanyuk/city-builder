@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
 
   .title {
     text-align: center;
-    color: ${({ theme }) => theme.color.blackMiddle};
+    color: ${({ theme }) => theme.color.blueDefault};
     margin: 0 0 10px 0;
   }
 

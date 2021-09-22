@@ -18,25 +18,24 @@ export const Wrapper = styled.div`
 
       .title {
         transition: 0.1s;
-        background: rgba(0, 0, 0, 0.8);
+        background: ${({ theme }) => theme.color.blueDefault};
         color: #fff;
       }
     }
 
     .img {
-      width: 200px;
+      width: 300px;
       height: 200px;
-      background: #647895;
-      border-radius: 50%;
+      border-radius: 2px;
       margin: 0 0 20px 0;
-      border: 1px solid #f2f2f2;
       background-size: cover !important;
     }
 
     .title {
       transition: 0.1s;
-      color: rgba(0, 0, 0, 0.8);
-      background: #fff;
+      color: ${({ theme }) => theme.color.blueDefault};
+      background: ${({ theme }) => theme.color.white};
+      padding: 0 10px;
     }
   }
 `

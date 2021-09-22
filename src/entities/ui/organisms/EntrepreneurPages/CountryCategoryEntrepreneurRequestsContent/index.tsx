@@ -11,15 +11,15 @@ export const CountryCategoryEntrepreneurRequestsContent = () => {
 
   return (
     <Wrapper>
-      <Typography variant="h4" className="title">
+      <GoBackBtn />
+      <Typography variant="h4" className="title-h4">
         {formatMessage({ id: 'country' })} {formatMessage({ id: `category.${categoryId}` })}{' '}
         {formatMessage({ id: 'entrepreneur.requests' })}
       </Typography>
 
-      <GoBackBtn />
       <AdvertisementsBox config={advertisementsConfig} />
 
-      <Typography variant="h4" className="title">
+      <Typography variant="h4" className="title-h4">
         {formatMessage({ id: 'another.advertisements' })}
       </Typography>
 

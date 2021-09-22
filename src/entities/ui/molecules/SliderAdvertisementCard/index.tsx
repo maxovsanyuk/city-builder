@@ -31,10 +31,12 @@ export const SliderAdvertisementCard = ({ advertisement }: Record<string, any>) 
 
             <div className="gorizontal-box">
               <LocationOnIcon color="primary" />
-              <Typography variant="body2" margin="0 5px 0 5px">
+              <Typography className="location" variant="body2" margin="0 5px 0 5px">
                 {advertisement?.location || 'Location'} -
               </Typography>
-              <Typography variant="body2"> {moment(advertisement?.date).format('l')}</Typography>
+              <Typography className="date" variant="body2">
+                {moment(advertisement?.date).format('l')}
+              </Typography>
             </div>
 
             <Rating

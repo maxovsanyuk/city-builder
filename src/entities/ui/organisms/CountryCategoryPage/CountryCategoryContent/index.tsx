@@ -26,11 +26,10 @@ export const CountryCategoryContent = () => {
 
   return (
     <Wrapper>
+      <GoBackBtn />
       <Typography variant="h4" className="title">
         {formatMessage({ id: 'country.category' })} {categoryId}
       </Typography>
-
-      <GoBackBtn />
 
       <CotegoriesTypes config={categoriesConfig} />
 

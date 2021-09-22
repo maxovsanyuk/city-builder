@@ -16,20 +16,22 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
 
   return (
     <Link to={advertisement?.link} onClick={() => setCurrentAdvertisement()}>
-      <div className="advertisement-large-box">
+      <div className="advertisement-small-box">
         <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
 
         <div className="content">
-          <Typography variant="h5" align="center" gutterBottom>
+          <Typography variant="h5" className="title" align="center" gutterBottom>
             {advertisement?.title}
           </Typography>
 
           <div className="gorizontal-box">
             <LocationOnIcon color="primary" />
-            <Typography variant="body2" margin="0 5px 0 5px">
+            <Typography variant="body2" className="location-title" margin="0 5px 0 5px">
               {advertisement?.location || 'Location'} -
             </Typography>
-            <Typography variant="body2"> {moment(advertisement?.date).format('l')}</Typography>
+            <Typography className="date-title" variant="body2">
+              {moment(advertisement?.date).format('l')}
+            </Typography>
           </div>
 
           <Rating
@@ -43,13 +45,13 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
             <div className="gorizontal-box">
               <div className="gorizontal-box">
                 <ThumbUpAltOutlinedIcon color="primary" />
-                <Typography variant="subtitle1" margin="0 10px">
+                <Typography className="default-color" variant="subtitle1" margin="0 10px">
                   {advertisement?.likeAmount || 32}
                 </Typography>
               </div>
               <div className="gorizontal-box">
                 <ThumbDownAltOutlinedIcon color="primary" />
-                <Typography variant="subtitle1" margin="0 10px">
+                <Typography className="default-color" variant="subtitle1" margin="0 10px">
                   {advertisement?.disLikeAmount || 43}
                 </Typography>
               </div>
@@ -57,7 +59,7 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
 
             <div className="gorizontal-box">
               <VisibilityOutlinedIcon color="primary" />
-              <Typography variant="subtitle1" margin="0 0 0 10px">
+              <Typography className="default-color" variant="subtitle1" margin="0 0 0 10px">
                 {advertisement?.peopleViewed || 2}
               </Typography>
             </div>

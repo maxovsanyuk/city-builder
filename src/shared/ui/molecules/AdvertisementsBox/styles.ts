@@ -14,9 +14,16 @@ export const Wrapper = styled.div`
     height: 140px;
     flex-direction: column;
     justify-content: space-between;
+
+    .title,
+    .location-title,
+    .date-title,
+    .default-color {
+      color: ${({ theme }) => theme.color.blueDefault};
+    }
   }
 
-  .advertisement-large-box {
+  .advertisement-small-box {
     display: flex;
     flex-direction: column;
     align-items: center;

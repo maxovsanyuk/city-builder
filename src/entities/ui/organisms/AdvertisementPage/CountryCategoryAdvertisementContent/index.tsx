@@ -17,7 +17,6 @@ export const CountryCategoryAdvertisementContent = () => {
         {formatMessage({ id: 'search.result.for' })} {formatMessage({ id: categoryId })} (
         {formatMessage({ id: advertisementId })})
       </Typography>
-
       <AdvertisementsBox config={advertisementsConfig} />
     </Wrapper>
   )

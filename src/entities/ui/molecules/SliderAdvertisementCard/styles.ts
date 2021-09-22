@@ -17,6 +17,11 @@ export const Wrapper = styled.div`
       border-top-right-radius: 4px;
       border-top-left-radius: 4px;
     }
+
+    .location,
+    .date {
+      color: ${({ theme }) => theme.color.blueDefault};
+    }
   }
 
   .gorizontal-box {

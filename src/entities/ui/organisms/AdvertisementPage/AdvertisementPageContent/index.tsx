@@ -11,13 +11,12 @@ export const AdvertisementPageContent = () => {
 
   return (
     <Wrapper>
-      <AdvertisementCard />
       <GoBackBtn />
+      <AdvertisementCard />
 
       <Typography variant="h4" className="title">
         {formatMessage({ id: 'another.advertisements' })}
       </Typography>
-
       <AdvertisementsSlider config={advertisementsConfig} />
     </Wrapper>
   )

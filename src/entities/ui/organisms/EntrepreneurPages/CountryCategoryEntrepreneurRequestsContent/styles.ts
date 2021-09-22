@@ -7,9 +7,9 @@ export const Wrapper = styled.div`
   padding: 20px 5%;
   position: relative;
 
-  .title {
+  .title-h4 {
     text-align: center;
-    color: ${({ theme }) => theme.color.blackMiddle};
-    margin: 0 0 10px 0;
+    color: ${({ theme }) => theme.color.blueDefault};
+    margin: 0 0 50px 0;
   }
 `
