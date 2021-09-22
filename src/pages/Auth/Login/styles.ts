@@ -7,12 +7,13 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.color.white};
   color: ${({ theme }) => theme.color.black};
   text-align: center;
-  border: 1px solid ${({ theme }) => theme.color.blackLight};
-  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blackLight};
+  border: 1px solid ${({ theme }) => theme.color.blueDefault};
+  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blueDefault};
 
   .title-h5 {
     margin: 20px 0 50px 0;
     font-weight: 600;
+    color: ${({ theme }) => theme.color.blueDefault};
   }
 
   .form-content {
@@ -26,7 +27,7 @@ export const Wrapper = styled.div`
     }
 
     .submit-btn {
-      background: ${({ theme }) => theme.color.blackMiddle};
+      background: ${({ theme }) => theme.color.blueDefault};
       font-weight: 600;
       max-width: 45%;
     }
@@ -35,6 +36,7 @@ export const Wrapper = styled.div`
       text-align: left;
       margin: 10px 20px 20px 20px;
       text-decoration: underline;
+      color: ${({ theme }) => theme.color.blueDefault};
     }
 
     .link-box {

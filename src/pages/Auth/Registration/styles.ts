@@ -7,8 +7,12 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.color.white};
   color: ${({ theme }) => theme.color.black};
   text-align: center;
-  border: 1px solid ${({ theme }) => theme.color.blackLight};
-  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blackLight};
+  border: 1px solid ${({ theme }) => theme.color.blueDefault};
+  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blueDefault};
+
+  .h-5 {
+    color: ${({ theme }) => theme.color.blueDefault};
+  }
 
   .form-content {
     display: flex;
@@ -22,7 +26,7 @@ export const Wrapper = styled.div`
 
     .submit-btn {
       margin: 40px 20px 0 20px !important;
-      background: ${({ theme }) => theme.color.blackMiddle};
+      background: ${({ theme }) => theme.color.blueDefault};
       font-weight: 600;
     }
 

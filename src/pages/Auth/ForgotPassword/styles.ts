@@ -5,10 +5,13 @@ export const Wrapper = styled.div`
   border-radius: 8px;
   padding: 60px 40px;
   background: ${({ theme }) => theme.color.white};
-  color: ${({ theme }) => theme.color.black};
   text-align: center;
   border: 1px solid ${({ theme }) => theme.color.blackLight};
   box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blackLight};
+
+  .h-5 {
+    color: ${({ theme }) => theme.color.blueDefault};
+  }
 
   .form-content {
     display: flex;
@@ -21,7 +24,7 @@ export const Wrapper = styled.div`
     }
 
     .submit-btn {
-      background: ${({ theme }) => theme.color.blackMiddle};
+      background: ${({ theme }) => theme.color.blueDefault};
       font-weight: 600;
       margin: 40px 20px 0 20px;
     }

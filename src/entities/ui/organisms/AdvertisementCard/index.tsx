@@ -1,6 +1,6 @@
 import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
-import { Typography } from '@material-ui/core'
+import { Typography, Box } from '@material-ui/core'
 import { $advertisement } from 'entities/model/Advertisement/model'
 import { UserInfo, PhotosSlider, LocationInfo } from 'features/ui/molecules'
 
@@ -32,7 +32,9 @@ export const AdvertisementCard = () => {
       <Wrapper>
         <PhotosSlider />
         <UserInfo />
-        <LocationInfo />
+        <Box className="location-info">
+          <LocationInfo />
+        </Box>
         <D />
         <C />
       </Wrapper>

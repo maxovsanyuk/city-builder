@@ -2,8 +2,9 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   width: 100%;
-  background: ${({ theme }) => theme.color.blackMiddle};
-  border-bottom: 1px solid ${({ theme }) => theme.color.black};
+  background: ${({ theme }) => theme.color.blueDefault};
+  border-bottom: 1px solid ${({ theme }) => theme.color.greyMedium};
+  color: ${({ theme }) => theme.color.white};
 
   .header {
     width: 100%;

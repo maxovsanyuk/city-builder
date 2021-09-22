@@ -7,7 +7,7 @@ interface DashboardLayoutProps {}
 const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
   return (
     <>
-      <Header withLogOutBtn />
+      <Header />
       <Wrapper>
         <Container style={{ display: 'flex', height: '100%' }}>
           <div className="children">{children}</div>

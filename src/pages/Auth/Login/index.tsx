@@ -57,7 +57,7 @@ const Login: any = () => {
             </Button>
 
             <Link to="/registration" className="link-box">
-              <Button className="submit-btn" variant="contained" color="primary">
+              <Button className="submit-btn" variant="contained">
                 {formatMessage({ id: 'registration' })}
               </Button>
             </Link>

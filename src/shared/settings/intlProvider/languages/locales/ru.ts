@@ -45,6 +45,7 @@ const translations = {
   citizen: 'Citizen ru',
   entrepreneur: 'Entrepreneur ru',
   admin: 'Admin ru',
+  'full.name': 'Full name ru',
   'user.location': 'Location ru',
   'top.advertisements': 'Top advertisements ru',
   'search.authorization.type': 'Authorization type ru',
@@ -59,13 +60,17 @@ const translations = {
     'Most popular entrepreneurs categories requests in the country ru',
   'most.popular.country.citiziens.categories.requests': 'Most popular citiziens categories requests in the country ru',
   'country.category': 'Country category ru',
-  advertisement: 'AdvertisementCard ru',
+  advertisement: 'Advertisement ru',
   'entrepreneur.requests': 'entrepreneurs requests ru',
   'citizen.requests': 'citizen requests ru',
   top: 'Top ru',
   'create.request': 'Create request ru',
   'create.new.rerquest': 'Create new rerquest ru',
   'go.back': 'Go back ru',
+  profile: 'Profile ru',
+  'new.advertisement': 'New advertisement ru',
+  settings: 'Settings ru',
+  contact: 'Contact ru',
 
   //
 

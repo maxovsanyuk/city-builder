@@ -8,15 +8,15 @@ interface LocationProps {
 
 const containerStyle = {
   position: 'relative',
-  width: '370px',
-  height: '200px',
+  width: '100%',
+  height: '100%',
 }
 
 const LocationComponent = ({ google, loaded }: LocationProps) => {
   if (!loaded) return <div>Loading...</div>
 
   return (
-    <Wrapper className="location-info">
+    <Wrapper>
       <Map
         containerStyle={containerStyle}
         google={google}

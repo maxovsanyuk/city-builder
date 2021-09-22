@@ -23,17 +23,17 @@ export const Wrapper = styled.div<{ currentCategoryIndex: number }>`
       .title {
         transition: 0.1s;
         background: rgba(0, 0, 0, 0.8);
-        color: #fff;
+        background: ${({ theme }) => theme.color.white};
       }
     }
 
     .img {
       width: 90px;
       height: 90px;
-      background: #647895;
+      background: ${({ theme }) => theme.color.blueDefault};
       border-radius: 50%;
       margin: 0 0 20px 0;
-      border: 1px solid #f2f2f2;
+      border: 1px solid ${({ theme }) => theme.color.whiteMiddle};
       background-size: cover !important;
     }
   }

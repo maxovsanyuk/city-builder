@@ -1,6 +1,6 @@
 import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
-import { Typography, Button } from '@material-ui/core'
+import { Typography, Button, Box } from '@material-ui/core'
 
 const scrollToChat = () => {
   const content = document.getElementById('chat')
@@ -10,24 +10,26 @@ const scrollToChat = () => {
 export const UserInfo = () => {
   return (
     <Wrapper>
-      <div className="user-info">
-        <img
-          className="user-avatar"
-          alt="user-avatar"
-          src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"
-        />
-        <div className="details-info">
-          <Typography variant="h6">User Name</Typography>
-          <Typography variant="body2">on CB since July 2015</Typography>
-          <Typography variant="body2">Online today at 08:00</Typography>
+      <Box>
+        <div className="user-info">
+          <img
+            className="user-avatar"
+            alt="user-avatar"
+            src="https://www.kindpng.com/picc/m/78-786207_user-avatar-png-user-avatar-icon-png-transparent.png"
+          />
+          <div className="details-info">
+            <Typography variant="h6">User Name</Typography>
+            <Typography variant="body2">on CB since July 2015</Typography>
+            <Typography variant="body2">Online today at 08:00</Typography>
+          </div>
         </div>
-      </div>
 
-      <Link to="/ads/123">
-        <Typography className="link" variant="body1">
-          All ads by the author
-        </Typography>
-      </Link>
+        <Link to="/ads/123">
+          <Typography className="link" variant="body1">
+            All ads by the author
+          </Typography>
+        </Link>
+      </Box>
 
       <div className="btn-box">
         <Button variant="contained">Show phone</Button>

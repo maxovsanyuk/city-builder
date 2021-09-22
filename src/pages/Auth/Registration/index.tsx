@@ -27,7 +27,7 @@ const Registration: any = () => {
 
   return (
     <Wrapper>
-      <Typography variant="h5" gutterBottom style={{ fontWeight: 600 }}>
+      <Typography variant="h5" className="h-5" gutterBottom style={{ fontWeight: 600 }}>
         {formatMessage({ id: 'join.us' })}
       </Typography>
 

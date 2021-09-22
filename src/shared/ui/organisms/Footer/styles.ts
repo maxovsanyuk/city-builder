@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: ${({ theme }) => theme.color.blackMiddle};
+  background: ${({ theme }) => theme.color.blueDefault};
   padding: 0 20px;
 
   a {

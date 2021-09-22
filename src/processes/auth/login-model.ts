@@ -1,8 +1,8 @@
 import { message } from 'antd'
 import { persist } from 'effector-storage/local'
-import { setCookie } from '../../shared/lib/utils'
 import { createEvent, createStore } from 'effector-root'
 import { historyPush } from '../../shared/services/navigation'
+import { setCookie, removeCookie } from '../../shared/lib/utils'
 
 export const MockData = [
   {
@@ -58,7 +58,6 @@ $user
     if (user) {
       setCookie('token', user?.token)
       $setUser(user)
-      persist({ store: $user, key: 'user' })
       message.success('Success login!')
       historyPush('/')
     } else {
@@ -66,4 +65,7 @@ $user
     }
   })
   .on($setUser, (_, payload) => payload)
-  .reset($logoutUser)
+  .on($logoutUser, () => {
+    removeCookie('token')
+    return null
+  })

@@ -1,7 +1,11 @@
+import Joyride from 'react-joyride'
 import { Wrapper } from './styles'
+import { useStore } from 'effector-react'
 import { Content } from 'shared/ui/templates'
+import { $user } from '../../processes/auth/login-model'
 import { SearchForm, Container } from 'shared/ui/molecules'
 import { Header, TopAdvertisements } from 'shared/ui/organisms'
+import { JoyrideStepsConfig } from '../../shared/settings/configs'
 import {
   MostPopularInCitizenRequests,
   MostPopularInCountry,
@@ -11,6 +15,8 @@ import {
 interface HomePageProps {}
 
 const HomePage: any = (): HomePageProps => {
+  const user = useStore($user)
+
   return (
     <Wrapper>
       <Header />
@@ -23,6 +29,7 @@ const HomePage: any = (): HomePageProps => {
           <TopAdvertisements />
         </Content>
       </Container>
+      {user?.token && <Joyride continuous showSkipButton run={true} callback={() => null} steps={JoyrideStepsConfig} />}
     </Wrapper>
   )
 }

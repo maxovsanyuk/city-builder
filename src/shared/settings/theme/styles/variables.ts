@@ -2,7 +2,7 @@ import { DefaultTheme } from 'styled-components'
 
 export interface ThemeType {
   fonts: Record<string, string>
-  breakpoint: Record<string, number>
+  breakpoints: Record<string, string>
   color: Record<string, string>
 }
 
@@ -11,21 +11,11 @@ const fonts = {
   inter: 'Inter',
 }
 
-const breakpoint = {
-  extraSmallMax: 374,
-  extraSmallMin: 375,
-
-  smallMax: 575,
-  smallMin: 576,
-
-  mediumMax: 767,
-  mediumMin: 768,
-
-  largeMax: 1024,
-  largeMin: 1025,
-
-  extraLargeMax: 1399,
-  extraLargeMin: 1400,
+const breakpoints = {
+  sm: '576px',
+  md: '768px',
+  lg: '1992px',
+  xl: '1200px',
 }
 
 export const defaultColors = {
@@ -44,7 +34,7 @@ export const defaultColors = {
 
   blueDark: '#07223F',
   blueMedium: '#11427E',
-  blueDefault: '#2585FB',
+  blueDefault: '#647895',
   blueLight: '#C8E0FE',
 
   black: '#000',
@@ -75,13 +65,13 @@ const lightThemeColors = {
 
 const DarkTheme: DefaultTheme = {
   fonts,
-  breakpoint,
+  breakpoints,
   color: defaultColors,
 }
 
 const LigthTheme: DefaultTheme = {
   fonts,
-  breakpoint,
+  breakpoints,
   color: lightThemeColors,
 }
 

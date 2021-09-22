@@ -1,29 +1,63 @@
-import { FC } from 'react'
-import { useIntl } from 'react-intl'
+import styled from 'styled-components'
+import { FC, useState } from 'react'
 import { useStore } from 'effector-react'
-import { FormControl, MenuItem, Select } from '@material-ui/core'
+import { Language } from '@material-ui/icons'
+import { ListItemIcon, MenuItem, Fade, Menu } from '@material-ui/core'
 import { $language, $setlanguage } from '../../../model/LangSwitcher/model'
 
+const langConfig = [
+  { lang: 'en', label: 'ENG' },
+  { lang: 'ru', label: 'RUS' },
+]
+
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+`
+
 export const LangSwitcher: FC = () => {
-  const { formatMessage } = useIntl()
-  const lang = useStore($language)
-  const changeLangHandler = (event: Record<string, string | any>) => $setlanguage(event?.target.value)
+  const currentLanguage = useStore($language)
+  const changeLangHandler = (language: string) => $setlanguage(language)
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => setAnchorEl(event.currentTarget)
+  const handleClose = () => setAnchorEl(null)
 
   return (
-    <FormControl variant="standard">
-      <Select
-        value={lang}
-        onChange={changeLangHandler}
-        className="lang-swicher"
-        label={formatMessage({ id: 'language' })}
+    <Wrapper>
+      <ListItemIcon onClick={handleClick}>
+        <Language fontSize="medium" />
+      </ListItemIcon>
+
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          'aria-labelledby': 'fade-button',
+        }}
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleClose}
+        TransitionComponent={Fade}
       >
-        <MenuItem value="en" disabled={lang === 'en'}>
-          ENG
-        </MenuItem>
-        <MenuItem value="ru" disabled={lang === 'ru'}>
-          RUS
-        </MenuItem>
-      </Select>
-    </FormControl>
+        {langConfig.map(({ lang, label }) => {
+          return (
+            <MenuItem
+              key={lang}
+              onClick={() => {
+                changeLangHandler(lang)
+                handleClose()
+              }}
+              disabled={currentLanguage === lang}
+            >
+              {label}
+            </MenuItem>
+          )
+        })}
+      </Menu>
+    </Wrapper>
   )
 }

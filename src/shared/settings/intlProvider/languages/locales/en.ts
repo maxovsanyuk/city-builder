@@ -44,6 +44,7 @@ const translations = {
   'search.autorization.type': 'Autorization type',
   citizen: 'Citizen',
   entrepreneur: 'Entrepreneur',
+  'full.name': 'Full name',
   admin: 'Admin',
   'user.location': 'Location',
   'top.advertisements': 'Top advertisements',
@@ -66,6 +67,10 @@ const translations = {
   'create.request': 'Create request',
   'create.new.rerquest': 'Create new rerquest',
   'go.back': 'Go back',
+  profile: 'Profile',
+  'new.advertisement': 'New advertisement',
+  settings: 'Settings',
+  contact: 'Contact',
 
   //
 

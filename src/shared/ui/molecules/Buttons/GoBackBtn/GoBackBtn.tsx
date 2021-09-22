@@ -11,5 +11,9 @@ const ButtonWrapper = styled(Button)`
 export const GoBackBtn: React.FC = () => {
   const { formatMessage } = useIntl()
 
-  return <ButtonWrapper onClick={() => history.goBack()}>{formatMessage({ id: 'go.back' })}</ButtonWrapper>
+  return (
+    <ButtonWrapper variant="outlined" onClick={() => history.goBack()}>
+      {formatMessage({ id: 'go.back' })}
+    </ButtonWrapper>
+  )
 }

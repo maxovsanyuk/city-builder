@@ -29,22 +29,18 @@ const checkPasswordValidation = (password = '') => {
       type: 'minLength',
       isValid: password.length >= 8,
     },
-
     {
       type: 'oneOrMoreLowercaseLetters',
       isValid: password.toUpperCase() !== password,
     },
-
     {
       type: 'oneOrMoreUppercaseLetters',
       isValid: password.toLowerCase() !== password,
     },
-
     {
       type: 'oneOrMoreNumbers',
       isValid: /\d/.test(password),
     },
-
     {
       type: 'oneOrMoreSpecialCharacters',
       isValid: !!password.match(/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/),
@@ -52,13 +48,12 @@ const checkPasswordValidation = (password = '') => {
   ]
 }
 
-export const usePasswordValidationState = password => {
+export const usePasswordValidationState = (password: string) => {
   const checkPasswordValidationResult = checkPasswordValidation(password)
-  const [isPassedValidation, setItsPassedValidation] = useState(false)
-  const [passwordState, setPasswordState] = useState({
+  const [isPassedValidation, setItsPassedValidation] = useState<boolean>(false)
+  const [passwordState, setPasswordState] = useState<Record<string, any>>({
     showPassword: false,
     isFocused: false,
-
     validation: {
       oneOrMoreLowercaseLetters: false,
       oneOrMoreUppercaseLetters: false,
@@ -66,7 +61,6 @@ export const usePasswordValidationState = password => {
       oneOrMoreNumbers: false,
       minLength: false,
     },
-
     totalValidationCounter: passwordValidationConfig.length,
     passedValidationCounter: 0,
   })
