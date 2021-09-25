@@ -10,9 +10,10 @@
     "prettier": "prettier --write ./src --loglevel silent",
     "lint": "eslint . --cache --ext .ts,.tsx",
     "ts-check": "tsc --noEmit",
-    "lint:fix": "eslint . --cache --ext .ts,.tsx --fix",
+    "lint-fix": "eslint . --cache --ext .ts,.tsx --fix",
     "prepare": "husky install",
-    "styles:check": "npx stylelint '**/styles.ts'"
+    "styles-check": "npx stylelint '**/styles.ts'",
+    "styles-fix": "npx stylelint --fix '*'"
   },
   "author": {
     "name": "Max Ovsianiuk",
@@ -216,12 +217,6 @@
     ],
     "resetMocks": true
   },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  }
+  "babel": {},
+  "eslintConfig": {}
 }

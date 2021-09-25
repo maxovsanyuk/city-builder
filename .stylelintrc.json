@@ -3,10 +3,12 @@
     "stylelint-config-standard",
     "stylelint-config-rational-order",
     "stylelint-config-styled-components",
-    "stylelint-config-prettier"
+    "stylelint-config-prettier",
+    "stylelint-config-recommended"
   ],
   "plugins": ["stylelint-no-browser-hacks/lib"],
   "rules": {
+    "selector-type-no-unknown": null,
     "block-closing-brace-newline-after": "always",
     "color-no-invalid-hex": true,
     "indentation": 2,
