@@ -1,7 +1,7 @@
 import styled from 'styled-components'
+import { history } from 'services/navigation'
 import { ArrowBack } from '@material-ui/icons'
 import { ListItemIcon } from '@material-ui/core'
-import { history } from 'services/navigation'
 
 const ButtonWrapper = styled.span`
   &:hover {

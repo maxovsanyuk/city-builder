@@ -1,8 +1,8 @@
 import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
-import { $advertisement } from '../../../../model/advertisement/model'
-import { Favorite, Share } from '@material-ui/icons'
 import { IconButton } from '@material-ui/core'
+import { Favorite, Share } from '@material-ui/icons'
+import { $advertisement } from '../../../../model/advertisement/model'
 
 export const PostInfo = () => {
   const advertisement = useStore($advertisement)

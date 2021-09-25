@@ -1,5 +1,5 @@
 export { AdvertisementSmallCard } from './advertisement-small-card'
-export { UserInfo } from './advertisement/userInfo'
-export { LocationInfo } from './advertisement/locationInfo'
+export { UserInfo } from './advertisement/user-info'
+export { LocationInfo } from './advertisement/location-info'
 export { UserHeaderInfoBox } from './user-header-info-box'
-export { PostInfo } from './advertisement/postInfo'
+export { PostInfo } from './advertisement/post-info'

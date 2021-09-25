@@ -4,8 +4,8 @@ import { useStore } from 'effector-react'
 import { Content } from 'shared/ui/templates'
 import { $user } from '../../processes/auth/login-model'
 import { SearchForm, Container } from 'shared/ui/molecules'
-import { Header, TopAdvertisements } from 'shared/ui/organisms'
 import { JoyrideStepsConfig } from '../../settings/configs'
+import { Header, TopAdvertisements } from 'shared/ui/organisms'
 import {
   MostPopularInCitizenRequests,
   MostPopularInCountry,
