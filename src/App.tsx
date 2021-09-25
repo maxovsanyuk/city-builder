@@ -1,16 +1,14 @@
-import AuthLayout from './pages/templates/AuthLayout'
-import DashboardLayout from './pages/templates/DashboardLayout'
+import AuthLayout from './pages/templates/auth-layout'
+import DashboardLayout from './pages/templates/dashboard-layout'
 import { FC, Suspense } from 'react'
 import { NotFound } from './pages/404'
 import { useStore } from 'effector-react'
 import { Loading } from './shared/ui/molecules'
-import { ThemeProvider } from 'styled-components'
+import { history } from './services/navigation'
 import { $user } from './processes/auth/login-model'
-import { history } from './shared/services/navigation'
 import { Router, Route, Switch } from 'react-router-dom'
-import { GlobalStyle, Theme } from 'shared/settings/theme'
-import { $theme } from './shared/model/ThemeSwitcher/model'
-import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'shared/settings/routes'
+import { $theme } from './shared/model/theme-switcher/model'
+import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
   switch (authorizationType.toLowerCase()) {
@@ -84,49 +82,43 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
 
 const App: FC = () => {
   const user = useStore($user)
-  const theme = useStore($theme)
 
   return (
-    // @ts-ignore
-    <ThemeProvider theme={Theme[theme]}>
-      <GlobalStyle />
+    <Router history={history}>
+      <Switch>
+        {HomeRoutes.map(({ component: Component, ...elem }) => (
+          <Route
+            key={elem.id}
+            {...elem}
+            render={() => (
+              <Suspense fallback={<Loading />}>
+                <Component />
+              </Suspense>
+            )}
+          />
+        ))}
 
-      <Router history={history}>
-        <Switch>
-          {HomeRoutes.map(({ component: Component, ...elem }) => (
+        {user?.token ? (
+          <UserRoutes authorizationType={user?.authorizationType} />
+        ) : (
+          LoginRoutes.map(({ component: Component, ...elem }) => (
             <Route
               key={elem.id}
               {...elem}
               render={() => (
                 <Suspense fallback={<Loading />}>
-                  <Component />
+                  <AuthLayout>
+                    <Component />
+                  </AuthLayout>
                 </Suspense>
               )}
             />
-          ))}
+          ))
+        )}
 
-          {user?.token ? (
-            <UserRoutes authorizationType={user?.authorizationType} />
-          ) : (
-            LoginRoutes.map(({ component: Component, ...elem }) => (
-              <Route
-                key={elem.id}
-                {...elem}
-                render={() => (
-                  <Suspense fallback={<Loading />}>
-                    <AuthLayout>
-                      <Component />
-                    </AuthLayout>
-                  </Suspense>
-                )}
-              />
-            ))
-          )}
-
-          <NotFound />
-        </Switch>
-      </Router>
-    </ThemeProvider>
+        <NotFound />
+      </Switch>
+    </Router>
   )
 }
 

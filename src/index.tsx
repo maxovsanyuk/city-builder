@@ -1,15 +1,27 @@
 import * as ReactDOM from 'react-dom'
 import App from './App'
 import registerServiceWorker from './registerServiceWorker'
-import { IntlProvider } from './shared/settings/intlProvider'
-import { initLogger } from './shared/services/effector-logger'
+import { useStore } from 'effector-react'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle, Theme } from './settings/theme'
+import { IntlProvider } from './settings/intl-provider'
+import { initLogger } from './services/effector-logger'
+import { $theme } from './shared/model/theme-switcher/model'
 
-ReactDOM.render(
-  <IntlProvider>
-    <App />
-  </IntlProvider>,
-  document.getElementById('root')
-)
+const InitApp: React.FC = () => {
+  const theme = useStore($theme)
+
+  return (
+    <IntlProvider>
+      <ThemeProvider theme={Theme[theme]}>
+        <App />
+        <GlobalStyle />
+      </ThemeProvider>
+    </IntlProvider>
+  )
+}
+
+ReactDOM.render(<InitApp />, document.getElementById('root'))
 
 registerServiceWorker()
 initLogger()

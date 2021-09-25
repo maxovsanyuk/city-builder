@@ -1,1 +1,5 @@
-export { SliderAdvertisementCard } from './SliderAdvertisementCard'
+export { AdvertisementSmallCard } from './advertisement-small-card'
+export { UserInfo } from './advertisement/userInfo'
+export { LocationInfo } from './advertisement/locationInfo'
+export { UserHeaderInfoBox } from './user-header-info-box'
+export { PostInfo } from './advertisement/postInfo'

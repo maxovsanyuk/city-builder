@@ -3,7 +3,8 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-    "typeRoots": ["src/shared/types", "@types", "node_modules/@types"],
+    "typeRoots": [
+      "src/types", "@types", "node_modules/@types"],
     "target": "es5",
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
