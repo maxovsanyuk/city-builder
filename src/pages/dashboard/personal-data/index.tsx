@@ -2,44 +2,38 @@ import { FC } from 'react'
 import { Wrapper } from './style'
 import { useIntl } from 'react-intl'
 import { useStore } from 'effector-react'
+import { Typography } from '@material-ui/core'
 import { Container } from 'shared/ui/molecules/grid'
-import { Paper, Typography } from '@material-ui/core'
 import { $user, UserInterface } from 'processes/auth/login-model'
 
 interface PersonalDataPageProps {}
 const PersonalDataPage: FC<PersonalDataPageProps> = () => {
   const user = useStore($user)
-  const { authorizationType, firstName, surname, location, email } = user as UserInterface
   const { formatMessage } = useIntl()
+  const { authorizationType, firstName, surname, location, email } = user as UserInterface
 
   return (
     <Container>
       <Wrapper>
-        <Typography variant="h3" style={{ margin: '20px' }}>
+        <Typography className="title" variant="h3" style={{ margin: '20px 0' }}>
           {formatMessage({ id: `${authorizationType.toLowerCase()}.personal.data.page` })}
         </Typography>
 
-        <Paper elevation={0} className="paper">
-          <Typography variant="h6" gutterBottom>
-            {formatMessage({ id: 'full.name' })} : {firstName} {surname}
-          </Typography>
-        </Paper>
-        <Paper elevation={0} className="paper">
-          <Typography variant="h6" gutterBottom>
-            {formatMessage({ id: 'email' })} : {email}
-          </Typography>
-        </Paper>
-        <Paper elevation={0} className="paper">
-          <Typography variant="h6" gutterBottom>
-            {formatMessage({ id: 'authorization.type' })} : {authorizationType}
-          </Typography>
-        </Paper>
+        <Typography className="title" variant="h6" gutterBottom>
+          {formatMessage({ id: 'full.name' })} : {firstName} {surname}
+        </Typography>
 
-        <Paper elevation={0} className="paper">
-          <Typography variant="h6" gutterBottom>
-            {formatMessage({ id: 'user.location' })} : {location}
-          </Typography>
-        </Paper>
+        <Typography className="title" variant="h6" gutterBottom>
+          {formatMessage({ id: 'email' })} : {email}
+        </Typography>
+
+        <Typography className="title" variant="h6" gutterBottom>
+          {formatMessage({ id: 'authorization.type' })} : {authorizationType}
+        </Typography>
+
+        <Typography className="title" variant="h6" gutterBottom>
+          {formatMessage({ id: 'user.location' })} : {location}
+        </Typography>
       </Wrapper>
     </Container>
   )

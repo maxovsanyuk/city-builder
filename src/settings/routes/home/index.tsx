@@ -58,7 +58,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: AdvertisementPage,
     exact: true,
-    path: '/advertisement-content/:advertisementId',
+    path: '/advertisement/:advertisementId',
     name: 'Advertisement',
   },
 
@@ -98,7 +98,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryAdvertisementPage,
     exact: true,
-    path: '/country/category/:categoryId/advertisement-content/:advertisementId',
+    path: '/country/category/:categoryId/advertisement/:advertisementId',
     name: 'Country category advertisement',
   },
 
@@ -106,7 +106,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryLocationAdvertisementContent,
     exact: true,
-    path: '/country/location/:locationId/advertisement-content/:advertisementId',
+    path: '/country/location/:locationId/advertisement/:advertisementId',
     name: 'Country location advertisement',
   },
 
@@ -114,7 +114,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryLocationAdvertisement,
     exact: true,
-    path: '/country/category/:categoryId/location/:locationId/advertisement-content/:advertisementId',
+    path: '/country/category/:categoryId/location/:locationId/advertisement/:advertisementId',
     name: 'Country category location advertisement',
   },
 ]

@@ -2,7 +2,7 @@ import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
 import { CotegoriesBox } from 'shared/ui/molecules'
-import { categoriesCitizenConfig } from 'settings/mock/categories'
+import { categoriesCitizenConfig } from 'shared/mock/categories'
 
 export const MostPopularInCitizenRequests = () => {
   const { formatMessage } = useIntl()

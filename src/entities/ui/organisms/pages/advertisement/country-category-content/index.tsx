@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl'
 import { useParams } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
 import { AdvertisementsBox, GoBackBtn } from 'shared/ui/molecules'
-import { advertisementsConfig } from 'settings/mock/advertisements'
+import { advertisementsConfig } from 'shared/mock/advertisements'
 
 export const CountryCategoryAdvertisementContent = () => {
   const { formatMessage } = useIntl()

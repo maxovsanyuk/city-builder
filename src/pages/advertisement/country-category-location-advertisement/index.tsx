@@ -1,6 +1,6 @@
 import { Wrapper } from './styles'
-import { Header } from 'shared/ui/organisms'
 import { Content } from 'shared/ui/templates'
+import { Footer, Header } from 'shared/ui/organisms'
 import { TopAdvertisements } from 'shared/ui/organisms'
 import { Container, SearchForm } from 'shared/ui/molecules'
 import { CountryCategoryLocationAdvertisementContent } from 'entities/ui/organisms'
@@ -18,6 +18,7 @@ const CountryCategoryLocationAdvertisement: any = (): CountryCategoryLocationAdv
           <TopAdvertisements />
         </Content>
       </Container>
+      <Footer />
     </Wrapper>
   )
 }

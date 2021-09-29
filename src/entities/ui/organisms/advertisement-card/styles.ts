@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   margin: 40px 0 100px 0;
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
-  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+  grid-template-rows: 0.5fr 0.5fr 1.5fr 1.1fr;
   gap: 20px;
   grid-template-areas:
     'photos-slider user-info'

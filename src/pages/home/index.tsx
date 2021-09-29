@@ -5,7 +5,7 @@ import { Content } from 'shared/ui/templates'
 import { $user } from '../../processes/auth/login-model'
 import { SearchForm, Container } from 'shared/ui/molecules'
 import { JoyrideStepsConfig } from '../../settings/configs'
-import { Header, TopAdvertisements } from 'shared/ui/organisms'
+import { Footer, Header, TopAdvertisements } from 'shared/ui/organisms'
 import {
   MostPopularInCitizenRequests,
   MostPopularInCountry,
@@ -29,6 +29,8 @@ const HomePage: any = (): HomePageProps => {
           <TopAdvertisements />
         </Content>
       </Container>
+      <Footer />
+
       {user?.token && <Joyride continuous showSkipButton run={true} callback={() => null} steps={JoyrideStepsConfig} />}
     </Wrapper>
   )

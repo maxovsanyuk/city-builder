@@ -2,8 +2,8 @@ import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useParams } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
-import { locationCategoriesConfig } from 'settings/mock/categories'
-import { advertisementsConfig } from 'settings/mock/advertisements'
+import { locationCategoriesConfig } from 'shared/mock/categories'
+import { advertisementsConfig } from 'shared/mock/advertisements'
 import { GoBackBtn, AdvertisementsBox, CotegoriesBox } from 'shared/ui/molecules'
 
 export const LocationCategoriesContent = () => {

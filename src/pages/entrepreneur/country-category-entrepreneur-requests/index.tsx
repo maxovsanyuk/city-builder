@@ -1,6 +1,6 @@
 import { Wrapper } from './styles'
-import { Header } from 'shared/ui/organisms'
 import { Content } from 'shared/ui/templates'
+import { Footer, Header } from 'shared/ui/organisms'
 import { Container, SearchForm } from 'shared/ui/molecules'
 import { CountryCategoryEntrepreneurRequestsContent } from 'entities/ui/organisms'
 
@@ -16,6 +16,7 @@ const CountryCategoryPageEntrepreneurRequests: any = (): CountryCategoryPageEntr
           <CountryCategoryEntrepreneurRequestsContent />
         </Content>
       </Container>
+      <Footer />
     </Wrapper>
   )
 }

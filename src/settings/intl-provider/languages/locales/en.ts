@@ -29,9 +29,9 @@ const translations = {
   'entrepreneur.home.page': 'entrepreneur home page!',
   'admin.home.page': 'admin home page!',
   'citizen.home.page': 'citizen home page!',
-  'entrepreneur.personal.data.page': 'entrepreneur personal data!',
-  'citizen.personal.data.page': 'citizen personal data!',
-  'admin.personal.data.page': 'admin personal data!',
+  'entrepreneur.personal.data.page': 'Entrepreneur personal data',
+  'citizen.personal.data.page': 'Citizen personal data',
+  'admin.personal.data.page': 'Admin personal data',
   'personal.data': 'Personal data',
   home: 'Home',
   inbox: 'Inbox',
@@ -68,9 +68,10 @@ const translations = {
   'create.new.rerquest': 'Create new rerquest',
   'go.back': 'Go back',
   profile: 'Profile',
-  'new.advertisement': 'New advertisement-content',
+  'new.advertisement': 'Add new advertisement',
   settings: 'Settings',
   contact: 'Contact',
+  'sent.message': 'Sent message',
 
   //
 

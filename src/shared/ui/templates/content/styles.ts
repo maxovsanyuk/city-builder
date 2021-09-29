@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: calc(100vh - 120px);
+  min-height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,13 +10,4 @@ export const Wrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.color.greyTransparent};
   background: ${({ theme }) => theme.color.whiteMain};
   border-radius: 2px;
-  overflow: auto;
-
-  .content-wrapper {
-    display: flex;
-    height: 100%;
-    min-height: 800px;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 `

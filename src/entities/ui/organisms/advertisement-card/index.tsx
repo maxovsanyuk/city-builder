@@ -3,15 +3,7 @@ import { useStore } from 'effector-react'
 import { Typography, Box } from '@material-ui/core'
 import { PhotosSlider } from 'features/ui/molecules'
 import { $advertisement } from 'entities/model/advertisement/model'
-import { UserInfo, LocationInfo, PostInfo } from 'entities/ui/molecules'
-
-const C = () => {
-  return (
-    <div id="chat" className="contact-box" style={{ background: '#ccc' }}>
-      Chat & Reviews
-    </div>
-  )
-}
+import { UserInfo, ChatRewiew, LocationInfo, PostInfo } from 'entities/ui/molecules'
 
 export const AdvertisementCard = () => {
   const advertisement = useStore($advertisement)
@@ -29,7 +21,7 @@ export const AdvertisementCard = () => {
           <LocationInfo />
         </Box>
         <PostInfo />
-        <C />
+        <ChatRewiew />
       </Wrapper>
     </>
   )

@@ -3,7 +3,7 @@ import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
 import { AdvertisementsBox } from 'shared/ui/molecules'
-import { advertisementsConfig } from 'settings/mock/advertisements'
+import { advertisementsConfig } from 'shared/mock/advertisements'
 
 export const TopAdvertisements: FC = () => {
   const { formatMessage } = useIntl()

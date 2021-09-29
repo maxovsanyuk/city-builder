@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core'
 import { GoBackBtn } from 'shared/ui/molecules'
 import { AdvertisementsSlider } from 'features/ui/molecules'
 import { AdvertisementCard } from 'entities/ui/organisms/index'
-import { advertisementsConfig } from 'settings/mock/advertisements'
+import { advertisementsConfig } from 'shared/mock/advertisements'
 
 export const AdvertisementPageContent = () => {
   const { formatMessage } = useIntl()

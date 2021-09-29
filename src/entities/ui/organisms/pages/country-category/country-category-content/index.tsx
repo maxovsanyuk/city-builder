@@ -2,7 +2,7 @@ import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useParams } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
-import { advertisementsConfig } from 'settings/mock/advertisements'
+import { advertisementsConfig } from 'shared/mock/advertisements'
 import { GoBackBtn, AdvertisementsBox, CotegoryTypes } from 'shared/ui/molecules'
 
 export const CountryCategoryContent = () => {
