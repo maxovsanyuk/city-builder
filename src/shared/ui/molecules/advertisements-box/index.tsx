@@ -6,7 +6,7 @@ import VisibilityOutlinedIcon from '@material-ui/icons/VisibilityOutlined'
 import ThumbDownAltOutlinedIcon from '@material-ui/icons/ThumbDownAltOutlined'
 import { Wrapper } from './styles'
 import { Link } from 'react-router-dom'
-import { Typography } from '@material-ui/core'
+import { Typography, Box } from '@material-ui/core'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useAdvertisement } from 'shared/lib/hook/use-advertisement'
 import { defineAdvertisementTypeIcon } from 'shared/lib/helpers/define-advertisement-type-icon'
@@ -19,7 +19,7 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
       <div className="advertisement-small-box">
         <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
 
-        <div className="content">
+        <Box>
           <Typography variant="h5" className="title" align="center" gutterBottom>
             {advertisement?.title}
           </Typography>
@@ -42,29 +42,29 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
           />
 
           <div className="info-box">
-            <div className="gorizontal-box">
-              <div className="gorizontal-box">
+            <Box className="gorizontal-box">
+              <Box className="gorizontal-box">
                 <ThumbUpAltOutlinedIcon color="primary" />
                 <Typography className="default-color" variant="subtitle1" margin="0 10px">
                   {advertisement?.likeAmount || 32}
                 </Typography>
-              </div>
-              <div className="gorizontal-box">
+              </Box>
+              <Box className="gorizontal-box">
                 <ThumbDownAltOutlinedIcon color="primary" />
                 <Typography className="default-color" variant="subtitle1" margin="0 10px">
                   {advertisement?.disLikeAmount || 43}
                 </Typography>
-              </div>
-            </div>
+              </Box>
+            </Box>
 
-            <div className="gorizontal-box">
+            <Box className="gorizontal-box">
               <VisibilityOutlinedIcon color="primary" />
               <Typography className="default-color" variant="subtitle1" margin="0 0 0 10px">
                 {advertisement?.peopleViewed || 2}
               </Typography>
-            </div>
+            </Box>
           </div>
-        </div>
+        </Box>
         {advertisement?.type && (
           <img className="user-type-icon" src={defineAdvertisementTypeIcon(advertisement?.type)} alt="icon" />
         )}
