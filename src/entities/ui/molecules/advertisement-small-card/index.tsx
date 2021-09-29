@@ -12,7 +12,7 @@ import { useAdvertisement } from 'shared/lib/hook/use-advertisement'
 import { defineAdvertisementTypeIcon } from 'shared/lib/helpers/define-advertisement-type-icon'
 
 export const AdvertisementSmallCard = ({ advertisement }: Record<string, any>) => {
-  const { setCurrentAdvertisement } = useAdvertisement({ advertisement })
+  const { setCurrentAdvertisement } = useAdvertisement({ advertisement, smoothScroll: true })
 
   return (
     <Wrapper>
