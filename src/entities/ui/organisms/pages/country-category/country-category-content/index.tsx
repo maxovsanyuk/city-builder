@@ -13,14 +13,12 @@ export const CountryCategoryContent = () => {
     {
       name: 'Citizen requests',
       link: `/country/category/${categoryId}/citizen-requests`,
-      imgUrl:
-        'https://capacitycooperation.danube-region.eu/wp-content/uploads/sites/3/sites/3/2020/02/Citizen-engagement.jpg',
+      type: 'citizen',
     },
     {
       name: 'Entrepreneurs requests',
       link: `/country/category/${categoryId}/entrepreneur-requests`,
-      imgUrl:
-        'https://media.istockphoto.com/vectors/teamwork-related-vector-illustration-concept-for-application-and-vector-id1147403096?k=6&m=1147403096&s=612x612&w=0&h=HBkxP4-1b55OaI_ap0UVKZ8h_1A7E-OWuutmiTOLzzM=',
+      type: 'entrepreneur',
     },
   ]
 

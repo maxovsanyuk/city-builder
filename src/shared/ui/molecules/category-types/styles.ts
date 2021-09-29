@@ -23,12 +23,11 @@ export const Wrapper = styled.div`
       }
     }
 
-    .img {
-      width: 300px;
-      height: 200px;
-      border-radius: 2px;
+    .cotegory-type-icon {
+      border-radius: 50%;
       margin: 0 0 20px 0;
-      background-size: cover !important;
+      background: ${({ theme }) => theme.color.white};
+      padding: 10px;
     }
 
     .title {

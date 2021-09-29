@@ -2,6 +2,7 @@ import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 import { Typography } from '@material-ui/core'
+import { defineAdvertisementTypeIcon } from '../../../lib/helpers/define-advertisement-type-icon'
 
 export const CotegoryTypes = ({ config, className, style }: Record<string, any>) => {
   const { formatMessage } = useIntl()
@@ -12,9 +13,10 @@ export const CotegoryTypes = ({ config, className, style }: Record<string, any>)
         return (
           <Link to={categorie?.link} key={categorie.name} className="cotegorie-box">
             <img
-              className="img"
-              alt=""
-              style={categorie?.imgUrl && { background: `url(${categorie?.imgUrl})center no-repeat` }}
+              className="cotegory-type-icon"
+              width={200}
+              src={defineAdvertisementTypeIcon(categorie.type)}
+              alt="icon"
             />
 
             <Typography variant="h5" className="title">

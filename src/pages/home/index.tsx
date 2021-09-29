@@ -11,6 +11,7 @@ import {
   MostPopularInCountry,
   MostPopularInEntrepreneurRequests,
 } from 'entities/ui/organisms'
+import { defaultColors } from '../../settings/theme/styles/variables'
 
 interface HomePageProps {}
 
@@ -31,7 +32,20 @@ const HomePage: any = (): HomePageProps => {
       </Container>
       <Footer />
 
-      {user?.token && <Joyride continuous showSkipButton run={true} callback={() => null} steps={JoyrideStepsConfig} />}
+      {user?.token && (
+        <Joyride
+          styles={{
+            options: {
+              primaryColor: defaultColors.blueMedium,
+            },
+          }}
+          continuous
+          showSkipButton
+          run={true}
+          callback={() => null}
+          steps={JoyrideStepsConfig}
+        />
+      )}
     </Wrapper>
   )
 }
