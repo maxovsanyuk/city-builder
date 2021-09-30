@@ -11,7 +11,7 @@ const categoryOptions = [
   { fmId: 'admin', id: 14324 },
 ]
 
-const Registration: any = () => {
+const Registration = () => {
   const {
     register,
     handleSubmit,

@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form'
 import { PasswordInput } from 'shared/ui/molecules'
 import { Button, Typography, TextField } from '@material-ui/core'
 
-const Login: any = () => {
+const Login = () => {
   const {
     register,
     handleSubmit,

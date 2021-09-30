@@ -1,14 +1,15 @@
 import { FC } from 'react'
 import { Wrapper } from './style'
-import { Footer, Header } from 'shared/ui/organisms'
 import { Container } from 'shared/ui/molecules/grid'
+import { Footer, Header } from 'shared/ui/organisms'
+import { Content } from '../../../shared/ui/templates'
 
-export const AuthLayout: FC = ({ children }) => {
+export const DefaultLayout: FC = ({ children }) => {
   return (
     <Wrapper>
       <Header />
       <Container>
-        <div className="children">{children}</div>
+        <Content>{children}</Content>
       </Container>
       <Footer />
     </Wrapper>

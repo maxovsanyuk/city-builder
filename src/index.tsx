@@ -1,6 +1,6 @@
 import * as ReactDOM from 'react-dom'
-import App from './App'
 import registerServiceWorker from './registerServiceWorker'
+import { App } from './App'
 import { useStore } from 'effector-react'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle, Theme } from './settings/theme'

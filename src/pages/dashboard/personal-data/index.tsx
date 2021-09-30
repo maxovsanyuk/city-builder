@@ -6,8 +6,7 @@ import { Typography } from '@material-ui/core'
 import { Container } from 'shared/ui/molecules/grid'
 import { $user, UserInterface } from 'processes/auth/login-model'
 
-interface PersonalDataPageProps {}
-const PersonalDataPage: FC<PersonalDataPageProps> = () => {
+const PersonalDataPage: FC = () => {
   const user = useStore($user)
   const { formatMessage } = useIntl()
   const { authorizationType, firstName, surname, location, email } = user as UserInterface

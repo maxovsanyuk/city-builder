@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import { historyPush } from 'services/navigation'
 import { Button, Typography, TextField } from '@material-ui/core'
 
-const ForgotPassword: any = () => {
+const ForgotPassword = () => {
   const {
     register,
     handleSubmit,

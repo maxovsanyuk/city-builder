@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import AuthLayout from './templates/auth-layout'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
 import { Link, Route } from 'react-router-dom'
+import { AuthLayout } from './templates/auth-layout'
 
 const Wrapper = styled.div`
   align-items: center;

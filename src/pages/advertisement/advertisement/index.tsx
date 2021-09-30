@@ -1,23 +1,13 @@
-import { Wrapper } from './styles'
-import { Content } from 'shared/ui/templates'
-import { Footer, Header } from 'shared/ui/organisms'
-import { Container, SearchForm } from 'shared/ui/molecules'
+import { SearchForm } from 'shared/ui/molecules'
+import { DefaultLayout } from '../../templates/default-layout'
 import { AdvertisementPageContent } from 'entities/ui/organisms'
 
-interface AdvertisementPageProps {}
-
-const AdvertisementPage: any = (): AdvertisementPageProps => {
+const AdvertisementPage = () => {
   return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Content>
-          <SearchForm />
-          <AdvertisementPageContent />
-        </Content>
-      </Container>
-      <Footer />
-    </Wrapper>
+    <DefaultLayout>
+      <SearchForm />
+      <AdvertisementPageContent />
+    </DefaultLayout>
   )
 }
 

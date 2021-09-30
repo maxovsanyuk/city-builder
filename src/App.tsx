@@ -1,5 +1,3 @@
-import AuthLayout from './pages/templates/auth-layout'
-import DashboardLayout from './pages/templates/dashboard-layout'
 import { FC, Suspense } from 'react'
 import { NotFound } from './pages/404'
 import { useStore } from 'effector-react'
@@ -7,7 +5,8 @@ import { Loading } from './shared/ui/molecules'
 import { history } from './services/navigation'
 import { $user } from './processes/auth/login-model'
 import { Router, Route, Switch } from 'react-router-dom'
-import { $theme } from './shared/model/theme-switcher/model'
+import { AuthLayout } from './pages/templates/auth-layout'
+import { DashboardLayout } from './pages/templates/dashboard-layout'
 import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
@@ -80,7 +79,7 @@ const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
   }
 }
 
-const App: FC = () => {
+export const App: FC = () => {
   const user = useStore($user)
 
   return (
@@ -121,5 +120,3 @@ const App: FC = () => {
     </Router>
   )
 }
-
-export default App

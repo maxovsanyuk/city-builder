@@ -1,25 +1,15 @@
-import { Wrapper } from './styles'
-import { Content } from 'shared/ui/templates'
-import { Footer, Header } from 'shared/ui/organisms'
+import { SearchForm } from 'shared/ui/molecules'
 import { TopAdvertisements } from 'shared/ui/organisms'
-import { Container, SearchForm } from 'shared/ui/molecules'
+import { DefaultLayout } from '../../templates/default-layout'
 import { CountryCategoryLocationAdvertisementContent } from 'entities/ui/organisms'
 
-interface CountryCategoryLocationAdvertisementProps {}
-
-const CountryCategoryLocationAdvertisement: any = (): CountryCategoryLocationAdvertisementProps => {
+const CountryCategoryLocationAdvertisement = () => {
   return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Content>
-          <SearchForm />
-          <CountryCategoryLocationAdvertisementContent />
-          <TopAdvertisements />
-        </Content>
-      </Container>
-      <Footer />
-    </Wrapper>
+    <DefaultLayout>
+      <SearchForm />
+      <CountryCategoryLocationAdvertisementContent />
+      <TopAdvertisements />
+    </DefaultLayout>
   )
 }
 

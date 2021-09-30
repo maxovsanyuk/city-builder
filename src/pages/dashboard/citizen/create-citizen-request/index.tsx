@@ -4,8 +4,7 @@ import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
 import { Container } from 'shared/ui/molecules/grid'
 
-interface CreateCitizenRequestProps {}
-const CreateCitizenRequest: FC<CreateCitizenRequestProps> = () => {
+const CreateCitizenRequest: FC = () => {
   const { formatMessage } = useIntl()
 
   return (

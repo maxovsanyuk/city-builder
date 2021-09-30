@@ -3,8 +3,7 @@ import { Wrapper } from './style'
 import { Header } from 'shared/ui/organisms'
 import { Container } from 'shared/ui/molecules/grid'
 
-interface DashboardLayoutProps {}
-const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
+export const DashboardLayout: FC = ({ children }) => {
   return (
     <>
       <Header />
@@ -16,5 +15,3 @@ const DashboardLayout: FC<DashboardLayoutProps> = ({ children }) => {
     </>
   )
 }
-
-export default DashboardLayout

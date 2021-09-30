@@ -1,37 +1,27 @@
 import Joyride from 'react-joyride'
-import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
-import { Content } from 'shared/ui/templates'
+import { SearchForm } from 'shared/ui/molecules'
+import { TopAdvertisements } from 'shared/ui/organisms'
 import { $user } from '../../processes/auth/login-model'
-import { SearchForm, Container } from 'shared/ui/molecules'
 import { JoyrideStepsConfig } from '../../settings/configs'
+import { DefaultLayout } from '../templates/default-layout'
 import { defaultColors } from '../../settings/theme/styles/variables'
-import { Footer, Header, TopAdvertisements } from 'shared/ui/organisms'
 import {
   MostPopularInCitizenRequests,
   MostPopularInCountry,
   MostPopularInEntrepreneurRequests,
 } from 'entities/ui/organisms'
 
-interface HomePageProps {}
-
-const HomePage: any = (): HomePageProps => {
+const HomePage = () => {
   const user = useStore($user)
 
   return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Content>
-          <SearchForm />
-          <MostPopularInCountry />
-          <MostPopularInCitizenRequests />
-          <MostPopularInEntrepreneurRequests />
-          <TopAdvertisements />
-        </Content>
-      </Container>
-      <Footer />
-
+    <DefaultLayout>
+      <SearchForm />
+      <MostPopularInCountry />
+      <MostPopularInCitizenRequests />
+      <MostPopularInEntrepreneurRequests />
+      <TopAdvertisements />
       {user?.token && (
         <Joyride
           styles={{
@@ -46,7 +36,7 @@ const HomePage: any = (): HomePageProps => {
           steps={JoyrideStepsConfig}
         />
       )}
-    </Wrapper>
+    </DefaultLayout>
   )
 }
 

@@ -1,25 +1,16 @@
-import { Wrapper } from './styles'
-import { Content } from 'shared/ui/templates'
-import { Footer, Header } from 'shared/ui/organisms'
-import { TopAdvertisements } from 'shared/ui/organisms'
-import { SearchForm, Container } from 'shared/ui/molecules'
+import { FC } from 'react'
+import { SearchForm } from '../../../shared/ui/molecules'
+import { DefaultLayout } from '../../templates/default-layout'
+import { TopAdvertisements } from '../../../shared/ui/organisms'
 import { CountryCategoryAdvertisementContent } from 'entities/ui/organisms'
 
-interface CountryCategoryAdvertisementPageProps {}
-
-const CountryCategoryAdvertisementPage: any = (): CountryCategoryAdvertisementPageProps => {
+const CountryCategoryAdvertisementPage: FC = () => {
   return (
-    <Wrapper>
-      <Header />
-      <Container>
-        <Content>
-          <SearchForm />
-          <CountryCategoryAdvertisementContent />
-          <TopAdvertisements />
-        </Content>
-      </Container>
-      <Footer />
-    </Wrapper>
+    <DefaultLayout>
+      <SearchForm />
+      <CountryCategoryAdvertisementContent />
+      <TopAdvertisements />
+    </DefaultLayout>
   )
 }
 
