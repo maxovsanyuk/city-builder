@@ -1,7 +1,7 @@
 import HomeRoutes from './home'
-import LoginRoutes from './auth'
+import AuthRoutes from './auth'
 import AdminRoutes from './admin'
 import CitizenRoutes from './citizen'
 import EntrepreneurRoutes from './entrepreneur'
 
-export { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes }
+export { AuthRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes }

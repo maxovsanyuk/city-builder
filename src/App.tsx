@@ -7,7 +7,7 @@ import { $user } from './processes/auth/login-model'
 import { AuthLayout } from './pages/templates/auth-layout'
 import { Router, Route, Redirect, Switch } from 'react-router-dom'
 import { DashboardLayout } from './pages/templates/dashboard-layout'
-import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
+import { AuthRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {
   switch (authorizationType.toLowerCase()) {
@@ -104,7 +104,7 @@ export const App: FC = () => {
         {user?.token ? (
           <UserRoutes authorizationType={user?.authorizationType} />
         ) : (
-          LoginRoutes.map(({ component: Component, ...elem }) => (
+          AuthRoutes.map(({ component: Component, ...elem }) => (
             <Route
               key={elem.id}
               {...elem}

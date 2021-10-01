@@ -12,12 +12,12 @@ export const CountryCategoryContent = () => {
   const categoriesConfig = [
     {
       name: 'Citizen requests',
-      link: `/country/category/${categoryId}/citizen-requests`,
+      link: `/city-builder/country/category/${categoryId}/citizen-requests`,
       type: 'citizen',
     },
     {
       name: 'Entrepreneurs requests',
-      link: `/country/category/${categoryId}/entrepreneur-requests`,
+      link: `/city-builder/country/category/${categoryId}/entrepreneur-requests`,
       type: 'entrepreneur',
     },
   ]
