@@ -132,9 +132,8 @@ export const GoogleMapsLocationsInput = ({ register, required, style }: Record<s
           label={formatMessage({ id: 'add.location' })}
           fullWidth
           placeholder="Warsaw"
-          {...register('location', {
-            required,
-          })}
+          required={required}
+          {...register('location')}
         />
       )}
       renderOption={(props, option) => {

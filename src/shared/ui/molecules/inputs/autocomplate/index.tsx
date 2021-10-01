@@ -28,9 +28,7 @@ export const AutocompleteInput = ({
           {...params}
           label={formatMessage({ id: `search.${fmId}` })}
           required={required}
-          {...register(name, {
-            required,
-          })}
+          {...register(name)}
         />
       )}
       renderOption={(props, option, { inputValue }) => {
