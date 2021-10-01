@@ -28,6 +28,7 @@ Instructions on how to use them in your own application are linked below.
 | Plugin | README |
 | ------ | ------ |
 | TypeScript | [GitHub](https://github.com/microsoft/TypeScript/blob/master/README.md) |
+| Effector | [Documentation](https://effector.dev/ru/) |
 | Axios | [GitHub](https://github.com/axios/axios/blob/master/README.md) |
 | NanoID | [GitHub](https://github.com/ai/nanoid#readme) |
 | React Intl | [Documentation](https://formatjs.io/docs/getting-started/installation/) |
