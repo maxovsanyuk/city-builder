@@ -26,7 +26,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: HomePage,
     exact: true,
-    path: '/',
+    path: '/city-builder',
     name: 'Home',
   },
 
@@ -34,7 +34,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryPage,
     exact: true,
-    path: '/country/category/:categoryId',
+    path: '/city-builder/country/category/:categoryId',
     name: 'Country category page',
   },
 
@@ -42,7 +42,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryPageCitizenRequests,
     exact: true,
-    path: '/country/category/:categoryId/citizen-requests',
+    path: '/city-builder/country/category/:categoryId/citizen-requests',
     name: 'Country category page citizen requests',
   },
 
@@ -50,7 +50,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryPageEntrepreneurRequests,
     exact: true,
-    path: '/country/category/:categoryId/entrepreneur-requests',
+    path: '/city-builder/country/category/:categoryId/entrepreneur-requests',
     name: 'Country category page entrepreneurs requests',
   },
 
@@ -58,7 +58,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: AdvertisementPage,
     exact: true,
-    path: '/advertisement/:advertisementId',
+    path: '/city-builder/advertisement/:advertisementId',
     name: 'Advertisement',
   },
 
@@ -66,7 +66,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: LocationCategoriesPage,
     exact: true,
-    path: '/location/:locationId',
+    path: '/city-builder/location/:locationId',
     name: 'Location',
   },
 
@@ -74,7 +74,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: LocationCategoryPage,
     exact: true,
-    path: '/location/:locationId/category/:categoryId',
+    path: '/city-builder/location/:locationId/category/:categoryId',
     name: 'Location category',
   },
 
@@ -82,7 +82,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: LocationCategoryPageCitizenRequests,
     exact: true,
-    path: '/location/:locationId/category/:categoryId/citizen-requests/',
+    path: '/city-builder/location/:locationId/category/:categoryId/citizen-requests/',
     name: 'Location category',
   },
 
@@ -90,7 +90,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: LocationCategoryPageEntrepreneurRequests,
     exact: true,
-    path: '/location/:locationId/category/:categoryId/entrepreneur-requests/',
+    path: '/city-builder/location/:locationId/category/:categoryId/entrepreneur-requests/',
     name: 'Location category',
   },
 
@@ -98,7 +98,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryAdvertisementPage,
     exact: true,
-    path: '/country/category/:categoryId/advertisement/:advertisementId',
+    path: '/city-builder/country/category/:categoryId/advertisement/:advertisementId',
     name: 'Country category advertisement',
   },
 
@@ -106,7 +106,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryLocationAdvertisementContent,
     exact: true,
-    path: '/country/location/:locationId/advertisement/:advertisementId',
+    path: '/city-builder/country/location/:locationId/advertisement/:advertisementId',
     name: 'Country location advertisement',
   },
 
@@ -114,7 +114,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: CountryCategoryLocationAdvertisement,
     exact: true,
-    path: '/country/category/:categoryId/location/:locationId/advertisement/:advertisementId',
+    path: '/city-builder/country/category/:categoryId/location/:locationId/advertisement/:advertisementId',
     name: 'Country category location advertisement',
   },
 ]

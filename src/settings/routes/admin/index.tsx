@@ -9,7 +9,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: PersonalDataPage,
     exact: true,
-    path: '/personal-data',
+    path: '/city-builder/personal-data',
     name: 'Personal data',
   },
 ]
