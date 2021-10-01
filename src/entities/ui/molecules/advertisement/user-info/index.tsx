@@ -26,7 +26,7 @@ export const UserInfo = () => {
           </div>
         </div>
 
-        <Link to="/ads/123">
+        <Link to="/city-builder/ads/123">
           <Typography className="link" variant="body1">
             All ads by the author
           </Typography>

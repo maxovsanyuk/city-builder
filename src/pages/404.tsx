@@ -29,7 +29,7 @@ export const NotFound = () => {
                 {formatMessage({ id: '404.not.found', defaultMessage: '404 | Not found' })}
               </Typography>
               <Typography variant="h6">
-                <Link to="/" className="link">
+                <Link to="/city-builder" className="link">
                   {formatMessage({ id: 'back.to.main.page', defaultMessage: 'Back to main page' })}
                 </Link>
               </Typography>

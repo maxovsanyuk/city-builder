@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid'
 export const advertisementsConfig = [
   {
     id: nanoid(),
-    link: '/advertisement/1',
+    link: '/city-builder/advertisement/1',
     type: 'citizen',
     title: 'Cafe Kafka',
     date: new Date(),
@@ -16,7 +16,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/2',
+    link: '/city-builder/advertisement/2',
     type: 'entrepreneur',
     title: 'Kawa Warszawa',
     date: new Date(),
@@ -29,7 +29,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/3',
+    link: '/city-builder/advertisement/3',
     type: 'entrepreneur',
     title: 'Cafe',
     date: new Date(),
@@ -42,7 +42,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/4',
+    link: '/city-builder/advertisement/4',
     type: 'citizen',
     title: 'Chillouthostel',
     date: new Date(),
@@ -55,7 +55,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/5',
+    link: '/city-builder/advertisement/5',
     type: 'citizen',
     title: 'My-mamy',
     date: new Date(),
@@ -68,7 +68,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/6',
+    link: '/city-builder/advertisement/6',
     type: 'citizen',
     title: 'Eventime',
     date: new Date(),
@@ -81,7 +81,7 @@ export const advertisementsConfig = [
   },
   {
     id: nanoid(),
-    link: '/advertisement/7',
+    link: '/city-builder/advertisement/7',
     type: 'entrepreneur',
     title: 'Cafe Kafka',
     date: new Date(),

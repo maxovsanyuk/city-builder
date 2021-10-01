@@ -19,12 +19,12 @@ export const Header = () => {
     <Wrapper>
       <Container>
         <div className="header">
-          <Link to="/">
+          <Link to="/city-builder">
             <img src={Logo} alt="logo" width={50} />
           </Link>
 
           <Box sx={{ display: 'flex', alignItems: 'center', textAlign: 'center' }}>
-            <Link to="/contact">
+            <Link to="/city-builder/contact">
               <Typography sx={{ minWidth: 100 }}>{formatMessage({ id: 'contact' })}</Typography>
             </Link>
             <LangSwitcher />

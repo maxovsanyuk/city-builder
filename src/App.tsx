@@ -4,8 +4,8 @@ import { useStore } from 'effector-react'
 import { Loading } from './shared/ui/molecules'
 import { history } from './services/navigation'
 import { $user } from './processes/auth/login-model'
-import { Router, Route, Switch } from 'react-router-dom'
 import { AuthLayout } from './pages/templates/auth-layout'
+import { Router, Route, Redirect, Switch } from 'react-router-dom'
 import { DashboardLayout } from './pages/templates/dashboard-layout'
 import { LoginRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
 
@@ -96,6 +96,10 @@ export const App: FC = () => {
             )}
           />
         ))}
+
+        <Route exact path="/">
+          <Redirect to="/city-builder" />
+        </Route>
 
         {user?.token ? (
           <UserRoutes authorizationType={user?.authorizationType} />

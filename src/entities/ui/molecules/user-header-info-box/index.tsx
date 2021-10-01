@@ -52,7 +52,7 @@ export const UserHeaderInfoBox = ({ user }: Record<string, any>) => {
         transformOrigin={{ horizontal: 'right', vertical: 'top' }}
         anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
       >
-        <Link to="/personal-data">
+        <Link to="/city-builder/personal-data">
           <MenuItem>
             <Avatar />
             {formatMessage({ id: 'profile' })}
