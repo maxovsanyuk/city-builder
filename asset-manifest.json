@@ -4,8 +4,8 @@
     "static/js/0.8e01f72c.chunk.js.map": "/city-builder/static/js/0.8e01f72c.chunk.js.map",
     "static/js/1.f13a971b.chunk.js": "/city-builder/static/js/1.f13a971b.chunk.js",
     "static/js/1.f13a971b.chunk.js.map": "/city-builder/static/js/1.f13a971b.chunk.js.map",
-    "main.js": "/city-builder/static/js/main.fa73dab4.chunk.js",
-    "main.js.map": "/city-builder/static/js/main.fa73dab4.chunk.js.map",
+    "main.js": "/city-builder/static/js/main.ec766109.chunk.js",
+    "main.js.map": "/city-builder/static/js/main.ec766109.chunk.js.map",
     "runtime-main.js": "/city-builder/static/js/runtime-main.65f1e495.js",
     "runtime-main.js.map": "/city-builder/static/js/runtime-main.65f1e495.js.map",
     "static/css/4.65ee0dab.chunk.css": "/city-builder/static/css/4.65ee0dab.chunk.css",
@@ -59,6 +59,6 @@
     "static/js/runtime-main.65f1e495.js",
     "static/css/4.65ee0dab.chunk.css",
     "static/js/4.fa9f2605.chunk.js",
-    "static/js/main.fa73dab4.chunk.js"
+    "static/js/main.ec766109.chunk.js"
   ]
 }
