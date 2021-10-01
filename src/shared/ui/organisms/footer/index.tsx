@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
             <Link href="#telegram">Telegram</Link>
             <Link href="#instagram">Instagram</Link>
           </div>
-          <Link href="/city-builder/contact">Contact us</Link>
+          <Link to="/city-builder/contact">Contact us</Link>
         </div>
       </Container>
     </Wrapper>
