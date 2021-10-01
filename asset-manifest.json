@@ -4,10 +4,10 @@
     "static/js/0.8e01f72c.chunk.js.map": "/city-builder/static/js/0.8e01f72c.chunk.js.map",
     "static/js/1.f13a971b.chunk.js": "/city-builder/static/js/1.f13a971b.chunk.js",
     "static/js/1.f13a971b.chunk.js.map": "/city-builder/static/js/1.f13a971b.chunk.js.map",
-    "main.js": "/city-builder/static/js/main.6139893a.chunk.js",
-    "main.js.map": "/city-builder/static/js/main.6139893a.chunk.js.map",
-    "runtime-main.js": "/city-builder/static/js/runtime-main.8aef2f23.js",
-    "runtime-main.js.map": "/city-builder/static/js/runtime-main.8aef2f23.js.map",
+    "main.js": "/city-builder/static/js/main.215d3e7c.chunk.js",
+    "main.js.map": "/city-builder/static/js/main.215d3e7c.chunk.js.map",
+    "runtime-main.js": "/city-builder/static/js/runtime-main.61ab382e.js",
+    "runtime-main.js.map": "/city-builder/static/js/runtime-main.61ab382e.js.map",
     "static/css/4.65ee0dab.chunk.css": "/city-builder/static/css/4.65ee0dab.chunk.css",
     "static/js/4.fa9f2605.chunk.js": "/city-builder/static/js/4.fa9f2605.chunk.js",
     "static/js/4.fa9f2605.chunk.js.map": "/city-builder/static/js/4.fa9f2605.chunk.js.map",
@@ -25,8 +25,8 @@
     "static/js/10.7ebe047d.chunk.js.map": "/city-builder/static/js/10.7ebe047d.chunk.js.map",
     "static/js/11.679e4c22.chunk.js": "/city-builder/static/js/11.679e4c22.chunk.js",
     "static/js/11.679e4c22.chunk.js.map": "/city-builder/static/js/11.679e4c22.chunk.js.map",
-    "static/js/12.55bbd848.chunk.js": "/city-builder/static/js/12.55bbd848.chunk.js",
-    "static/js/12.55bbd848.chunk.js.map": "/city-builder/static/js/12.55bbd848.chunk.js.map",
+    "static/js/12.1c03de75.chunk.js": "/city-builder/static/js/12.1c03de75.chunk.js",
+    "static/js/12.1c03de75.chunk.js.map": "/city-builder/static/js/12.1c03de75.chunk.js.map",
     "static/js/13.ec97752e.chunk.js": "/city-builder/static/js/13.ec97752e.chunk.js",
     "static/js/13.ec97752e.chunk.js.map": "/city-builder/static/js/13.ec97752e.chunk.js.map",
     "static/js/14.4ca3920c.chunk.js": "/city-builder/static/js/14.4ca3920c.chunk.js",
@@ -56,9 +56,9 @@
     "static/media/logo.4f11e4cb.svg": "/city-builder/static/media/logo.4f11e4cb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8aef2f23.js",
+    "static/js/runtime-main.61ab382e.js",
     "static/css/4.65ee0dab.chunk.css",
     "static/js/4.fa9f2605.chunk.js",
-    "static/js/main.6139893a.chunk.js"
+    "static/js/main.215d3e7c.chunk.js"
   ]
 }
