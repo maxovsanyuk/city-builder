@@ -7,12 +7,9 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   background: ${({ theme }) => theme.color.blueDefault};
+  color: ${({ theme }) => theme.color.white};
   padding: 0 20px;
   margin: 40px 0 0 0;
-
-  a {
-    color: ${({ theme }) => theme.color.white};
-  }
 
   .wrapper {
     display: flex;
