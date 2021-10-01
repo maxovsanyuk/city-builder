@@ -16,7 +16,7 @@ const ForgotPassword = () => {
 
   const onSubmit = handleSubmit(data => {
     message.success(`Sent to ${data?.email}`)
-    historyPush('/login')
+    historyPush('/city-builder/login')
   })
 
   return (

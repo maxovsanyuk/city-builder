@@ -4,5 +4,5 @@ import { historyPush } from '../../services/navigation'
 
 export const $registerationNewUser = createEffect(async (user: UserInterface) => {
   MockData.push(user)
-  historyPush('/login')
+  historyPush('/city-builder/login')
 })

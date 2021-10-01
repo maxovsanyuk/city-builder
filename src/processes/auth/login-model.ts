@@ -59,7 +59,7 @@ $user
       setCookie('token', user?.token)
       $setUser(user)
       message.success('Success login!')
-      historyPush('/')
+      historyPush('/city-builder')
     } else {
       message.error('User password or login is wrong!')
     }
