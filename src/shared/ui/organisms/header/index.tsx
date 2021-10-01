@@ -31,7 +31,7 @@ export const Header = () => {
             {get(user, 'token') ? (
               <UserHeaderInfoBox user={user} />
             ) : (
-              <Button style={{ background: '#fff' }} href="/login" variant="outlined">
+              <Button style={{ background: '#fff' }} href="/city-builder/login" variant="outlined">
                 {formatMessage({ id: 'login' })}
               </Button>
             )}

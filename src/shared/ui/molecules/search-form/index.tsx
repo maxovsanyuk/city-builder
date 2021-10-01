@@ -14,24 +14,26 @@ export const SearchForm = () => {
 
   const onSubmit = handleSubmit((data: any, e: any) => {
     if (!data.location && data.category && !data?.advertisement) {
-      historyPush(`/country/category/${data.category.trim()}`)
+      historyPush(`/city-builder/country/category/${data.category.trim()}`)
     } else if (data.location && !data.category && !data?.advertisement) {
       const locationId = data.location.split(' ')[0].replace(',', '').toLowerCase()
-      historyPush(`/location/${locationId}`)
+      historyPush(`/city-builder/location/${locationId}`)
     } else if (data.location && data.category && !data?.advertisement) {
       const locationId = data.location.split(' ')[0].replace(',', '').toLowerCase()
-      historyPush(`/location/${locationId}/category/${data.category.trim()}`)
+      historyPush(`/city-builder/location/${locationId}/category/${data.category.trim()}`)
     } else if (!data.location && !data.category && data?.advertisement) {
-      historyPush(`/advertisement/${data?.advertisement}`)
+      historyPush(`/city-builder/advertisement/${data?.advertisement}`)
     } else if (!data.location && data.category && data?.advertisement) {
-      historyPush(`/country/category/${data.category.trim()}/advertisement/${data?.advertisement}`)
+      historyPush(`/city-builder/country/category/${data.category.trim()}/advertisement/${data?.advertisement}`)
     } else if (data.location && !data.category && data?.advertisement) {
       const locationId = data.location.split(' ')[0].replace(',', '').toLowerCase()
-      historyPush(`/country/location/${locationId}/advertisement/${data?.advertisement}`)
+      historyPush(`/city-builder/country/location/${locationId}/advertisement/${data?.advertisement}`)
     } else if (data?.location && data?.category && data?.advertisement) {
       const locationId = data.location.split(' ')[0].replace(',', '').toLowerCase()
       historyPush(
-        `/country/category/${data.category.trim()}/location/${locationId}/advertisement/${data?.advertisement}`
+        `/city-builder/country/category/${data.category.trim()}/location/${locationId}/advertisement/${
+          data?.advertisement
+        }`
       )
     }
 
