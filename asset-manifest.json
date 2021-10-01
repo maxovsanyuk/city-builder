@@ -1,16 +1,16 @@
 {
   "files": {
-    "static/js/0.0c0d91ba.chunk.js": "/city-builder/static/js/0.0c0d91ba.chunk.js",
-    "static/js/0.0c0d91ba.chunk.js.map": "/city-builder/static/js/0.0c0d91ba.chunk.js.map",
+    "static/js/0.2607893a.chunk.js": "/city-builder/static/js/0.2607893a.chunk.js",
+    "static/js/0.2607893a.chunk.js.map": "/city-builder/static/js/0.2607893a.chunk.js.map",
     "static/js/1.f13a971b.chunk.js": "/city-builder/static/js/1.f13a971b.chunk.js",
     "static/js/1.f13a971b.chunk.js.map": "/city-builder/static/js/1.f13a971b.chunk.js.map",
-    "main.js": "/city-builder/static/js/main.2bb7e940.chunk.js",
-    "main.js.map": "/city-builder/static/js/main.2bb7e940.chunk.js.map",
-    "runtime-main.js": "/city-builder/static/js/runtime-main.8f4b87c8.js",
-    "runtime-main.js.map": "/city-builder/static/js/runtime-main.8f4b87c8.js.map",
+    "main.js": "/city-builder/static/js/main.2e94e342.chunk.js",
+    "main.js.map": "/city-builder/static/js/main.2e94e342.chunk.js.map",
+    "runtime-main.js": "/city-builder/static/js/runtime-main.5150b836.js",
+    "runtime-main.js.map": "/city-builder/static/js/runtime-main.5150b836.js.map",
     "static/css/4.65ee0dab.chunk.css": "/city-builder/static/css/4.65ee0dab.chunk.css",
-    "static/js/4.86d7b350.chunk.js": "/city-builder/static/js/4.86d7b350.chunk.js",
-    "static/js/4.86d7b350.chunk.js.map": "/city-builder/static/js/4.86d7b350.chunk.js.map",
+    "static/js/4.64a191ee.chunk.js": "/city-builder/static/js/4.64a191ee.chunk.js",
+    "static/js/4.64a191ee.chunk.js.map": "/city-builder/static/js/4.64a191ee.chunk.js.map",
     "static/js/5.a2d7d30e.chunk.js": "/city-builder/static/js/5.a2d7d30e.chunk.js",
     "static/js/5.a2d7d30e.chunk.js.map": "/city-builder/static/js/5.a2d7d30e.chunk.js.map",
     "static/js/6.5fde8d1e.chunk.js": "/city-builder/static/js/6.5fde8d1e.chunk.js",
@@ -23,8 +23,8 @@
     "static/js/9.3209df70.chunk.js.map": "/city-builder/static/js/9.3209df70.chunk.js.map",
     "static/js/10.e3afaf7f.chunk.js": "/city-builder/static/js/10.e3afaf7f.chunk.js",
     "static/js/10.e3afaf7f.chunk.js.map": "/city-builder/static/js/10.e3afaf7f.chunk.js.map",
-    "static/js/11.0725505b.chunk.js": "/city-builder/static/js/11.0725505b.chunk.js",
-    "static/js/11.0725505b.chunk.js.map": "/city-builder/static/js/11.0725505b.chunk.js.map",
+    "static/js/11.78d76d2e.chunk.js": "/city-builder/static/js/11.78d76d2e.chunk.js",
+    "static/js/11.78d76d2e.chunk.js.map": "/city-builder/static/js/11.78d76d2e.chunk.js.map",
     "static/js/12.24279010.chunk.js": "/city-builder/static/js/12.24279010.chunk.js",
     "static/js/12.24279010.chunk.js.map": "/city-builder/static/js/12.24279010.chunk.js.map",
     "static/js/13.ec97752e.chunk.js": "/city-builder/static/js/13.ec97752e.chunk.js",
@@ -49,16 +49,16 @@
     "static/js/22.90cd0a13.chunk.js.map": "/city-builder/static/js/22.90cd0a13.chunk.js.map",
     "index.html": "/city-builder/index.html",
     "static/css/4.65ee0dab.chunk.css.map": "/city-builder/static/css/4.65ee0dab.chunk.css.map",
-    "static/js/4.86d7b350.chunk.js.LICENSE.txt": "/city-builder/static/js/4.86d7b350.chunk.js.LICENSE.txt",
+    "static/js/4.64a191ee.chunk.js.LICENSE.txt": "/city-builder/static/js/4.64a191ee.chunk.js.LICENSE.txt",
     "static/js/5.a2d7d30e.chunk.js.LICENSE.txt": "/city-builder/static/js/5.a2d7d30e.chunk.js.LICENSE.txt",
     "static/media/auth.19510ff9.jpg": "/city-builder/static/media/auth.19510ff9.jpg",
     "static/media/businessman.504c4ecb.png": "/city-builder/static/media/businessman.504c4ecb.png",
     "static/media/logo.4f11e4cb.svg": "/city-builder/static/media/logo.4f11e4cb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8f4b87c8.js",
+    "static/js/runtime-main.5150b836.js",
     "static/css/4.65ee0dab.chunk.css",
-    "static/js/4.86d7b350.chunk.js",
-    "static/js/main.2bb7e940.chunk.js"
+    "static/js/4.64a191ee.chunk.js",
+    "static/js/main.2e94e342.chunk.js"
   ]
 }
