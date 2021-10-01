@@ -32,7 +32,9 @@ export const Header = () => {
               <UserHeaderInfoBox user={user} />
             ) : (
               <Link to="/city-builder/login/">
-                <Typography>{formatMessage({ id: 'login' })}</Typography>
+                <Button style={{ background: '#fff' }} variant="outlined">
+                  {formatMessage({ id: 'login' })}
+                </Button>
               </Link>
             )}
           </Box>
