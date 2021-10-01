@@ -23,8 +23,8 @@ export const PasswordInput = ({ password, register, errors, setValue }: Record<s
         className="input password-input"
         error={!!get(errors, 'password.message') || !!(!isPassedValidation && password)}
         placeholder={formatMessage({ id: 'password' })}
+        required
         {...register('password', {
-          required: true,
           minLength: { value: 10, message: formatMessage({ id: 'min.length.20' }) },
           maxLength: { value: 30, message: formatMessage({ id: 'max.length.30' }) },
           validate: () => {

@@ -88,7 +88,7 @@ const Registration = () => {
             required
           />
 
-          <GoogleMapsLocationsInput required register={register} style={{ margin: '0 20px' }} />
+          <GoogleMapsLocationsInput register={register} style={{ margin: '0 20px' }} />
 
           <div className="btn-box">
             <Button className="submit-btn" variant="contained" type="submit" color="primary">

@@ -121,11 +121,7 @@ export const GoogleMapsLocationsInput = ({ register, required, style }: Record<s
         setOptions(newValue ? [newValue, ...options] : options)
         setValue(newValue)
       }}
-      onInputChange={(event, newInputValue) => {
-        console.log(newInputValue, 'newInputValue')
-
-        setInputValue(newInputValue)
-      }}
+      onInputChange={(event, newInputValue) => setInputValue(newInputValue)}
       renderInput={params => (
         <TextField
           {...params}
