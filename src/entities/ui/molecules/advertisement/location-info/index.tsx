@@ -31,6 +31,6 @@ const LocationComponent = ({ google, loaded }: LocationProps) => {
 }
 
 export const LocationInfo = GoogleApiWrapper({
-  apiKey: 'AIzaSyCgZFSSNRl-UfTZBUEojW8hBrM-ZrmSDL4&libraries',
+  apiKey: 'AIzaSyCgZFSSNRl-UfTZBUEojW8hBrM-ZrmSDL4',
   language: 'en',
 })(LocationComponent)
