@@ -11,7 +11,7 @@ import { LazyLoadImage } from 'react-lazy-load-image-component'
 import { useAdvertisement } from 'shared/lib/hook/use-advertisement'
 import { defineAdvertisementTypeIcon } from 'shared/lib/helpers/define-advertisement-type-icon'
 
-const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
+const AdvertisementCard = ({ advertisement }: Record<string, any>) => {
   const { setCurrentAdvertisement } = useAdvertisement({ advertisement })
 
   return (
@@ -19,7 +19,7 @@ const SmallAdvertisementCard = ({ advertisement }: Record<string, any>) => {
       <div className="advertisement-small-box">
         <LazyLoadImage className="advertisement-img" alt="" src={advertisement?.imgLink} />
 
-        <Box>
+        <Box width="100%">
           <Typography variant="h5" className="title" align="center" gutterBottom>
             {advertisement?.title}
           </Typography>
@@ -77,7 +77,7 @@ export const AdvertisementsBox = ({ config }: Record<string, any>) => {
   return (
     <Wrapper>
       {config.map((advertisement: Record<string, any>) => (
-        <SmallAdvertisementCard key={advertisement?.name || advertisement?.id} advertisement={advertisement} />
+        <AdvertisementCard key={advertisement?.name || advertisement?.id} advertisement={advertisement} />
       ))}
     </Wrapper>
   )
