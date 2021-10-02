@@ -26,7 +26,7 @@ export const CountryCategoryContent = () => {
     <Wrapper>
       <GoBackBtn />
       <Typography variant="h4" className="title">
-        {formatMessage({ id: 'country.category' })} {categoryId}
+        {formatMessage({ id: 'country.category' })} - {categoryId}
       </Typography>
 
       <CotegoryTypes config={categoriesConfig} />

@@ -20,7 +20,7 @@ export const ChatRewiew = () => {
       </Dragger>
 
       <Button className="sent-btn" variant="contained">
-        {formatMessage({ id: 'sent.message' })}
+        {formatMessage({ id: 'send.message' })}
       </Button>
     </Wrapper>
   )

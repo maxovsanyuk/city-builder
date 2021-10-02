@@ -54,7 +54,9 @@ export const UserHeaderInfoBox = ({ user }: Record<string, any>) => {
       >
         <Link to="/city-builder/personal-data">
           <MenuItem>
-            <Avatar />
+            <ListItemIcon>
+              <Avatar />
+            </ListItemIcon>
             {formatMessage({ id: 'profile' })}
           </MenuItem>
         </Link>
