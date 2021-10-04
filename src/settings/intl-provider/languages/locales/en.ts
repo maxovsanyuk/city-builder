@@ -36,7 +36,7 @@ const translations = {
   'category.3': 'Category 3',
   'add.location': 'Add location',
   search: 'Search',
-  'search.category': 'Search by category',
+  category: 'Search by category',
   'search.autorization.type': 'Autorization type',
   citizen: 'citizen',
   entrepreneur: 'entrepreneur',

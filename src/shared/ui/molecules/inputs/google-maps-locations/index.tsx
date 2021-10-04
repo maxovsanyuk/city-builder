@@ -53,7 +53,7 @@ export const GoogleMapsLocationsInput = ({ register, required, style }: Record<s
   if (typeof window !== 'undefined' && !loaded.current) {
     if (!document.querySelector('#google-maps')) {
       loadScript(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyCgZFSSNRl-UfTZBUEojW8hBrM-ZrmSDL4&libraries=places',
+        'https://maps.googleapis.com/maps/api/js?key=AIzaSyDlh-3Gn2gI2rekURoVcFQPvRn2FkXn4vA&libraries=places',
         document.querySelector('head'),
         'google-maps'
       )

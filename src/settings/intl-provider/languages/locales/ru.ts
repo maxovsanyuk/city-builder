@@ -36,7 +36,7 @@ const translations = {
   'category.3': 'Категория 3',
   'add.location': 'Добавить местоположение',
   search: 'Поиск',
-  'search.category': 'Искать по категориям',
+  category: 'Искать по категориям',
   'search.autorization.type': 'Тип авторизации',
   citizen: 'гражданин',
   entrepreneur: 'предприниматель',

@@ -24,12 +24,7 @@ export const AutocompleteInput = ({
       onInputChange={(event, newInputValue) => setValue(name, newInputValue)}
       getOptionLabel={(option: Record<string, any>) => formatMessage({ id: option.fmId })}
       renderInput={(params: Record<string, any>) => (
-        <TextField
-          {...params}
-          label={formatMessage({ id: `search.${fmId}` })}
-          required={required}
-          {...register(name)}
-        />
+        <TextField {...params} label={formatMessage({ id: fmId })} required={required} {...register(name)} />
       )}
       renderOption={(props, option, { inputValue }) => {
         const matches = match(option.fmId, inputValue)
