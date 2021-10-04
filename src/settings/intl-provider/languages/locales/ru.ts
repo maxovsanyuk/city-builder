@@ -37,7 +37,7 @@ const translations = {
   'add.location': 'Добавить местоположение',
   search: 'Поиск',
   category: 'Искать по категориям',
-  'search.autorization.type': 'Тип авторизации',
+  'autorization.type': 'Тип авторизации',
   citizen: 'гражданин',
   entrepreneur: 'предприниматель',
   'full.name': 'Полное имя',
