@@ -11,7 +11,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: Login,
     exact: true,
-    path: '/city-builder/login',
+    path: '/city-builder/login/',
     name: 'Login',
   },
 
@@ -19,7 +19,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: ForgotPassword,
     exact: true,
-    path: '/city-builder/forgot-password',
+    path: '/city-builder/forgot-password/',
     name: 'ForgotPassword',
   },
 
@@ -27,7 +27,7 @@ const routes: RouteProperties[] = [
     id: nanoid(),
     component: Registration,
     exact: true,
-    path: '/city-builder/registration',
+    path: '/city-builder/registration/',
     name: 'registration',
   },
 ]
