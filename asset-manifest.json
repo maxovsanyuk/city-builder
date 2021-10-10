@@ -4,10 +4,10 @@
     "static/js/0.a9c21f40.chunk.js.map": "/city-builder/static/js/0.a9c21f40.chunk.js.map",
     "static/js/1.a6c6ba56.chunk.js": "/city-builder/static/js/1.a6c6ba56.chunk.js",
     "static/js/1.a6c6ba56.chunk.js.map": "/city-builder/static/js/1.a6c6ba56.chunk.js.map",
-    "main.js": "/city-builder/static/js/main.965bc6a4.chunk.js",
-    "main.js.map": "/city-builder/static/js/main.965bc6a4.chunk.js.map",
-    "runtime-main.js": "/city-builder/static/js/runtime-main.348d63c8.js",
-    "runtime-main.js.map": "/city-builder/static/js/runtime-main.348d63c8.js.map",
+    "main.js": "/city-builder/static/js/main.b967da84.chunk.js",
+    "main.js.map": "/city-builder/static/js/main.b967da84.chunk.js.map",
+    "runtime-main.js": "/city-builder/static/js/runtime-main.b67f9e60.js",
+    "runtime-main.js.map": "/city-builder/static/js/runtime-main.b67f9e60.js.map",
     "static/css/4.65ee0dab.chunk.css": "/city-builder/static/css/4.65ee0dab.chunk.css",
     "static/js/4.9d39a10a.chunk.js": "/city-builder/static/js/4.9d39a10a.chunk.js",
     "static/js/4.9d39a10a.chunk.js.map": "/city-builder/static/js/4.9d39a10a.chunk.js.map",
@@ -21,12 +21,12 @@
     "static/js/8.f904f961.chunk.js.map": "/city-builder/static/js/8.f904f961.chunk.js.map",
     "static/js/9.973e6844.chunk.js": "/city-builder/static/js/9.973e6844.chunk.js",
     "static/js/9.973e6844.chunk.js.map": "/city-builder/static/js/9.973e6844.chunk.js.map",
-    "static/js/10.776731e9.chunk.js": "/city-builder/static/js/10.776731e9.chunk.js",
-    "static/js/10.776731e9.chunk.js.map": "/city-builder/static/js/10.776731e9.chunk.js.map",
-    "static/js/11.ef898a45.chunk.js": "/city-builder/static/js/11.ef898a45.chunk.js",
-    "static/js/11.ef898a45.chunk.js.map": "/city-builder/static/js/11.ef898a45.chunk.js.map",
-    "static/js/12.bd4f4c1e.chunk.js": "/city-builder/static/js/12.bd4f4c1e.chunk.js",
-    "static/js/12.bd4f4c1e.chunk.js.map": "/city-builder/static/js/12.bd4f4c1e.chunk.js.map",
+    "static/js/10.c48a86b7.chunk.js": "/city-builder/static/js/10.c48a86b7.chunk.js",
+    "static/js/10.c48a86b7.chunk.js.map": "/city-builder/static/js/10.c48a86b7.chunk.js.map",
+    "static/js/11.c2d1e078.chunk.js": "/city-builder/static/js/11.c2d1e078.chunk.js",
+    "static/js/11.c2d1e078.chunk.js.map": "/city-builder/static/js/11.c2d1e078.chunk.js.map",
+    "static/js/12.25d94bee.chunk.js": "/city-builder/static/js/12.25d94bee.chunk.js",
+    "static/js/12.25d94bee.chunk.js.map": "/city-builder/static/js/12.25d94bee.chunk.js.map",
     "static/js/13.1c6cfdcb.chunk.js": "/city-builder/static/js/13.1c6cfdcb.chunk.js",
     "static/js/13.1c6cfdcb.chunk.js.map": "/city-builder/static/js/13.1c6cfdcb.chunk.js.map",
     "static/js/14.ed22c425.chunk.js": "/city-builder/static/js/14.ed22c425.chunk.js",
@@ -56,9 +56,9 @@
     "static/media/logo.4f11e4cb.svg": "/city-builder/static/media/logo.4f11e4cb.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.348d63c8.js",
+    "static/js/runtime-main.b67f9e60.js",
     "static/css/4.65ee0dab.chunk.css",
     "static/js/4.9d39a10a.chunk.js",
-    "static/js/main.965bc6a4.chunk.js"
+    "static/js/main.b967da84.chunk.js"
   ]
 }
