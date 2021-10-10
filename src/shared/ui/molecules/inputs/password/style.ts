@@ -33,15 +33,14 @@ export const PasswordInputComponent = styled.div`
 
   .check-password-box {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 4px);
     left: 20px;
     width: calc(100% - 40px);
     background: ${({ theme }) => theme.color.white};
     color: ${({ theme }) => theme.color.blackLight};
-    border: 1px solid ${({ theme }) => theme.color.blackLight};
     box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blackLight};
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 4px;
     font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     font-weight: 400;
     font-size: 16px;

@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.color.black};
   text-align: center;
   border: 1px solid ${({ theme }) => theme.color.blueDefault};
-  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blueDefault};
 
   .title-h5 {
     margin: 20px 0 50px 0;

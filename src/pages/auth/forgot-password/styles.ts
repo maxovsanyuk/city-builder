@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.color.white};
   text-align: center;
   border: 1px solid ${({ theme }) => theme.color.blackLight};
-  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blackLight};
 
   .h-5 {
     color: ${({ theme }) => theme.color.blueDefault};

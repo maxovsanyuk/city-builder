@@ -30,7 +30,6 @@ const Registration = () => {
       <Typography variant="h5" className="h-5" gutterBottom style={{ fontWeight: 600 }}>
         {formatMessage({ id: 'join.us' })}
       </Typography>
-
       <form onSubmit={onSubmit}>
         <div className="form-content">
           <TextField

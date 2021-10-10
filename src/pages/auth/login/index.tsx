@@ -47,7 +47,7 @@ const Login = () => {
 
           <PasswordInput password={password} register={register} errors={errors} setValue={setValue} />
 
-          <Link color="inherit" className="link" to="/city-builder/forgot-password/">
+          <Link color="inherit" className="link" to="/city-builder/forgot-password">
             {formatMessage({ id: 'forgot.password' })}
           </Link>
 
@@ -56,7 +56,7 @@ const Login = () => {
               {formatMessage({ id: 'login' })}
             </Button>
 
-            <Link to="/city-builder/registration/" className="link-box">
+            <Link to="/city-builder/registration" className="link-box">
               <Button className="submit-btn" variant="contained">
                 {formatMessage({ id: 'registration' })}
               </Button>

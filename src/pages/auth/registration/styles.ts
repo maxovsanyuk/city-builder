@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.color.black};
   text-align: center;
   border: 1px solid ${({ theme }) => theme.color.blueDefault};
-  box-shadow: inset 0 0 2px 0 ${({ theme }) => theme.color.blueDefault};
 
   .h-5 {
     color: ${({ theme }) => theme.color.blueDefault};
@@ -28,6 +27,7 @@ export const Wrapper = styled.div`
       margin: 40px 20px 0 20px !important;
       background: ${({ theme }) => theme.color.blueDefault};
       font-weight: 600;
+      box-shadow: none;
     }
 
     .btn-box {
