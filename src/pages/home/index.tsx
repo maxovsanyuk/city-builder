@@ -1,11 +1,9 @@
-import Joyride from 'react-joyride'
 import { useStore } from 'effector-react'
 import { SearchForm } from 'shared/ui/molecules'
+import { JoyRide } from '../../processes/joyride'
 import { TopAdvertisements } from 'shared/ui/organisms'
 import { $user } from '../../processes/auth/login-model'
-import { JoyrideStepsConfig } from '../../settings/configs'
 import { DefaultLayout } from '../templates/default-layout'
-import { defaultColors } from '../../settings/theme/styles/variables'
 import {
   MostPopularInCitizenRequests,
   MostPopularInCountry,
@@ -22,20 +20,7 @@ const HomePage = () => {
       <MostPopularInCitizenRequests />
       <MostPopularInEntrepreneurRequests />
       <TopAdvertisements />
-      {user?.token && (
-        <Joyride
-          styles={{
-            options: {
-              primaryColor: defaultColors.blueMedium,
-            },
-          }}
-          continuous
-          showSkipButton
-          run={true}
-          callback={() => null}
-          steps={JoyrideStepsConfig}
-        />
-      )}
+      {user?.token && <JoyRide />}
     </DefaultLayout>
   )
 }
