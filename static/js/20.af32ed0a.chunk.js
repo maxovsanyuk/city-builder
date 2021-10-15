@@ -1,0 +1,2 @@
+(this["webpackJsonpcity-builder"]=this["webpackJsonpcity-builder"]||[]).push([[20],{560:function(t,c,e){"use strict";e.r(c);var s=e(69),i=e(537),j=e(536),n=e(2);c.default=function(){return Object(n.jsxs)(i.a,{children:[Object(n.jsx)(s.j,{}),Object(n.jsx)(j.j,{})]})}}}]);
+//# sourceMappingURL=20.af32ed0a.chunk.js.map
