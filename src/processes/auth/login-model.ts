@@ -49,7 +49,7 @@ export const $setUser = createEvent<UserInterface>()
 export const $logoutUser = createEvent()
 
 export const $user = createStore<UserInterface | null>(null)
-persist({ store: $user, key: 'USER' })
+persist({ store: $user, key: 'user' })
 
 $user
   .on($loginUser, (_, payload) => {
