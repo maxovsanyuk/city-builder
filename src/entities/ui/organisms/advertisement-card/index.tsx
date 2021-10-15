@@ -1,3 +1,4 @@
+import { Empty } from 'antd'
 import { Wrapper } from './styles'
 import { useStore } from 'effector-react'
 import { Typography, Box } from '@material-ui/core'
@@ -7,7 +8,7 @@ import { UserInfo, ChatRewiew, LocationInfo, PostInfo } from 'entities/ui/molecu
 
 export const AdvertisementCard = () => {
   const advertisement = useStore($advertisement)
-  if (!advertisement) return null
+  if (!advertisement) return <Empty image={Empty.PRESENTED_IMAGE_SIMPLE} />
 
   return (
     <>
