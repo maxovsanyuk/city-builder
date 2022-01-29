@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { history } from 'services/navigation'
+import { history } from 'shared/lib/utils/navigation'
 import { ArrowBack } from '@material-ui/icons'
 import { ListItemIcon } from '@material-ui/core'
 

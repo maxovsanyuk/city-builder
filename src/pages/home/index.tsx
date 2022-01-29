@@ -1,14 +1,10 @@
 import { useStore } from 'effector-react'
+import { JoyRide } from 'processes/joyride'
 import { SearchForm } from 'shared/ui/molecules'
-import { JoyRide } from '../../processes/joyride'
+import { $user } from 'processes/auth/login-model'
+import { DefaultLayout } from 'shared/ui/templates'
 import { TopAdvertisements } from 'shared/ui/organisms'
-import { $user } from '../../processes/auth/login-model'
-import { DefaultLayout } from '../templates/default-layout'
-import {
-  MostPopularInCitizenRequests,
-  MostPopularInCountry,
-  MostPopularInEntrepreneurRequests,
-} from 'entities/ui/organisms'
+import { MostPopularInCitizenRequests, MostPopularInCountry, MostPopularInEntrepreneurRequests } from 'features/pages'
 
 const HomePage = () => {
   const user = useStore($user)

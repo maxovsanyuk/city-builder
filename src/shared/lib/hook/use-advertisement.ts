@@ -1,4 +1,4 @@
-import { $setAdvertisement } from 'entities/model/advertisement/model'
+import { $setAdvertisement } from '../../../features/advertisement-card/model/advertisement'
 
 export const useAdvertisement = ({ advertisement, smoothScroll }: Record<string, any>) => {
   const setCurrentAdvertisement = () => {

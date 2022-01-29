@@ -1,6 +1,6 @@
 import { SearchForm } from 'shared/ui/molecules'
-import { DefaultLayout } from '../../templates/default-layout'
-import { AdvertisementPageContent } from 'entities/ui/organisms'
+import { DefaultLayout } from 'shared/ui/templates'
+import { AdvertisementPageContent } from 'features/pages'
 
 const AdvertisementPage = () => {
   return (

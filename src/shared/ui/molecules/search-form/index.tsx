@@ -3,9 +3,9 @@ import { nanoid } from 'nanoid'
 import { useEffect } from 'react'
 import { useIntl } from 'react-intl'
 import { StyledForm } from './styles'
-import { historyPush } from 'services/navigation'
 import { useForm, Controller } from 'react-hook-form'
 import { Button, TextField } from '@material-ui/core'
+import { historyPush } from 'shared/lib/utils/navigation'
 import { AutocompleteInput, GoogleMapsLocationsInput } from 'shared/ui/molecules'
 
 export const SearchForm = () => {

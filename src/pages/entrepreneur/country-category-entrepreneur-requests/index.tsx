@@ -1,6 +1,6 @@
 import { SearchForm } from 'shared/ui/molecules'
-import { DefaultLayout } from '../../templates/default-layout'
-import { CountryCategoryEntrepreneurRequestsContent } from 'entities/ui/organisms'
+import { DefaultLayout } from 'shared/ui/templates'
+import { CountryCategoryEntrepreneurRequestsContent } from 'features/pages'
 
 const CountryCategoryPageEntrepreneurRequests = () => {
   return (

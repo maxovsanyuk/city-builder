@@ -1,8 +1,8 @@
 import { FC } from 'react'
-import { SearchForm } from '../../../shared/ui/molecules'
-import { DefaultLayout } from '../../templates/default-layout'
-import { TopAdvertisements } from '../../../shared/ui/organisms'
-import { CountryCategoryAdvertisementContent } from 'entities/ui/organisms'
+import { SearchForm } from 'shared/ui/molecules'
+import { DefaultLayout } from 'shared/ui/templates'
+import { TopAdvertisements } from 'shared/ui/organisms'
+import { CountryCategoryAdvertisementContent } from 'features/pages'
 
 const CountryCategoryAdvertisementPage: FC = () => {
   return (

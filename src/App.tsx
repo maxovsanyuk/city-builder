@@ -1,12 +1,11 @@
 import { FC, Suspense } from 'react'
 import { NotFound } from './pages/404'
 import { useStore } from 'effector-react'
-import { Loading } from './shared/ui/molecules'
-import { history } from './services/navigation'
+import { Loading } from 'shared/ui/molecules'
 import { $user } from './processes/auth/login-model'
-import { AuthLayout } from './pages/templates/auth-layout'
+import { history } from 'shared/lib/utils/navigation'
+import { AuthLayout, DashboardLayout } from 'shared/ui/templates'
 import { Router, Route, Redirect, Switch } from 'react-router-dom'
-import { DashboardLayout } from './pages/templates/dashboard-layout'
 import { AuthRoutes, AdminRoutes, CitizenRoutes, EntrepreneurRoutes, HomeRoutes } from 'settings/routes'
 
 const UserRoutes: any = ({ authorizationType }: Record<string, any>) => {

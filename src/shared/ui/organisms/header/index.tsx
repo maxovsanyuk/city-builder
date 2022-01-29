@@ -5,10 +5,9 @@ import Logo from 'shared/assets/logo.svg'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
+import { LangSwitcher, UserHeaderInfoBox } from 'features'
 import { useStore } from 'effector-react'
 import { Container } from 'shared/ui/molecules'
-import { LangSwitcher } from 'features/ui/molecules'
-import { UserHeaderInfoBox } from 'entities/ui/molecules'
 import { Button, Typography, Box } from '@material-ui/core'
 
 export const Header = () => {

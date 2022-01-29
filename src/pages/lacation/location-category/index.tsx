@@ -1,6 +1,6 @@
 import { SearchForm } from 'shared/ui/molecules'
-import { DefaultLayout } from '../../templates/default-layout'
-import { LocationCategoryContent } from 'entities/ui/organisms'
+import { DefaultLayout } from 'shared/ui/templates'
+import { LocationCategoryContent } from 'features/pages'
 
 const LocationCategoryPage = () => {
   return (

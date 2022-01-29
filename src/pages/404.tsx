@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { useIntl } from 'react-intl'
 import { Typography } from '@material-ui/core'
 import { Link, Route } from 'react-router-dom'
-import { AuthLayout } from './templates/auth-layout'
+import { AuthLayout } from 'shared/ui/templates'
 
 const Wrapper = styled.div`
   align-items: center;

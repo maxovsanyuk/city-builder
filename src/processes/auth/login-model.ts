@@ -1,8 +1,8 @@
 import { message } from 'antd'
 import { persist } from 'effector-storage/local'
-import { historyPush } from '../../services/navigation'
 import { createEvent, createStore } from 'effector-root'
-import { setCookie, removeCookie } from '../../shared/lib/utils'
+import { historyPush } from 'shared/lib/utils/navigation'
+import { setCookie, removeCookie } from 'shared/lib/utils'
 
 export const MockData = [
   {

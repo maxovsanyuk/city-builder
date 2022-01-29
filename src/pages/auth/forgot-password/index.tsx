@@ -2,7 +2,7 @@ import { message } from 'antd'
 import { Wrapper } from './styles'
 import { useIntl } from 'react-intl'
 import { useForm } from 'react-hook-form'
-import { historyPush } from 'services/navigation'
+import { historyPush } from 'shared/lib/utils/navigation'
 import { Button, Typography, TextField } from '@material-ui/core'
 
 const ForgotPassword = () => {
