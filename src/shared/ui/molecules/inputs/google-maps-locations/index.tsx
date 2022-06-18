@@ -50,8 +50,6 @@ export const GoogleMapsLocationsInput = ({ register, required, style }: Record<s
   const loaded = useRef(false)
   const { formatMessage } = useIntl()
 
-  console.log(process.env.GOOGLE_API_KEY, 'process.env.GOOGLE_API_KEY')
-
   if (typeof window !== 'undefined' && !loaded.current) {
     if (!document.querySelector('#google-maps')) {
       loadScript(
