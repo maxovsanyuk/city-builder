@@ -50,10 +50,14 @@ export const GoogleMapsLocationsInput = ({ register, required, style }: Record<s
   const loaded = useRef(false)
   const { formatMessage } = useIntl()
 
+  console.log(process.env.GOOGLE_API_KEY, 'process.env.GOOGLE_API_KEY')
+
   if (typeof window !== 'undefined' && !loaded.current) {
     if (!document.querySelector('#google-maps')) {
       loadScript(
-        'https://maps.googleapis.com/maps/api/js?key=AIzaSyDlh-3Gn2gI2rekURoVcFQPvRn2FkXn4vA&libraries=places',
+        `https://maps.googleapis.com/maps/api/js?key=${
+          process.env.GOOGLE_API_KEY || 'AIzaSyCgZFSSNRl-UfTZBUEojW8hBrM-ZrmSDL4'
+        }&libraries=places`,
         document.querySelector('head'),
         'google-maps'
       )
