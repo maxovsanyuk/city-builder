@@ -1,0 +1,2 @@
+(this["webpackJsonpcity-builder"]=this["webpackJsonpcity-builder"]||[]).push([[16],{570:function(e,n,t){"use strict";t.r(n);var r,a=t(15),i=t(21).d.div(r||(r=Object(a.a)(["\n  .paper {\n    margin: 15px;\n    padding: 15px;\n  }\n"]))),c=t(500),s=t(525),d=t(71),p=t(1);n.default=function(){var e=Object(c.a)().formatMessage;return Object(p.jsx)(d.a,{children:Object(p.jsx)(i,{children:Object(p.jsx)(s.a,{variant:"h3",style:{margin:"20px"},children:e({id:"create.new.rerquest"})})})})}}}]);
+//# sourceMappingURL=16.8f7006a3.chunk.js.map
